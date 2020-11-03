@@ -1,5 +1,5 @@
 ---
-title: Overview
+title: Git Overview
 aliases:
 - "/docs/overview"
 weight: 1
