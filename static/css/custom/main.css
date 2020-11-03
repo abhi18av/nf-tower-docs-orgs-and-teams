@@ -1,3 +1,7 @@
 .header .left-block.tower-logo {
     min-width: 265px;
 }
+
+.footer {
+    padding: 0 !important;
+}
