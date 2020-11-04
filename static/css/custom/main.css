@@ -6,6 +6,10 @@
     width: 200px;
 }
 
+.docs-content {
+    max-width: 850px;
+}
+
 .footer {
     padding: 0 !important;
 }
