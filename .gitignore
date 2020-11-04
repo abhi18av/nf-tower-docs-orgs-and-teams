@@ -6,6 +6,7 @@ yarn.lock
 
 # Don't add personal VS Code settings
 .vscode/
+.idea 
 
 # Ensure Hugo builds aren't committed to Git
 public/
