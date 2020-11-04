@@ -1,0 +1,39 @@
+name: Tower Docs build
+# read more here
+# https://help.github.com/en/articles/workflow-syntax-for-github-actions#on
+on:
+  push:
+    branches:
+      - '*'
+      - '!refs/tags/.*'
+    tags-ignore:
+      - '*'
+
+jobs:
+  build:
+    name: Tower build
+    if: "!contains(github.event.head_commit.message, '[ci skip]')"
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    strategy:
+      fail-fast: false
+
+    steps:
+      - name: Environment
+        run: env | sort
+
+      - name: Checkout
+        uses: actions/checkout@v1
+        with:
+          fetch-depth: 1
+
+      - name: Build docs
+        run: ./hugo.sh
+
+#      - name: Publish website
+#        if: "github.ref == 'refs/heads/master' && !contains(github.event.head_commit.message, '[release]')"
+#        run: ./gradle.sh publish
+#        env:
+#          AWS_ACCESS_KEY_ID: ${{secrets.TOWER_DOCS_ACCESS}}
+#          AWS_SECRET_ACCESS_KEY: ${{secrets.TOWER_DOCS_SECRET}}
+
