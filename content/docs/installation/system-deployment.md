@@ -1,7 +1,5 @@
 ---
 title: System deployment
-aliases:
-- "/docs/system-deployment"
 weight: 1
 layout: single
 publishdate: 2020-10-20 04:00:00 +0000
@@ -14,8 +12,8 @@ headline: 'Deployment Guide'
 description: 'System description and instructions for Nextflow Tower.'
 menu:
   docs:
-    parent: Getting Started
-    weight: 2
+    parent: Installation
+    weight: 1
 ---
 
 {{% tip %}}
