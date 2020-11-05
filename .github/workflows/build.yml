@@ -32,7 +32,9 @@ jobs:
 
       - name: Publish website
         if: github.ref == 'refs/heads/master'
-        run: make publish
+        run: |
+          make publish
+          make invalidate
         env:
           AWS_ACCESS_KEY_ID: ${{secrets.TOWER_DOCS_ACCESS}}
           AWS_SECRET_ACCESS_KEY: ${{secrets.TOWER_DOCS_SECRET}}

@@ -23,5 +23,5 @@ dry-pub:
 
 invalidate:
 	aws cloudfront create-invalidation \
-		--distribution-id <INVALIDATION-ID> \
+		--distribution-id EE450FY2UY75L \
 		--paths '/*'
