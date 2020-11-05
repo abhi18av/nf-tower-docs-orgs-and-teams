@@ -13,7 +13,7 @@ authors:
   - "Seqera Labs"
 
 headline: 'Tower Documentation - Welcome!'
-description: 'Nextflow Tower is full-stack application for the development, deployment and monitoring  of Nextflow data analysis pipelines.'
+description: 'Nextflow Tower is a full-stack application for the development, deployment and monitoring of Nextflow data analysis pipelines.'
 menu:
   docs:
     parent: Welcome
@@ -29,15 +29,15 @@ The execution launchpad allows users to run pipelines with ease while the flexib
 
 ## What is Nextflow?
 
-Nextflow is a framework for the development of data pipelines. It enables developers and data scientists to create and securely deploy custom, parallel data applications in the cloud or on traditional on-premise infrastructure. Nextflow is characterized by the powerful dataflow programming paradigm coupled with execution engines that allow the transparent deployment.
+Nextflow is a framework for the development of data pipelines. It enables developers and data scientists to create and securely deploy custom, parallel data applications in the cloud or on traditional on-premise infrastructure. Nextflow is characterized by the powerful dataflow programming paradigm coupled with execution engines that allow for transparent deployment.
 
-Nextflow is both a programming workflow language and an execution runtime that supports a wide range of execution platforms including popular traditional grid scheduling systems such as Slurm as well as cloud using services such as AWS Batch and Google Cloud LifeSciences.
+Nextflow is both a programming workflow language and an execution runtime that supports a wide range of execution platforms including popular traditional grid scheduling systems such as Slurm and IBM LSF as well as cloud using services such as AWS Batch and Google Cloud Life Sciences.
 
 ## Why Nextflow Tower?
 
-We created Nextflow in 2013 to deliver the most seamless experience for executing data pipelines at scale. Tower is the continuation of that mission. Encompassing the latest technologies we have built the solution to easily execute and monitor pipelines across every step. Tower brings the cloud closer than ever with automated resource provisioning and role-based permissions setup. 
+We created Nextflow in 2013 to deliver the most seamless experience for executing data pipelines at scale. Tower is the continuation of that mission. Encompassing the latest technologies we have built the solution to easily execute and monitor pipelines across every step. Tower brings the cloud closer than ever before with automated resource provisioning and role-based access control. 
 
-Uniquely, Tower has been designed from day one to be installed easily in your own environment - data and compute never leaves your organizations security boundary. Tower has been extensively tested with over 125 million jobs to date with zero down time. Regular penetration testing, security scanning and the highest development standards mean that Tower has been deployed in many of the largest pharma companies globally.
+Tower has been designed from day one to be installed easily in any environment - data and compute never leaves your organizations security boundary. It has been extensively tested with over 125 million jobs to date and zero down time. Regular penetration testing, security scanning and the highest development standards have ensured that Tower has been deployed in many of the largest pharma companies and research organizations globally.
 
 {{% tip %}}
 
