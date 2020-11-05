@@ -28,26 +28,26 @@ weight = 1
 name = "Getting Started"
 weight = 2
 [[menu.docs]]
-name = "Compute Environments"
+name = "Installation"
 weight = 3
 [[menu.docs]]
-name = "Launching Pipelines"
+name = "Compute Environments"
 weight = 4
 [[menu.docs]]
-name = "Monitoring Pipelines"
+name = "Launching Pipelines"
 weight = 5
 [[menu.docs]]
-name = "Git Integration"
+name = "Monitoring Pipelines"
 weight = 6
 [[menu.docs]]
-name = "Automation"
+name = "Git Integration"
 weight = 7
 [[menu.docs]]
-name = "API"
+name = "Automation"
 weight = 8
-[[menu.faqs]]
-name = "Glossary"
-weight = 2
+[[menu.docs]]
+name = "API"
+weight = 9
 
 
 [outputFormats.Algolia]
