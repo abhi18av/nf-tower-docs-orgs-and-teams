@@ -22,9 +22,7 @@
 {{- partial "seo/schema" . -}}
 {{- partial "seo/twitterCards" . }}
 <link rel="stylesheet" href="{{ "css/styles.min.css" | relURL }}?{{ readFile "static/css/styles.min.css" | md5 }}" type="text/css" />
-{{ range .Site.Params.custom_css -}}
-    <link rel="stylesheet" href="{{ . | absURL }}">
-{{- end }}
+<link rel="stylesheet" href="{{ "css/custom/main.css" | relURL }}?{{ readFile "static/css/custom/main.css" | md5 }}" type="text/css">
 {{- if .IsHome -}}
 {{- range .Site.AllPages -}}
 {{- $section := .Section -}}
