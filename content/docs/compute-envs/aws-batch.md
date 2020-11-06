@@ -222,7 +222,7 @@ To enable Tower within your existing AWS configuration, you need to have an IAM 
 - `AmazonEC2ContainerRegistryReadOnly`
 - `CloudWatchLogsReadOnlyAccess`
 - The following [custom policy](launch-policy.json) to grant the ability to submit and control Batch jobs.
-- Write access to any S3 bucket used pipeline work directories with the following [policy template](s3-bucket-write.json). See [below for details](#Access to S3 Buckets)
+- Write access to any S3 bucket used pipeline work directories with the following [policy template](s3-bucket-write.json). See [below for details](#access-to-s3-buckets)
 
 With theses permissions, we can add a new **AWS Batch** environment in the [Tower UI](#launch-compute-environment)
 
