@@ -187,7 +187,11 @@ The bucket should be in the same **Region** as selected above.
 
 **11.** Enter any additional **Allowed S3 buckets** that your workflows require to access input data or to write output files. The **Pipeline work directory** bucket above is added by default to the list of **Allowed S3 buckets**.
 
-**12.** Choose to use **FSx for Lustre** which attaches a file system to each EC2 instance. This eliminates the need to transfer data between S3 and the instance and can provide significant performance advantages.
+**12.** Optionally select **FSx** for Lustre. This attaches a file system to each EC2 instance. This eliminates the need to transfer data between S3 and the instance and can provide significant performance advantages.
+
+If using **FSx** enter `/fsx` as the **FSx mount path** and then, the **Pipeline work directory** above should be set as `/fsx/work`
+
+{{% pretty_screenshot img="/uploads/2020/11/aws_lustre_options.png" %}}
 
 **13.** Choose the **Dispose resources** option.
 
