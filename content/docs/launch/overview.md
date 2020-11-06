@@ -20,7 +20,7 @@ menu:
 
 {{% warning %}}
 
-See the [**Compute Environment**](/docs/compute-environments) documentation to learn how to create an environment.
+See the [**Compute Environment**](/docs/compute-envs) documentation to learn how to create an environment.
 
 {{% /warning %}}
 
@@ -38,7 +38,7 @@ To launch a pipeline:
 
 The **Launch Pipeline** dialog will appear.
 
-**2.** Select the drop down menu to choose a [**Compute Environment**](/docs/compute-environments/overview).  
+**2.** Select the drop down menu to choose a [**Compute Environment**](/docs/compute-envs/overview).  
 *The users primary compute environment is selected by default.*
 
 {{% pretty_screenshot img="/uploads/2020/10/launch_RNASeq.png" %}}
