@@ -24,7 +24,7 @@ See the [**Compute Environment**](/docs/compute-environments) documentation to l
 
 {{% /warning %}}
 
-Tower currently supports launching into **AWS**, **Google**, **Slurm** and **LSF** compute environments. 
+Tower currently supports launching into **AWS**, **Google**, **Slurm** and **LSF** compute environments.
 
 In the following example we will launch the nf-core RNASeq pipeline using a Google Cloud compute environment we have previously set up.
 
@@ -38,7 +38,7 @@ To launch a pipeline:
 
 The **Launch Pipeline** dialog will appear.
 
-**2.** Select the drop down menu to choose a [**Compute Environment**](/docs/compute-environments/overview).  
+**2.** Select the drop down menu to choose a [**Compute Environment**](/docs/compute-environments).  
 *The users primary compute environment is selected by default.*
 
 {{% pretty_screenshot img="/uploads/2020/10/launch_RNASeq.png" %}}
