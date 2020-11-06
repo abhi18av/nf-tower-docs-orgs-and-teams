@@ -40,3 +40,11 @@
     }
 }
 
+/*
+    Prevent other elements from overlaping by data-hlink.
+    Fixes the case when hyperlinks in shortcode blocks cannot be clicked.
+*/
+[data-hlink]::before {
+    display: none;
+}
+
