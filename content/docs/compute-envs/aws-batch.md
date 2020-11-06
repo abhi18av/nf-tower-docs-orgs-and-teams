@@ -19,7 +19,7 @@ menu:
 ## Overview
 {{% tip "Disclaimer" %}}
 <!-- If you already have Batch environment pre-configured skip Forge and go to Launch -->
-This guide assumes you have an existing [AWS Account](https://aws.amazon.com/). Sign up for a free AWS account [here](https://aws.amazon.com/account/sign-up).
+This guide assumes you have an existing [AWS Account](https://aws.amazon.com/). Sign up for a free AWS account [here](https://portal.aws.amazon.com/billing/signup).
 {{% /tip %}}
 
 There are two ways of creating a **Compute Environment** for **AWS Batch** with Tower.
@@ -57,7 +57,7 @@ The steps below will guide you through the creation a new IAM user for Tower and
 
 **3.** In the following steps, click on the **Next: Tags** button, **Next: Review** and **Create User**.
 
-**4.** Save the **Access key ID** and **Secret access key** in a secure location. We will use these in the [next section](#create-a-new-compute-environment). Press the **Close** button.
+**4.** Save the **Access key ID** and **Secret access key** in a secure location. We will use these in the [next section](#forge-compute-environment). Press the **Close** button.
 
 {{% pretty_screenshot img="/uploads/2020/09/aws_user_created.png" %}}
 
@@ -222,7 +222,7 @@ To enable Tower within your existing AWS configuration, you need to have an IAM 
 - `AmazonEC2ContainerRegistryReadOnly`
 - `CloudWatchLogsReadOnlyAccess`
 - The following [custom policy](launch-policy.json) to grant the ability to submit and control Batch jobs.
-- Write access to any S3 bucket used pipeline work directories with the following [policy template](s3-bucket-write.json). See [below for details](#Access to S3 Buckets)
+- Write access to any S3 bucket used pipeline work directories with the following [policy template](s3-bucket-write.json). See [below for details](#access-to-s3-buckets)
 
 With theses permissions, we can add a new **AWS Batch** environment in the [Tower UI](#launch-compute-environment)
 

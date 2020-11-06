@@ -2,6 +2,7 @@
 title: Overview
 aliases:
 - "/docs/compute-environments"
+- "/docs/compute-envs"
 weight: 1
 layout: single
 publishdate: 2020-10-20 04:00:00 +0000
