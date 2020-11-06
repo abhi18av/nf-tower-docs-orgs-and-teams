@@ -1,5 +1,5 @@
 ---
-title: Usage 
+title: Usage
 aliases:
 - "/docs/getting-started"
 weight: 1
@@ -40,7 +40,7 @@ To try Tower, visit [tower.nf](https://tower.nf/login) and login with GitHub or 
 <br>
 
 ## Community
-For more information on installing the Community version of Tower visit [our GitHub repository](https://github.com/seqeralabs/nf-tower) and follow our [installation guide](docs/getting-started/system-deployment/).
+For more information on installing the Community version of Tower visit [our GitHub repository](https://github.com/seqeralabs/nf-tower) and follow our [installation guide](/docs/compute-envs).
 
 {{% pretty_screenshot img="/uploads/2020/10/starting_tower_opensource.png" %}}
 
@@ -56,7 +56,7 @@ Tower Enterprise is installed within an organizations own cloud or on-premise en
   * Pipeline actions and event-based execution
   * LDAP & OpenID Authentication
   * Enterprise role-based access control
-  * Fully featured API 
+  * Fully featured API
   * Support for Nextflow & Tower
 
 To install the Tower enterprise version, please contact [Seqera Labs](https://seqera.io) for a demo and to discuss your organizations requirements.
@@ -64,6 +64,3 @@ To install the Tower enterprise version, please contact [Seqera Labs](https://se
 {{% pretty_screenshot img="/uploads/2020/10/starting_tower_enterprise.png" %}}
 
 <br>
-
-
-

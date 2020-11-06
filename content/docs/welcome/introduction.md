@@ -20,7 +20,7 @@ menu:
     weight: 1
 ---
 
-Tower is a full-stack application for [Nextflow](http://nextflow.io) data analysis pipelines. It brings monitoring, logging & observability to your distributed workflows and simplifies the deployment of workflows on any cloud, cluster or laptop. 
+Tower is a full-stack application for [Nextflow](https://www.nextflow.io/) data analysis pipelines. It brings monitoring, logging & observability to your distributed workflows and simplifies the deployment of workflows on any cloud, cluster or laptop.
 
 {{% pretty_screenshot img="/uploads/2020/11/overview_image.png" %}}
 
