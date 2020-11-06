@@ -19,7 +19,7 @@ menu:
 ## Overview
 {{% tip "Disclaimer" %}}
 <!-- If you already have Batch environment pre-configured skip Forge and go to Launch -->
-This guide assumes you have an existing [AWS Account](https://aws.amazon.com/). Sign up for a free AWS account [here](https://aws.amazon.com/account/sign-up).
+This guide assumes you have an existing [AWS Account](https://aws.amazon.com/). Sign up for a free AWS account [here](https://portal.aws.amazon.com/billing/signup).
 {{% /tip %}}
 
 There are two ways of creating a **Compute Environment** for **AWS Batch** with Tower.
@@ -57,7 +57,7 @@ The steps below will guide you through the creation a new IAM user for Tower and
 
 **3.** In the following steps, click on the **Next: Tags** button, **Next: Review** and **Create User**.
 
-**4.** Save the **Access key ID** and **Secret access key** in a secure location. We will use these in the [next section](#create-a-new-compute-environment). Press the **Close** button.
+**4.** Save the **Access key ID** and **Secret access key** in a secure location. We will use these in the [next section](#forge-compute-environment). Press the **Close** button.
 
 {{% pretty_screenshot img="/uploads/2020/09/aws_user_created.png" %}}
 
