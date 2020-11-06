@@ -1,7 +1,3 @@
-.header .left-block.tower-logo {
-    min-width: 265px;
-}
-
 .header .right-block .seqera-logo {
     width: 200px;
 }
@@ -18,6 +14,32 @@
     margin-left: 0 !important;
 }
 
+@media screen and (min-width: 200px) {
+    .header .left-block.tower-logo {
+        min-width: 190px;
+    }
+
+    .header .right-block .seqera-logo {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 859px) {
+    .header .right-block .seqera-logo {
+        display: block;
+    }
+
+    .header.docs .mini-nav--toggle {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 360px) {
+    .header .left-block.tower-logo {
+        min-width: 265px;
+    }
+}
+
 /*
     Prevent other elements from overlaping by data-hlink.
     Fixes the case when hyperlinks in shortcode blocks cannot be clicked.
@@ -25,3 +47,4 @@
 [data-hlink]::before {
     display: none;
 }
+
