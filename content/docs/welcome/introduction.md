@@ -20,7 +20,7 @@ menu:
     weight: 1
 ---
 
-Tower is a full-stack application for [Nextflow](https://nextflow.io) data analysis pipelines. It brings monitoring, logging & observability to your distributed workflows and simplifies the deployment of workflows on any cloud, cluster or laptop. 
+Tower is a full-stack application for [Nextflow](http://nextflow.io) data analysis pipelines. It brings monitoring, logging & observability to your distributed workflows and simplifies the deployment of workflows on any cloud, cluster or laptop. 
 
 {{% pretty_screenshot img="/uploads/2020/11/overview_image.png" %}}
 
@@ -35,7 +35,7 @@ Nextflow is both a programming workflow language and an execution runtime that s
 
 ## Why Nextflow Tower?
 
-We created Nextflow in 2013 to deliver the most seamless experience for executing data pipelines at scale. Tower is the continuation of that mission. Encompassing the latest technologies we have built the solution to easily execute and monitor pipelines across every step. Tower brings the cloud closer than ever before with automated resource provisioning and role-based access control. 
+We created Nextflow in 2013 to deliver the most seamless experience for executing data pipelines at scale. Tower is the continuation of that mission. Encompassing the latest technologies we have built the solution to easily execute and monitor pipelines across every step. Tower brings the cloud closer than ever before with automated resource provisioning and role-based access control.
 
 Tower has been designed from day one to be installed easily in any environment - data and compute never leaves your organizations security boundary. It has been extensively tested with over 125 million jobs to date and zero down time. Regular penetration testing, security scanning and the highest development standards have ensured that Tower has been deployed in many of the largest pharma companies and research organizations globally.
 
