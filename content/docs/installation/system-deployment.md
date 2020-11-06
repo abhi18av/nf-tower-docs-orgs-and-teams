@@ -18,13 +18,13 @@ menu:
 
 {{% tip %}}
 
-It is highly recommended to first [**Sign up**](https://tower.nf "Nextflow Tower") and try the hosted version of Tower for free or request a [**demo**](https://seqera.io/demo "Nextflow Tower Demo") for a deployment in your own on-premise or cloud environment.
+It is highly recommended to first [**Sign up**](https://tower.nf "Nextflow Tower") and try the hosted version of Tower for free or request a [**demo**](https://meetings.hubspot.com/evan141 "Nextflow Tower Demo") for a deployment in your own on-premise or cloud environment.
 
 {{% /tip %}}
 
 Nextflow Tower is a web application server based on a microservices oriented architecture and designed to maximize the portability, scalability and security of the application.
 
-The application is composed of different modules that can be configured and deployed depending on user requirements. 
+The application is composed of different modules that can be configured and deployed depending on user requirements.
 
 All components for the Enterprise release are packaged as Docker container images which are hosted and security validated by the Amazon ECR service. The community version can be accessed via GitHub.
 
