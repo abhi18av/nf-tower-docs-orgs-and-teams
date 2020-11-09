@@ -1,5 +1,5 @@
 ---
-title: Public git repositories
+title: Public Git repositories
 aliases:
 - "/docs/git-public"
 weight: 1
@@ -9,7 +9,7 @@ authors:
   - "Evan Floden"
   - "Alain Coletta"
   - "Seqera Labs"
-headline: "Public git repositories"
+headline: "Public Git Repositories"
 description: 'Managing and connecting to Nextflow workflows in Public git repositories'
 
 menu:
