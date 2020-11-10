@@ -20,7 +20,7 @@ menu:
 
 ## Navigation bar
 
-Jobs have been submitted with Tower can be monitored wherever you have an internet connection. 
+Jobs which have been submitted with Tower can be monitored wherever you have an internet connection. 
 
 The **navigation bar** contains all previous jobs executions. Each new or resumed job will be given a random name e.g: `grave_williams`.
 

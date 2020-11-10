@@ -17,7 +17,7 @@ menu:
     parent: Git Integration
     weight: 1
 ---
-Nextflow different has the built-in support for [Git](https://git-scm.com) and integration with several Git-hosting platforms.
+Nextflow has the built-in support for [Git](https://git-scm.com) and integration with several Git-hosting platforms.
 
 A data pipelines may be composed by many assets (source code scripts, deployment settings, dependency descriptors such as Conda or Docker files, documentation etc.).
 
