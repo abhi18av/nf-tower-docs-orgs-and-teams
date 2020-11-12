@@ -9,7 +9,7 @@ authors:
   - "Evan Floden"
   - "Alain Coletta"
   - "Seqera Labs"
-headline: "Private git repositories"
+headline: "Private Git repositories"
 description: 'Managing and connecting to Nextflow workflows to private Git repositories using Nextflow Tower.'
 
 

@@ -25,7 +25,7 @@ The General summary displays information on the environment and the job being ex
   - Unique workflow run ID
   - Workflow run name
   - Date and time of job submission timestamp
-  - Project revision and git commit ID
+  - Project revision and Git commit ID
   - Nextflow session ID
   - Username of the launcher
   - Work directory path
