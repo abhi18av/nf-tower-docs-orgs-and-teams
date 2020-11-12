@@ -29,7 +29,7 @@ The guide will begin with configuring your Google Cloud account and enabling the
 
 ## Project configuration
 
-If you do not already have one, the first Step is to create a a Google Cloud project.
+If you do not already have one, the first Step is to create a Google Cloud project.
 
 **1.** Navigate to the [Google Project Selector page](https://console.cloud.google.com/projectselector2) and select **CREATE PROJECT**.
 

@@ -23,7 +23,7 @@ Tower currently offers support for native **GitHub webhooks** and a general **To
 
 ## Github webhooks
 
-This **Pipeline action** listens for any changes made in a the pipeline repository. When a change occurs, Tower triggers the launch of the pipeline in response.
+This **Pipeline action** listens for any changes made in the pipeline repository. When a change occurs, Tower triggers the launch of the pipeline in response.
 
 To create a new **Pipeline action**, navigate to the user menu on the top right, select **Pipeline actions** and create a new action.
 

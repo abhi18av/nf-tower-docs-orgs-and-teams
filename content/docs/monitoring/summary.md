@@ -35,7 +35,7 @@ The General summary displays information on the environment and the job being ex
   - Nextflow version
 
 {{% tip %}}
-Hover over with mouse to get full details on the compute environment.
+Hover over with the mouse to get full details on the compute environment.
 {{% /tip %}}
 
 {{% pretty_screenshot img="/uploads/2020/10/monitoring_general.png" %}}

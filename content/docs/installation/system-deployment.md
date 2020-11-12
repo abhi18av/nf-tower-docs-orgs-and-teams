@@ -22,7 +22,7 @@ It is highly recommended to first [**Sign up**](https://tower.nf "Nextflow Tower
 
 {{% /tip %}}
 
-Nextflow Tower is a server-based web application on a microservices oriented architecture and is designed to maximize the portability, scalability and security of the application.
+Nextflow Tower is a web application server based on a microservice oriented architecture and designed to maximize the portability, scalability and security of the application.
 
 The application is composed of a variety of modules that can be configured and deployed depending on organization's requirements.
 
@@ -34,7 +34,7 @@ All components for the Enterprise release are packaged as Docker container image
 
 The minimal Tower configuration only requires the front-end, backend and database modules.
 
-These can be executed as Docker containers or as native services running in the hosting environment. Such minimal configuration is only suggested for evaluation purposes or for a small number of users.
+These can be executed as Docker containers or as native services running in the hosting environment. Such a minimal configuration is only suggested for evaluation purposes or for a small number of users.
 
 ### Kubernetes deployment
 

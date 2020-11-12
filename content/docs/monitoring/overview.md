@@ -33,7 +33,7 @@ In the left bar:
   - **Blue** are running.
   - **Green** are successfully executed.
   - **Yellow** are successfully executed where some tasks failed.
-  - **Red** are jobs where where at least one task fully failed.
+  - **Red** are jobs where at least one task fully failed.
   - **Grey** are jobs that where forced to stop during execution.
 
   Selecting a run on the left panel will display the job execution details.

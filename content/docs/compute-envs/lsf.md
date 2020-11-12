@@ -9,7 +9,7 @@ authors:
   - "Seqera Labs"
 
 headline: 'IBM LSF Compute Environments'
-description: 'Step-by-step instructions to setup IBM LSF for Nextflow Tower.'
+description: 'Step-by-step instructions to set up IBM LSF for Nextflow Tower.'
 menu:
   docs:
     parent: Compute Environments

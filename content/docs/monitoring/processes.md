@@ -25,5 +25,5 @@ In the example below, there are four tasks of the fastqc process.
 
 {{% pretty_screenshot img="/uploads/2020/10/monitoring_fastqc_processes.png" %}}
 
-By selecting a processes, the [**Tasks table**](/docs/monitoring/tasks/) is filtered below.
+By selecting a process, the [**Tasks table**](/docs/monitoring/tasks/) is filtered below.
 

@@ -9,7 +9,7 @@ authors:
   - "Seqera Labs"
 
 headline: 'Notifications'
-description: 'Guide to setup notification for Nextflow pipelines using Tower.'
+description: 'Guide to set up notification for Nextflow pipelines using Tower.'
 menu:
   docs:
     parent: Launching Pipelines

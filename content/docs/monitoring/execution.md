@@ -18,7 +18,7 @@ menu:
     weight: 2
 ---
 
-Selecting a pipeline on the on the navigation bar will display the workflow details in the main monitoring panel. The main window contains:
+Selecting a pipeline on the navigation bar will display the workflow details in the main monitoring panel. The main window contains:
 
 * [Execution section](#run-information) with command-line, parameters, configuration, and execution logs in real-time.
 * [Summary](/docs/monitoring/summary/) and [status section](/docs/monitoring/summary/).

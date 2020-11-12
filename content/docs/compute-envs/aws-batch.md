@@ -9,7 +9,7 @@ authors:
   - "Seqera Labs"
 
 headline: 'AWS Batch Compute Environments'
-description: 'Step-by-step instructions to setup AWS Batch in Nextflow Tower.'
+description: 'Step-by-step instructions to set up AWS Batch in Nextflow Tower.'
 menu:
   docs:
     parent: Compute Environments
@@ -28,7 +28,7 @@ There are two ways of creating a **Compute Environment** for **AWS Batch** with 
 
 2. **Tower Launch** allows you to create a compute environment using existing AWS Batch resources.
 
-If you don't yet have an AWS Batch environment fully set-up, the [Tower Forge](#forge) guide is suggested. If you have been provided with an AWS Batch queue from your account administrator, or if you have setup AWS Batch previously, follow the [Tower Launch](#manual) guide.
+If you don't yet have an AWS Batch environment fully set-up, the [Tower Forge](#forge) guide is suggested. If you have been provided with an AWS Batch queue from your account administrator, or if you have set up AWS Batch previously, follow the [Tower Launch](#manual) guide.
 
 ## Forge
 
@@ -43,7 +43,7 @@ Tower Forge automates the configuration of an [AWS Batch](https://aws.amazon.com
 
 ### IAM User Permissions
 
-To use the Tower Forge feature, Tower requires an IAM user with the permissions listed in this [policy file](https://github.com/seqeralabs/nf-tower-aws/blob/master/forge/forge-policy.json). These permissions are more permissive that the ones required to only launch a pipeline as Tower needs to create AWS resources on your behalf.
+To use the Tower Forge feature, Tower requires an IAM user with the permissions listed in this [policy file](https://github.com/seqeralabs/nf-tower-aws/blob/master/forge/forge-policy.json). These permissions are more permissive than those required to only launch a pipeline as Tower needs to create AWS resources on your behalf.
 
 The steps below will guide you through the creation a new IAM user for Tower and attach the required policy for the newly created user.
 
@@ -153,7 +153,7 @@ Now we can add a new **AWS Batch** environment in the Tower UI. To create a new 
 
 </br>
 
-**3.** Add new credentials by selecting the the **+** button. Choose a name, e.g. *AWS Credentials* and add the Access key and Secret key. These are the keys we saved in the previous steps when creating the AWS IAM user.
+**3.** Add new credentials by selecting the **+** button. Choose a name, e.g. *AWS Credentials* and add the Access key and Secret key. These are the keys we saved in the previous steps when creating the AWS IAM user.
 
 {{% pretty_screenshot img="/uploads/2020/09/aws_keys.png" %}}
 

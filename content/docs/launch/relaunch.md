@@ -16,7 +16,7 @@ menu:
     weight: 3
 ---
 
-Re-launching pipelines is great way to quickly troubleshoot or make use of Nextflow's resume functionality and re-launch the same pipeline with different parameters.
+Re-launching pipelines is a great way to quickly troubleshoot or make use of Nextflow's resume functionality and re-launch the same pipeline with different parameters.
 
 {{% pretty_screenshot img="/uploads/2020/10/launch_relaunch.png" %}}
 

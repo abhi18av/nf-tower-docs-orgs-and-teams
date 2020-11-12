@@ -11,7 +11,7 @@ authors:
   - "Seqera Labs"
 
 headline: 'Compute Environments'
-description: 'Step-by-step instructions to setup compute environments in Nextflow Tower.'
+description: 'Step-by-step instructions to set up compute environments in Nextflow Tower.'
 menu:
   docs:
     parent: Compute Environments

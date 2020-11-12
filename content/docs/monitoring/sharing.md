@@ -40,7 +40,7 @@ An email with the pipeline URL will be sent to the collaborator.
 Your collaborator's Tower account email must match the email where you sent the invite.
 {{% /warning %}}
 
-Once shared, the pipeline execution is visible in the users navigation panel with the launchers name shown.
+Once shared, the pipeline execution is visible in the user's navigation panel with the launchers name shown.
 
 It is important to ensure your collaborators have permissions to your compute resources to make the most of this feature. For example, information in a cloud bucket such as task logs will only be visible if the collaborator also has access to that bucket.
 

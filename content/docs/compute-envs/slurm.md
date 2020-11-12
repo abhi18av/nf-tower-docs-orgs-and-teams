@@ -9,7 +9,7 @@ authors:
   - "Seqera Labs"
 
 headline: 'SLURM Compute Environments'
-description: 'Step-by-step instructions to setup SLURM for Nextflow Tower.'
+description: 'Step-by-step instructions to set up SLURM for Nextflow Tower.'
 menu:
   docs:
     parent: Compute Environments
@@ -26,7 +26,7 @@ This feature enables Tower to connect to remote cloud or on-premise clusters and
 
 ## Requirements
 
-To launch pipelines into a Slurm cluster from Tower, the following requirements must to be fulfilled:
+To launch pipelines into a Slurm cluster from Tower, the following requirements must be fulfilled:
 
 * The cluster should be reachable via an SSH connection using an SSH key.
 * The cluster should allow outbound connections to the Tower web service.
