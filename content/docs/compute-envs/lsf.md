@@ -50,7 +50,7 @@ To create a new compute environment for LSF:
 
 <br>
 
-**3.** Select the **+** sign to add new SHH credentials.
+**3.** Select the **+** sign to add new SSH credentials.
 
 **4.** Enter a name for the credentials
 
@@ -59,7 +59,7 @@ To create a new compute environment for LSF:
 {{% pretty_screenshot img="/uploads/2020/10/lsf_tower_credentials.png" %}}
 
 {{% tip %}}
-An passphrase for your SSH key may be optional depending on how it was created. See [here](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) for detailed instructions for how to create a key.
+A passphrase for your SSH key may be optional depending on how it was created. See [here](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) for detailed instructions for how to create a key.
 {{% /tip %}}
 
 <br>

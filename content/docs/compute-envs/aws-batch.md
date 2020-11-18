@@ -22,19 +22,19 @@ menu:
 This guide assumes you have an existing [AWS Account](https://aws.amazon.com/). Sign up for a free AWS account [here](https://portal.aws.amazon.com/billing/signup).
 {{% /tip %}}
 
-There are two ways of creating a **Compute Environment** for **AWS Batch** with Tower.
+There are two ways to create a **Compute Environment** for **AWS Batch** with Tower.
 
 1. **Tower Forge** for AWS Batch automatically creates AWS Batch resources in your AWS account.
 
 2. **Tower Launch** allows you to create a compute environment using existing AWS Batch resources.
 
-If you don't yet have an AWS Batch environment fully set-up, the [Tower Forge](#forge) guide is suggested. If you have been provided with an AWS Batch queue from your account administrator, or if you have set up AWS Batch previously, follow the [Tower Launch](#manual) guide.
+If you don't yet have an AWS Batch environment fully set-up, following the [Tower Forge](#forge) guide is suggested. If you have been provided with an AWS Batch queue from your account administrator, or if you have set up AWS Batch previously, follow the [Tower Launch](#manual) guide.
 
 ## Forge
 
 <!-- Add explanation for what is Forge and disclaimer -->
 {{% warning %}}
-Follow these instructions if you have not pre-configured an AWS Batch environment. This will create resources in your AWS account that you may be charged for by Amazon.
+Follow these instructions if you have not pre-configured an AWS Batch environment. Note that this will create resources in your AWS account that you may be charged for by Amazon.
 {{% /warning %}}
 
 Tower Forge automates the configuration of an [AWS Batch](https://aws.amazon.com/batch/) compute environment and queues required for the deployment of Nextflow pipelines.
@@ -55,7 +55,7 @@ The steps below will guide you through the creation a new IAM user for Tower and
 
 **2.** Enter a name for your user (e.g. `tower`) and choose the **Programmatic access** type. Then select the **Next: Permissions** button.
 
-**3.** In the following steps, click on the **Next: Tags** button, **Next: Review** and **Create User**.
+**3.** Now perform the following steps: click on the **Next: Tags** button, **Next: Review** and **Create User**.
 
 **4.** Save the **Access key ID** and **Secret access key** in a secure location. We will use these in the [next section](#forge-compute-environment). Press the **Close** button.
 
@@ -147,7 +147,7 @@ Now we can add a new **AWS Batch** environment in the Tower UI. To create a new 
 
 </br>
 
-**2.** Enter a descriptive name for this environment, for example *AWS Batch Spot (eu-west-1)* and select **Amazon Batch** as the target platform.
+**2.** Enter a descriptive name for this environment. For example, *AWS Batch Spot (eu-west-1)* and select **Amazon Batch** as the target platform.
 
 {{% pretty_screenshot img="/uploads/2020/09/aws_new_env_name.png" %}}
 
@@ -163,7 +163,7 @@ You can create multiple credentials in your Tower environment.
 
 <br>
 
-**4.** Select a **Region**, for example *eu-west-1 - Europe (Ireland)*, and in the **Pipeline work directory** enter the S3 bucket we created in the previous section e.g: `s3://unique-tower-bucket`.
+**4.** Select a **Region**. For example *eu-west-1 - Europe (Ireland)*, and in the **Pipeline work directory** enter the S3 bucket we created in the previous section e.g: `s3://unique-tower-bucket`.
 
 **5.** Select **Batch Forge** as the **Config Mode**.
 
@@ -177,13 +177,13 @@ The bucket should be in the same **Region** as selected above.
 
 **6.** Choose a **Provisioning model**. In most cases this will be *Spot*.
 
-**7.** Enter the **Min CPUs**. When this is set to greater than `0`, EC2 instances will remain active and you will be billed regardless of if you are running workloads. The advantages of setting a minimum number of CPUs greater than `0` is that a pipeline execution will initialize faster.
+**7.** Enter the **Min CPUs**. When this is set to greater than `0`, EC2 instances will remain active and you will be billed regardless of whether you are running workloads. The advantage of setting a minimum number of CPUs greater than `0` is that a pipeline execution will initialize faster.
 
 **8.** Enter the **Max CPUs** e.g. `64`.
 
 **9.** Choose **EBS Auto scale** to allow the EC2 virtual machines to expand the amount of available disk space during the task execution.
 
-**10.** Choose **Enable GPUs** to allow the deployment of GPU enabled EC2 virtual machines.
+**10.** Choose **Enable GPUs** to allow the deployment of GPU enabled EC2 virtual machines if required.
 
 **11.** Enter any additional **Allowed S3 buckets** that your workflows require to access input data or to write output files. The **Pipeline work directory** bucket above is added by default to the list of **Allowed S3 buckets**.
 
@@ -198,19 +198,20 @@ If using **FSx** enter `/fsx` as the **FSx mount path** and then, the **Pipeline
 {{% pretty_screenshot img="/uploads/2020/09/aws_cpus.png" %}}
 
 {{% tip "Spot or On-demand?" %}}
-You can choose to create a compute environment that will launch either **Spot** or **On-demand** instances. Spot instances can cost as little as 20% of on-demand instances and with Nextflow ability to automatically relaunch failed tasks, Spot is almost always the recommended provisioning model. It is important to note that when selecting Spot, Tower Forge will create two queues in your AWS environment. The first or **Head queue** will be on-demand and used for the Nextflow runtime job. The second or **Compute queue** will be used for pipeline tasks.
+You can choose to create a compute environment that will launch either **Spot** or **On-demand** instances. Spot instances can cost as little as 20% of on-demand instances and with Nextflow's ability to automatically relaunch failed tasks, Spot is almost always the recommended provisioning model. 
+Note however that when choosing *Spot* instances, Tower will in any case create a dedicated queue for running the main Nextflow job using a single on-demand instance in order to prevent any execution interruption.
 {{% /tip %}}
 
 <br>
 
-**14.** Select **Create** to finalize the compute environment setup. It will take approximately 60 seconds for all the resources to be created and after this you will be ready to launch pipelines.
+**14.** Select **Create** to finalize the compute environment setup. It will take approximately 60 seconds for all the resources to be created and then you will be ready to launch pipelines.
 
 {{% pretty_screenshot img="/uploads/2020/09/aws_60s_new_env.png" %}}
 
 <br>
 
 {{% star "Amazing!" %}}
-You now have everything to begin deploying massively scalable pipelines.
+You now have everything you need to begin deploying massively scalable pipelines.
 {{% /tip %}}
 
 Jump to the documentation section for [Launching Pipelines](/docs/launch/overview/).
@@ -225,15 +226,15 @@ To enable Tower within your existing AWS configuration, you need to have an IAM 
 - `AmazonS3ReadOnlyAccess`
 - `AmazonEC2ContainerRegistryReadOnly`
 - `CloudWatchLogsReadOnlyAccess`
-- The following [custom policy](https://github.com/seqeralabs/nf-tower-aws/blob/master/launch/launch-policy.json) to grant the ability to submit and control Batch jobs.
+- A [custom policy](https://github.com/seqeralabs/nf-tower-aws/blob/master/launch/launch-policy.json) to grant the ability to submit and control Batch jobs.
 - Write access to any S3 bucket used pipeline work directories with the following [policy template](https://github.com/seqeralabs/nf-tower-aws/blob/master/launch/s3-bucket-write.json). See [below for details](#access-to-s3-buckets)
 
-With theses permissions, we can add a new **AWS Batch** environment in the [Tower UI](#launch-compute-environment)
+With these permissions set, we can add a new **AWS Batch** environment in the [Tower UI](#launch-compute-environment)
 
 ## Manual compute environment
 To create a new compute environment for AWS Batch (Manual):
 
-**1.** In the navigation bar on the upper right, choose your account name then choose "Compute environments" and select on **New Environment**.
+**1.** In the navigation bar on the upper right, choose your account name then choose **Compute environments** and select on **New Environment**.
 
 {{% pretty_screenshot img="/uploads/2020/09/aws_new_env.png" %}}
 
@@ -245,7 +246,7 @@ To create a new compute environment for AWS Batch (Manual):
 
 <br>
 
-**3.** Add new credentials by clicking the the "+" button. Choose a name, add the **Access key** and **Secret key** from your IAM user.
+**3.** Add new credentials by clicking the "+" button. Choose a name, add the **Access key** and **Secret key** from your IAM user.
 
 {{% pretty_screenshot img="/uploads/2020/09/aws_keys.png" %}}
 
@@ -261,7 +262,7 @@ You can create multiple credentials in your Tower environment. See the section *
 
 **6.** the **Manual** config mode.
 
-**7.** Enter the **Head queue** which is the name of the AWS Batch queue that the Nextflow runtime application will run and a **Compute queue** which is the name of the AWS Batch queue that tasks will be submitted to.
+**7.** Enter the **Head queue** which is the name of the AWS Batch queue that the Nextflow driver job will run and a **Compute queue** which is the name of the AWS Batch queue that tasks will be submitted to.
 
 **8.** Select **Create** to finalize the compute environment setup.
 

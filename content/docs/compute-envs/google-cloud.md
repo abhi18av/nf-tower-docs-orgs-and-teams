@@ -29,7 +29,7 @@ The guide will begin with configuring your Google Cloud account and enabling the
 
 ## Project configuration
 
-If you do not already have one, the first Step is to create a Google Cloud project.
+If you do not already have one, the first step is to create a Google Cloud project.
 
 **1.** Navigate to the [Google Project Selector page](https://console.cloud.google.com/projectselector2) and select **CREATE PROJECT**.
 
@@ -54,7 +54,7 @@ If you do not already have one, the first Step is to create a Google Cloud proje
 {{% pretty_screenshot img="/uploads/2020/09/google_name_bucket.png" %}}
 
 {{% warning "Bucket Naming - No underscores _ !"%}}
-Avoid underscores in your bucket name and use hyphens instead.   
+Do not use underscores in your bucket name and use hyphens instead.   
 {{% /warning %}}
 
 <br>
@@ -83,7 +83,7 @@ Next we need to create a service account.
 
 <br>
 
-**3.** In step 2: **Grant this service account access to project (optional)**  Set the role to _Editor_ and click **CONTINUE**, in step 3: **Grant users access to this service account (optional)** leave all options empty and select **CREATE**.
+**3.** **Grant this service account access to project (optional)**  Set the role to _Editor_ and click **CONTINUE**, and then **Grant users access to this service account (optional)** leave all options empty and select **CREATE**.
 
 {{% pretty_screenshot img="/uploads/2020/09/google_service_account_role.png" %}}
 
@@ -121,7 +121,7 @@ To create a new compute environment for Google Cloud in Tower:
 
 <br>
 
-**3.** Select the **+** sign to add new credentials. Name your credentials and copy-paste the contents from the JSON file above.
+**3.** Select the **+** sign to add new credentials. Name your credentials and copy & paste the contents from the JSON file above.
 
 {{% pretty_screenshot img="/uploads/2020/09/google_tower_credentials.png" %}}
 

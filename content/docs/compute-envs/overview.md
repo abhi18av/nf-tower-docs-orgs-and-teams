@@ -26,7 +26,7 @@ Tower supports launching of pipelines into **AWS Batch**, **Google Cloud**, **IB
 
 {{% pretty_screenshot img="/uploads/2020/09/compute_env_platforms.png" %}}
 
-Each compute environment must be configured to enable Tower to submit tasks. You can read more on how to set up each environment using the links below.
+Each compute environment must be pre-configured to enable Tower to submit tasks. You can read more on how to set up each environment using the links below.
 
 ## Setup guides
 
