@@ -185,15 +185,22 @@ The bucket should be in the same **Region** as selected above.
 
 **10.** Choose **Enable GPUs** to allow the deployment of GPU enabled EC2 virtual machines.
 
-**11.** Enter any additional **Allowed S3 buckets** that your workflows require to access input data or to write output files. The **Pipeline work directory** bucket above is added by default to the list of **Allowed S3 buckets**.
+**11.** Enter any additional **Allowed S3 buckets** that your workflows require to read input data or to write output files. The **Pipeline work directory** bucket above is added by default to the list of **Allowed S3 buckets**.
 
-**12.** Optionally select **FSx** for Lustre. This attaches a file system to each EC2 instance. This eliminates the need to transfer data between S3 and the instance and can provide significant performance advantages.
+**12.** With the optional **Enable Fusion mounts** feature enabled, S3 buckets specified in the **Pipeline work directory** and **Allowed S3 Buckets** 
+fields will be mounted as a plain file system volumes in the EC2 instances carrying out the Batch job execution and accessible at the path location following this pattern `/fusion/s3/BUCKET_NAME`. 
+For example if the bucket name is `imputation-gp2` the Nextflow pipeline will access it using the file system path and `/fusion/s3/imputation-gp2`. 
 
-If using **FSx** enter `/fsx` as the **FSx mount path** and then, the **Pipeline work directory** above should be set as `/fsx/work`
+{{% tip %}}
+Note that's not required to modify your pipeline to get advantage of this feature, Nextflow is able to recognise these buckets and automatically replace any reference to s3:// prefixed files 
+to the corresponding Fusion mount paths. 
+{{% /tip %}}
+
+**13.** If using **FSx** enter `/fsx` as the **FSx mount path** and then, the **Pipeline work directory** above should be set as `/fsx/work`
 
 {{% pretty_screenshot img="/uploads/2020/11/aws_lustre_options.png" %}}
 
-**13.** Choose the **Dispose resources** option.
+**14.** Choose the **Dispose resources** option.
 
 {{% pretty_screenshot img="/uploads/2020/09/aws_cpus.png" %}}
 
@@ -203,7 +210,7 @@ You can choose to create a compute environment that will launch either **Spot** 
 
 <br>
 
-**14.** Select **Create** to finalize the compute environment setup. It will take approximately 60 seconds for all the resources to be created and after this you will be ready to launch pipelines.
+**15.** Select **Create** to finalize the compute environment setup. It will take approximately 60 seconds for all the resources to be created and after this you will be ready to launch pipelines.
 
 {{% pretty_screenshot img="/uploads/2020/09/aws_60s_new_env.png" %}}
 
