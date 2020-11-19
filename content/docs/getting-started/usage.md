@@ -40,7 +40,7 @@ To try Tower, visit [tower.nf](https://tower.nf/login) and login with GitHub or 
 <br>
 
 ## Community
-For more information on installing the Community version of Tower visit [our GitHub repository](https://github.com/seqeralabs/nf-tower) and follow our [installation guide](/docs/compute-envs).
+For more information on installing the Community version of Tower visit [our GitHub repository](https://github.com/seqeralabs/nf-tower) and follow our [deployment guide](/docs/installation/system-deployment/).
 
 {{% pretty_screenshot img="/uploads/2020/10/starting_tower_opensource.png" %}}
 
