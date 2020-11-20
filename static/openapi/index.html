@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8"> <!-- Important: rapi-doc uses utf8 characters -->
+    <script type="module" src="/openapi/rapidoc-min.js"></script>
+</head>
+<body>
+<rapi-doc
+        id="rapid"
+        theme=light
+        show-header=true
+        allow-authentication=true
+        allow-spec-url-load=false
+        allow-spec-file-load=false
+        allow-try=true
+        layout=row
+        sort-tags=true
+        sort-endpoints-by=method
+        spec-url="https://tower.nf/openapi/nextflow-tower-api-latest.yml"
+        server-url="https://api.tower.nf"
+        primary-color="#345EEA"
+        allow-server-selection="false"
+>
+    <a slot="logo" href="https://tower.nf" target="_blank" style="width: 150pt; margin: 0.4em 2em"><img src="nf-tower-white.svg" ></a>
+    <div id="spacer" style="margin-bottom: 2em"></div>
+</rapi-doc>
+</body>
+
+</html>
