@@ -2,14 +2,24 @@
 
 ## Get started
 
+Clone the repository.
 ```
 git clone https://github.com/seqeralabs/nf-tower-docs.git
 ```
 
-Move to the working directory e.g: `cd nf-tower-docs`
+Follow the instructions from https://gohugo.io/getting-started/installing to complete the Hugo installation in your
+local system.
 
+Move to the working directory e.g: `cd nf-tower-docs`.
+
+For Linux users, run to start the Hugo server:
 ```
-./hugo.sh serve
+./hugo.sh server
+```
+
+For Mac users, run the following command to start the Hugo server:
+```
+hugo server
 ```
 
 The result is that a local website is run and can be
