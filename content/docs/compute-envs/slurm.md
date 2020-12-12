@@ -54,7 +54,7 @@ To create a new compute environment for Slurm:
 
 **4.** Enter a name for the credentials
 
-**5** Enter your **SSH private key** and associated **Passphrase** if required then click **Create**.
+**5.** Enter your **SSH private key** and associated **Passphrase** if required then click **Create**.
 
 {{% pretty_screenshot img="/uploads/2020/09/slurm_tower_credentials.png" %}}
 
