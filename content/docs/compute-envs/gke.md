@@ -2,7 +2,7 @@
 title: Google GKE
 weight: 1
 layout: single
-publishdate: 2020-10-20 04:00:00 +0000
+publishdate: 2020-12-17 04:00:00 +0000
 authors:
   - "Jordi Deu-Pons"
   - "Paolo Di Tommaso"
@@ -19,13 +19,13 @@ menu:
 ---
 ## Overview
 
-[Google GKE](https://cloud.google.com/kubernetes-engine) is a managed Kubernetes cluster that allows the execution of containerised workloads in the Google cloud at scale.
+[Google GKE](https://cloud.google.com/kubernetes-engine) is a managed Kubernetes cluster that allows the execution of containerized workloads in Google Cloud at scale.
 
-Nextflow Tower offers native support for Google GKE cluster and streamlines the deployment
-of Nextflow pipelines in such environment.
+Nextflow Tower offers native support for Google GKE clusters and streamlines the deployment
+of Nextflow pipelines in such environments.
 
 
-## Requirement
+## Requirements
 
 You need to have a GKE cluster up and running. Make sure you have followed
 the steps in the [Cluster preparation](https://github.com/seqeralabs/nf-tower-k8s) guide to create the cluster resources required by Nextflow Tower.
@@ -51,7 +51,7 @@ the steps in the [Cluster preparation](https://github.com/seqeralabs/nf-tower-k8
 GKE clusters can be either *regional* or *zonal*. For example, the `us-west1` identify the United States West-Coast region, and it has three zones: `us-west1-a`, `us-west1-b`, and `us-west1-c`.
 
 <br>
-Tower self-completion only shows regions. You can manually edit this field if your GKE cluster was created as zonal rather than regional.
+Tower self-completion only shows regions. You can manually edit this field if your GKE cluster was created zonally rather than regionally.
 <br>
 {{% pretty_screenshot img="/uploads/2020/12/gke_regions.png" %}}
 
@@ -67,7 +67,7 @@ If you have followed the example in the [cluster preparation](https://github.com
 
 If you have followed the [cluster preparation](https://github.com/seqeralabs/nf-tower-k8s/blob/master/cluster-preparation.md#2-service-account--role-creation) guide, this field should be `tower-launcher-sa`.
 
-**8.** The **Storage claim** field allows you to specify the storage Nextflow should use as
+**8.** The **Storage claim** field allows you to specify the storage Nextflow should use as a
 scratch file system for the pipeline execution.
 
 This should reference a Kubernetes persistence volume with `ReadWriteMany` capability. Check the [cluster preparation](https://github.com/seqeralabs/nf-tower-k8s/blob/master/cluster-preparation.md#3-storage-configuration) guide for details. 

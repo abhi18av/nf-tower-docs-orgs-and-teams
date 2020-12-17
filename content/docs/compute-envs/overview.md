@@ -34,9 +34,9 @@ The following sections describe how to set up each of the available compute envi
 * [Google Cloud](/docs/compute-envs/google-cloud/)
 * [IBM LSF](/docs/compute-envs/lsf/)
 * [Slurm](/docs/compute-envs/slurm/)
-* [Amazon Kubernetes EKS](/docs/compute-envs/cloud-k8s/)
-* [Google Kubernets GKE](/docs/compute-envs/cloud-k8s/)
-* [Hosted Kubernetes clusters](/docs/compute-envs/standalone-k8s/)
+* [Amazon Kubernetes (EKS)](/docs/compute-envs/eks/)
+* [Google Kubernetes (GKE)](/docs/compute-envs/gke/)
+* [Hosted Kubernetes](/docs/compute-envs/k8s/)
 
 ## Select a default compute environment
 

@@ -2,14 +2,14 @@
 title: Kubernetes
 weight: 1
 layout: single
-publishdate: 2020-10-20 04:00:00 +0000
+publishdate: 2020-12-17 04:00:00 +0000
 authors:
   - "Jordi Deu-Pons"
   - "Paolo Di Tommaso"
   - "Alain Coletta"
   - "Seqera Labs"
 
-headline: 'Kubernetes Compute environment'
+headline: 'Kubernetes Compute Environments'
 description: 'Step-by-step instructions to set up a Nextflow Tower compute environment for a Kubernetes cluster'
 menu:
   docs:
@@ -19,19 +19,19 @@ menu:
 ---
 ## Overview
 
-[Kubernetes](https://kubernetes.io/) is the leading technology for deployment and orchestration of containerised workloads in cloud-native environments.
+[Kubernetes](https://kubernetes.io/) is the leading technology for deployment and orchestration of containerized workloads in cloud-native environments.
 
-Tower streamlines the deployment of Nextflow pipelines into Kubernetes either on
-cloud and on-premises solutions.
+Tower streamlines the deployment of Nextflow pipelines into Kubernetes both in the
+cloud and in on-premises solutions.
 
 
-## Requirement
+## Requirements
 
 You need to have Kubernetes cluster up and running. Make sure you have followed
 the steps in the [Cluster preparation](https://github.com/seqeralabs/nf-tower-k8s) guide to create the cluster resources required by Nextflow Tower.
 
-The following instruction are for a **generic Kubernetes** distribution. If you are using
-[Amazon EKS](/docs/compute-envs/eks/) or [Google GKE](/docs/compute-envs/gke/) see the corresponding documentation pages.
+The following instructions are for a **generic Kubernetes** distribution. If you are using
+[Amazon EKS](/docs/compute-envs/eks/) or [Google GKE](/docs/compute-envs/gke/), see the corresponding documentation pages.
 
 
 ## Compute environment setup  
@@ -108,6 +108,6 @@ The following parameters are available:
 
 **1.** The **Storage mount path** defines the file system path where the Storage claim is mounted. Default: `/scratch`
 
-**2.** The **Work directory** field defines the file system path used as working directory by the Nextflow pipelines. It must be the same or a subdirectory of the *Storage mount path* at the previous point. Default: the same as *Storage mount path*.
+**2.** The **Work directory** field defines the file system path used as a working directory by Nextflow pipelines. It must be the same or a subdirectory of the *Storage mount path* at the previous point. Default: the same as *Storage mount path*.
 
 **3.** The  **Compute service account** field allows you to specify the Kubernetes *service account* that the pipeline jobs should use. Default is the `default` service account in your Kubernetes cluster.
