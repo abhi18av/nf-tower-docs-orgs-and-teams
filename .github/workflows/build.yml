@@ -4,10 +4,7 @@ name: Tower Docs build
 on:
   push:
     branches:
-      - '*'
-      - '!refs/tags/.*'
-    tags-ignore:
-      - '*'
+      - master
 
 jobs:
   build:

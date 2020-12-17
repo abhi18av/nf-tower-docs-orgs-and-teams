@@ -8,7 +8,7 @@ authors:
   - "Alain Coletta"
   - "Seqera Labs"
 
-headline: 'AWS Batch Compute Environments'
+headline: 'AWS Batch Compute Environment'
 description: 'Step-by-step instructions to set up AWS Batch in Nextflow Tower.'
 menu:
   docs:

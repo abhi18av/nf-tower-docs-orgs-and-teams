@@ -8,12 +8,12 @@ authors:
   - "Alain Coletta"
   - "Seqera Labs"
 
-headline: 'IBM LSF Compute Environments'
+headline: 'IBM LSF Compute Environment'
 description: 'Step-by-step instructions to set up IBM LSF for Nextflow Tower.'
 menu:
   docs:
     parent: Compute Environments
-    weight: 5
+    weight: 8
 
 ---
 ## Overview

@@ -20,11 +20,9 @@ menu:
 
 ## Introduction
 
-Tower uses the concept of **Compute Environments** to define the execution platform where a pipeline will run.
+Tower uses the concept of **Compute Environments** to define the execution platform where a pipeline will run. It launching of pipelines into a growing number of **cloud** and **on-premise** infrastructures.
 
-Tower supports launching of pipelines into **AWS Batch**, **Google Cloud**, **IBM LSF**, and **Slurm** with many more in development.
-
-{{% pretty_screenshot img="/uploads/2020/09/compute_env_platforms.png" %}}
+{{% pretty_screenshot img="/uploads/2020/12/compute_env_platforms.png" %}}
 
 Each compute environment must be pre-configured to enable Tower to submit tasks. You can read more on how to set up each environment using the links below.
 
@@ -36,6 +34,9 @@ The following sections describe how to set up each of the available compute envi
 * [Google Cloud](/docs/compute-envs/google-cloud/)
 * [IBM LSF](/docs/compute-envs/lsf/)
 * [Slurm](/docs/compute-envs/slurm/)
+* [Amazon Kubernetes EKS](/docs/compute-envs/cloud-k8s/)
+* [Google Kubernets GKE](/docs/compute-envs/cloud-k8s/)
+* [Hosted Kubernetes clusters](/docs/compute-envs/standalone-k8s/)
 
 ## Select a default compute environment
 

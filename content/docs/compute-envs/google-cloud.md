@@ -8,7 +8,7 @@ authors:
   - "Alain Coletta"
   - "Seqera Labs"
 
-headline: 'Google Cloud Compute Environments'
+headline: 'Google Cloud Compute Environment'
 description: 'Step-by-step instructions to setup Google Cloud for Nextflow Tower.'
 menu:
   docs:

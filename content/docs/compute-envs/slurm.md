@@ -8,12 +8,12 @@ authors:
   - "Alain Coletta"
   - "Seqera Labs"
 
-headline: 'SLURM Compute Environments'
+headline: 'SLURM Compute Environment'
 description: 'Step-by-step instructions to set up SLURM for Nextflow Tower.'
 menu:
   docs:
     parent: Compute Environments
-    weight: 4
+    weight: 7
 
 ---
 ## Overview
