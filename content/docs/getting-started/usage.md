@@ -1,10 +1,8 @@
 ---
 title: Usage
-aliases:
-- "/docs/getting-started"
 weight: 1
 layout: single
-publishdate: 2020-10-20 04:00:00 +0000
+publishdate: 2021-01-04 04:00:00 +0000
 authors:
   - "Evan Floden"
   - "Alain Coletta"
@@ -15,52 +13,78 @@ description: 'Choose how you want to use Tower.'
 menu:
   docs:
     parent: Getting Started
-    weight: 1
+    weight: 2
 ---
 
-Tower can be accessed or deployed three ways:
+<br>
 
-  * **Hosted**: The hosted version of Tower is available free of charge at [tower.nf](https://tower.nf). This version is for individuals, academics and organizations that want to get setup fast. It is the recommended way for users to become familiar with Tower. The service is hosted by Seqera Labs.
+# Usage
 
-  * **Community deployment**: Installation of the Tower community edition can be performed on a user's own system. The community edition has basic features for the monitoring of pipelines by an individual user.
-
-  * **Enterprise deployment**: Deployment of the fully-featured Tower application in an organization's own cloud or on-premise environment. This deployment option is supported by Seqera Labs and is recommended for production environments.
+You can use Tower via either the **online GUI**, using the `-with-tower` option with the **Nextflow run command**, or through the **API**.
 
 
-{{% note %}}
-All versions of Tower require the setup of a compute environment. Data and workflow executions always remain within this environment.
+## Via online GUI
+
+**1.** Create an account and login into Tower, available free of charge, at [tower.nf](https://tower.nf).
+
+**2.** Create and configure a new [compute environment](/docs/compute-envs/overview/).
+
+**3.** Start [launching pipelines](/docs/launch/).
+
+## Via Nextflow run command
+
+Create an account and login into Tower.
+
+**1. Create a new token**
+
+  You can access your tokens from the The *Settings* drop-down menu or directly from this [link](https://tower.nf/tokens):
+
+  {{% pretty_screenshot img="/uploads/2021/01/usage_create_token.png" %}}
+
+  <br>
+
+
+**2. Name your token**
+
+  {{% pretty_screenshot img="/uploads/2021/01/usage_name_token.png" %}}
+
+  <br>
+
+**3. Save your token safely**
+
+  Copy and keep your new token in a safe place.
+
+  {{% pretty_screenshot img="/uploads/2021/01/usage_token.png" %}}
+
+  <br>
+
+**4. Export your token**
+
+Once your token has been created, open a terminal and type:
+
+{{% highlight bash %}}
+export TOWER_ACCESS_TOKEN=eyxxxxxxxxxxxxxxxQ1ZTE=
+export NXF_VER=20.10.0
+{{% /highlight %}}
+
+Where `eyxxxxxxxxxxxxxxxQ1ZTE=` is the token you have just created.
+
+{{% note "check your Nextflow version"%}}
+Bearer token requires Nextflow version 20.10.0 or later, set with the second command above.
 {{% /note %}}
 
-## Hosted
+**5. Run Nextflow with tower**
 
-To try Tower, visit [tower.nf](https://tower.nf/login) and login with GitHub or Google credentials to get started. The [Launching Pipelines](/docs/launch/) documentation section gives step-by-step instructions to start your first pipeline. Hosted Tower at tower.nf has a limitation of five concurrent workflow executions.
+Run your Nextflow workflows as usual with the addition of the `-with-tower` command:
 
-{{% pretty_screenshot img="/uploads/2020/10/starting_tower_nf.png" %}}
+{{% highlight bash %}}
+nextflow run hello.nf -with-tower
+{{% /highlight %}}
 
-<br>
+You will see and be able to monitor your ** Nextflow jobs** in Tower.
 
-## Community
-For more information on installing the Community version of Tower visit [our GitHub repository](https://github.com/seqeralabs/nf-tower) and follow our [deployment guide](/docs/installation/system-deployment/).
+To configure and execute Nextflow jobs in **Cloud environments**, visit the [Compute environments section](/docs/compute-envs).
 
-{{% pretty_screenshot img="/uploads/2020/10/starting_tower_opensource.png" %}}
+## API
 
-<br>
-
-## Enterprise
-
-Tower Enterprise is installed within an organization's own cloud or on-premise environment. It includes:
-
-  * Monitoring, logging & observability
-  * Pipeline execution launchpad
-  * Cloud resource provisioning
-  * Pipeline actions and event-based execution
-  * LDAP & OpenID Authentication
-  * Enterprise role-based access control
-  * Fully featured API
-  * Support for Nextflow & Tower
-
-To install the Tower enterprise version, please contact [Seqera Labs](https://seqera.io) for a demo and to discuss your organization's requirements.
-
-{{% pretty_screenshot img="/uploads/2020/10/starting_tower_enterprise.png" %}}
-
-<br>
+To learn more about using the Tower API, visit to the [API section](/docs/api) in this documentation.
