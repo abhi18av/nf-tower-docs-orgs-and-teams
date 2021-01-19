@@ -1,32 +1,28 @@
 ---
-title: Slurm
+title: Grid Engine
 weight: 1
 layout: single
-publishdate: 2020-10-20 04:00:00 +0000
+publishdate: 2021-01-19 04:00:00 +0000
 authors:
   - "Evan Floden"
   - "Alain Coletta"
   - "Seqera Labs"
 
-headline: 'SLURM Compute Environment'
-description: 'Step-by-step instructions to set up SLURM for Nextflow Tower.'
+headline: 'Grid Engine Compute Environment'
+description: 'Step-by-step instructions to set up Grid engine for Nextflow Tower.'
 menu:
   docs:
     parent: Compute Environments
-    weight: 6
+    weight: 4
 
 ---
 ## Overview
 
-[Slurm Workload Manager](https://slurm.schedmd.com/overview.html) is an open source, fault-tolerant, and highly scalable cluster management and job scheduling system for large and small Linux clusters.
-
-{{% warning "Support for remote batch schedulers is an incubating feature" %}}
-This feature enables Tower to connect to remote cloud or on-premise clusters and launch pipelines.
-{{% /warning %}}
+[Grid engine](https://www.univa.com/products/univa-grid-engine.php) is a workload management tool maintained by Altair.
 
 ## Requirements
 
-To launch pipelines into a Slurm cluster from Tower, the following requirements must be fulfilled:
+To launch pipelines into a **Grid engine** scheduler from Tower, the following requirements must be fulfilled:
 
 * The cluster should be reachable via an SSH connection using an SSH key.
 * The cluster should allow outbound connections to the Tower web service.
@@ -36,17 +32,17 @@ To launch pipelines into a Slurm cluster from Tower, the following requirements 
 
 ## Compute environment
 
-Follow these steps to create a new compute environment for Slurm:
+Follow these steps to create a new compute environment for Grid Engine:
 
-**1.** In the navigation bar on the upper right, choose your account name then choose "Compute environments". Click on the *New Environment* button.
+**1.** In the navigation bar on the upper right, choose your account name then choose "Compute environments". Then, click on the **New Environment** button.
 
 {{% pretty_screenshot img="/uploads/2021/01/new_env.png" %}}
 
 <br>
 
-**2.** Enter a descriptive name (e.g. *Slurm On-premise*) and select **Slurm Workload Manager** as the target platform.
+**2.** Enter a descriptive name (e.g. *Grid Engine On-prem*) and select **Grid Engine** as the target platform.
 
-{{% pretty_screenshot img="/uploads/2020/10/slurm_new_env.png" %}}
+{{% pretty_screenshot img="/uploads/2021/01/grid-engine_new_env.png" %}}
 
 <br>
 
@@ -56,7 +52,7 @@ Follow these steps to create a new compute environment for Slurm:
 
 **5.** Enter your **SSH private key** and associated **Passphrase** if required then click **Create**.
 
-{{% pretty_screenshot img="/uploads/2020/09/slurm_tower_credentials.png" %}}
+{{% pretty_screenshot img="/uploads/2021/01/grid-engine_tower_credentials.png" %}}
 
 {{% tip %}}
 A passphrase for your SSH key may be optional depending on how it was created. See [here](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) for detailed instructions for how to create a key.
@@ -76,7 +72,7 @@ A passphrase for your SSH key may be optional depending on how it was created. S
 
 **11.** Select **Create** to finalize the creation of the compute environment.
 
-{{% pretty_screenshot img="/uploads/2020/10/slurm_tower_options.png" %}}
+{{% pretty_screenshot img="/uploads/2021/01/grid-engine_tower_options.png" %}}
 
 {{% tip %}}
 The Compute queue can be overridden as a configuration option in the Nextflow pipeline configuration. See Nextflow [docs](https://www.nextflow.io/docs/latest/process.html#queue) for more details.

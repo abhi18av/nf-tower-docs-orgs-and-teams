@@ -2,7 +2,7 @@
 title: Google GKE
 weight: 1
 layout: single
-publishdate: 2020-12-17 04:00:00 +0000
+publishdate: 2021-01-19 04:00:00 +0000
 authors:
   - "Jordi Deu-Pons"
   - "Paolo Di Tommaso"
@@ -14,7 +14,7 @@ description: 'Step-by-step instructions to set up a Tower compute environment fo
 menu:
   docs:
     parent: Compute Environments
-    weight: 6
+    weight: 8
 
 ---
 ## Overview
@@ -45,13 +45,13 @@ the steps in the [Cluster preparation](https://github.com/seqeralabs/nf-tower-k8
 
 **3.** Select your Google Cloud credentials. The credentials are needed to identify the user that will access the GKE cluster.
 
-**4.** Select the **Location** where the GKE cluster is located. 
+**4.** Select the **Location** where the GKE cluster is located.
 
 {{% warning "Regional and zonal clusters" %}}
-GKE clusters can be either *regional* or *zonal*. For example, the `us-west1` identify the United States West-Coast region, and it has three zones: `us-west1-a`, `us-west1-b`, and `us-west1-c`.
+GKE clusters can be either *regional* or *zonal*. For example, `us-west1` identifies the United States West-Coast region which has three zones: `us-west1-a`, `us-west1-b`, and `us-west1-c`.
 
 <br>
-Tower self-completion only shows regions. You can manually edit this field if your GKE cluster was created zonally rather than regionally.
+Tower self-completion only shows regions. You should manually edit this field if your GKE cluster was created zonally rather than regionally.
 <br>
 {{% pretty_screenshot img="/uploads/2020/12/gke_regions.png" %}}
 
@@ -70,7 +70,7 @@ If you have followed the [cluster preparation](https://github.com/seqeralabs/nf-
 **8.** The **Storage claim** field allows you to specify the storage Nextflow should use as a
 scratch file system for the pipeline execution.
 
-This should reference a Kubernetes persistence volume with `ReadWriteMany` capability. Check the [cluster preparation](https://github.com/seqeralabs/nf-tower-k8s/blob/master/cluster-preparation.md#3-storage-configuration) guide for details. 
+This should reference a Kubernetes persistence volume with `ReadWriteMany` capability. Check the [cluster preparation](https://github.com/seqeralabs/nf-tower-k8s/blob/master/cluster-preparation.md#3-storage-configuration) guide for details.
 
 ## Advanced options
 

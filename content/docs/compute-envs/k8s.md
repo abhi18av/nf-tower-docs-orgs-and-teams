@@ -14,7 +14,7 @@ description: 'Step-by-step instructions to set up a Nextflow Tower compute envir
 menu:
   docs:
     parent: Compute Environments
-    weight: 4
+    weight: 9
 
 ---
 ## Overview
@@ -64,7 +64,7 @@ The token can be found using the following command:
     SECRET=$(kubectl get secrets | grep <SERVICE-ACCOUNT-NAME> | cut -f1 -d ' ')
     kubectl describe secret SECRET | grep -E '^token' | cut -f2 -d':' | tr -d '\t'
 
-Replace `<SERVICE-ACCOUNT-NAME>` with the name of the service account create in the [Cluster preparation](https://github.com/seqeralabs/nf-tower-k8s/blob/master/cluster-preparation.md#2-service-account--role-creation) step. 
+Replace `<SERVICE-ACCOUNT-NAME>` with the name of the service account create in the [Cluster preparation](https://github.com/seqeralabs/nf-tower-k8s/blob/master/cluster-preparation.md#2-service-account--role-creation) step.
 If you followed the example in the guide, it should be `tower-launcher-sa`.
 <br>
 {{% /tip %}}
@@ -76,29 +76,29 @@ If you followed the example in the guide, it should be `tower-launcher-sa`.
 The master server can be found using this command: `kubectl cluster-info`
 {{% /tip %}}
 
-**7.** Enter the **SSL Certificate** to authenticate your connection. 
+**7.** Enter the **SSL Certificate** to authenticate your connection.
 
 {{% tip %}}
 The certificate data can be found in your `~/.kube/config` file, check for the `certificate-authority-data` field matching to the specified server URL.
 {{% /tip %}}
 
-**8.** Specify Kubernetes **Namespace** that should be used to deployment the pipeline execution. 
+**8.** Specify Kubernetes **Namespace** that should be used to deployment the pipeline execution.
 
 If you have followed the example in the [cluster preparation](https://github.com/seqeralabs/nf-tower-k8s/blob/master/cluster-preparation.md#2-service-account--role-creation) guide this field should be `tower-nf`.
 
-**9.** Specify the Kubernetes **Head service account** that will be used to grant permissions to Tower to deploy the pods executions and related. 
+**9.** Specify the Kubernetes **Head service account** that will be used to grant permissions to Tower to deploy the pods executions and related.
 
-If you have followed the [cluster preparation](https://github.com/seqeralabs/nf-tower-k8s/blob/master/cluster-preparation.md#2-service-account--role-creation) guide this field should be `tower-launcher-sa`. 
+If you have followed the [cluster preparation](https://github.com/seqeralabs/nf-tower-k8s/blob/master/cluster-preparation.md#2-service-account--role-creation) guide this field should be `tower-launcher-sa`.
 
-**10.** The **Storage claim** field allows you to specify the storage that Nextflow should use as 
-scratch file system for the pipeline execution. 
+**10.** The **Storage claim** field allows you to specify the storage that Nextflow should use as
+scratch file system for the pipeline execution.
 
-This should reference a Kubernetes persistence volume with `ReadWriteMany` capability. 
-Check the [cluster preparation](https://github.com/seqeralabs/nf-tower-k8s/blob/master/cluster-preparation.md#3-storage-configuration) guide for details. 
+This should reference a Kubernetes persistence volume with `ReadWriteMany` capability.
+Check the [cluster preparation](https://github.com/seqeralabs/nf-tower-k8s/blob/master/cluster-preparation.md#3-storage-configuration) guide for details.
 
 ## Advanced options
 
-These options allow the fine-tuning of the Tower configuration for the Kubernetes cluster. 
+These options allow the fine-tuning of the Tower configuration for the Kubernetes cluster.
 
 
 {{% pretty_screenshot img="/uploads/2020/12/advanced_options.png" %}}

@@ -1,5 +1,5 @@
 ---
-title: LSF
+title: IBM LSF
 weight: 1
 layout: single
 publishdate: 2020-10-20 04:00:00 +0000
@@ -13,7 +13,7 @@ description: 'Step-by-step instructions to set up IBM LSF for Nextflow Tower.'
 menu:
   docs:
     parent: Compute Environments
-    weight: 8
+    weight: 5
 
 ---
 ## Overview
@@ -30,17 +30,17 @@ To launch pipelines into a LSF managed cluster from Tower, the following require
 
 * The cluster should be reachable via an SSH connection using an SSH key.
 * The cluster should allow outbound connections to the Tower web service.
-* The cluster queue used to run the Nextflow head job must be able submit cluster jobs.
-* The Nextflow runtime version 20.08.1-edge (or later) should be installed on the cluster.
+* The cluster queue used to run the Nextflow head job must be able to submit cluster jobs.
+* The Nextflow runtime version 21.01.1-edge (or later) should be installed on the cluster.
 
 
 ## Compute environment
 
-To create a new compute environment for LSF:
+Follow these steps to create a new compute environment for LSF:
 
 **1.** In the navigation bar on the upper right, choose your account name then choose "Compute environments". Click on the *New Environment* button.
 
-{{% pretty_screenshot img="/uploads/2020/09/aws_new_env.png" %}}
+{{% pretty_screenshot img="/uploads/2021/01/new_env.png" %}}
 
 <br>
 
@@ -64,15 +64,15 @@ A passphrase for your SSH key may be optional depending on how it was created. S
 
 <br>
 
-**6.** Enter the absolute path on the cluster of the **Work directory** to be used.
+**6.** Enter the absolute path of the **Work directory** to be used on the cluster.
 
-**7.** Enter the absolute path on the cluster of the **Launch directory** to be used.
+**7.** Enter the absolute path of the **Launch directory** to be used on the cluster.
 
-**8.** Enter the **Login hostname**. This is usually is the cluster login node address.
+**8.** Enter the **Login hostname**. This is usually the cluster login node address.
 
-**9.** The **Head queue name** which is the name of the queue on the cluster used to launch the execution of the Nextflow runtime.
+**9.** The **Head queue name** which is the name of the queue, on the cluster, used to launch the execution of the Nextflow runtime.
 
-**10.** The **Compute queue name** which is the name of queue on the cluster to which pipeline jobs are submitted.
+**10.** The **Compute queue name** which is the name of queue, on the cluster, to which pipeline jobs are submitted.
 
 **11.** Select **Create** to finalize the creation of the compute environment.
 
