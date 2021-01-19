@@ -57,19 +57,23 @@ The steps below will guide you through the creation a new IAM user for Tower and
 
 **3.** Now perform the following steps: click on the **Next: Tags** button, **Next: Review** and **Create User**.
 
+{{% pretty_screenshot img="/uploads/2020/11/aws_user_no_permissions.png" %}}
+
+<br>
+
+{{% warning  "This user has no permissions" %}}
+
+In **step 4**, you can ignore the warning "This user has no permissions." We will address this later using an **IAM Policy**.
+
+{{% /warning %}}
+
 **4.** Save the **Access key ID** and **Secret access key** in a secure location. We will use these in the [next section](#forge-compute-environment). Press the **Close** button.
 
 {{% pretty_screenshot img="/uploads/2020/09/aws_user_created.png" %}}
 
 <br>
 
-{{% tip %}}
-Note the user has now been created but has not yet been granted any permissions.
-{{% /tip %}}
-
-</br>
-
-**5.** Back in the users table, select the newly created user and click **+ Add inline policy**.
+**5.** Back in the users table, select the newly created user and click **+ Add inline policy** to add user permissions.
 
 {{% pretty_screenshot img="/uploads/2020/09/aws_add_inline_policy.png" %}}
 
@@ -112,13 +116,13 @@ The region of the bucket should be in the same region as the compute environment
 
 <br>
 
-**5.** Select the default options for **Set permissions**.
+**4.** Select the default options for **Set permissions**.
 
 {{% pretty_screenshot img="/uploads/2020/09/aws_new_bucket_set_permissions.png" %}}
 
 <br>
 
-**6.** Review the bucket and select **Create bucket**.
+**5.** Review the bucket and select **Create bucket**.
 
 {{% pretty_screenshot img="/uploads/2020/09/aws_new_bucket_review.png" %}}
 
@@ -156,6 +160,8 @@ Now we can add a new **AWS Batch** environment in the Tower UI. To create a new 
 **3.** Add new credentials by selecting the **+** button. Choose a name, e.g. *AWS Credentials* and add the Access key and Secret key. These are the keys we saved in the previous steps when creating the AWS IAM user.
 
 {{% pretty_screenshot img="/uploads/2020/09/aws_keys.png" %}}
+
+<br>
 
 {{% tip "Multiple credentials" %}}
 You can create multiple credentials in your Tower environment.
@@ -203,7 +209,6 @@ with the corresponding Fusion mount paths.
 
 **11.** Enter any additional **Allowed S3 buckets** that your workflows require to read input data or to write output files. The **Pipeline work directory** bucket above is added by default to the list of **Allowed S3 buckets**.
 
-
 **12.** To use **FSx**, you can enter `/fsx` as the **FSx mount path** and set the **Pipeline work directory** above to be `/fsx/work`
 
 {{% pretty_screenshot img="/uploads/2020/11/aws_lustre_options.png" %}}
@@ -211,7 +216,6 @@ with the corresponding Fusion mount paths.
 <br>
 
 **13.** Choose the **Dispose resources** option.
-
 
 **Advanced options**
 
