@@ -81,7 +81,7 @@ Run your Nextflow workflows as usual with the addition of the `-with-tower` comm
 nextflow run hello.nf -with-tower
 {{% /highlight %}}
 
-You will see and be able to monitor your ** Nextflow jobs** in Tower.
+You will see and be able to monitor your **Nextflow jobs** in Tower.
 
 To configure and execute Nextflow jobs in **Cloud environments**, visit the [Compute environments section](/docs/compute-envs).
 
