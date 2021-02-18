@@ -8,6 +8,7 @@ publishdate: 2020-10-20 04:00:00 +0000
 authors:
   - "Evan Floden"
   - "Alain Coletta"
+  - "Abhinav Sharma"
   - "Seqera Labs"
 
 headline: 'Compute Environments'
@@ -22,7 +23,7 @@ menu:
 
 Tower uses the concept of **Compute Environments** to define the execution platform where a pipeline will run. It launching of pipelines into a growing number of **cloud** and **on-premise** infrastructures.
 
-{{% pretty_screenshot img="/uploads/2021/01/compute_env_platforms.png" %}}
+{{% pretty_screenshot img="/uploads/2021/02/compute_env_platforms.png" %}}
 
 Each compute environment must be pre-configured to enable Tower to submit tasks. You can read more on how to set up each environment using the links below.
 
@@ -35,6 +36,7 @@ The following sections describe how to set up each of the available compute envi
 * [IBM LSF](/docs/compute-envs/lsf/)
 * [Slurm](/docs/compute-envs/slurm/)
 * [Grid Engine](/docs/compute-envs/grid-engine/)
+* [Altair PBS Pro](/docs/compute-envs/altair-pbs-pro/)
 * [Amazon Kubernetes (EKS)](/docs/compute-envs/eks/)
 * [Google Kubernetes (GKE)](/docs/compute-envs/gke/)
 * [Hosted Kubernetes](/docs/compute-envs/k8s/)
