@@ -32,6 +32,7 @@ Each compute environment must be pre-configured to enable Tower to submit tasks.
 The following sections describe how to set up each of the available compute environments.
 
 * [AWS Batch](/docs/compute-envs/aws-batch/)
+* [Azure Batch](/docs/compute-envs/azure-batch/)
 * [Google Cloud](/docs/compute-envs/google-cloud/)
 * [IBM LSF](/docs/compute-envs/lsf/)
 * [Slurm](/docs/compute-envs/slurm/)
