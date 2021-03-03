@@ -21,7 +21,7 @@ menu:
 
 ## Introduction
 
-Tower uses the concept of **Compute Environments** to define the execution platform where a pipeline will run. It launching of pipelines into a growing number of **cloud** and **on-premise** infrastructures.
+Tower uses the concept of **Compute Environments** to define the execution platform where a pipeline will run. It supports launching of pipelines into a growing number of **cloud** and **on-premise** infrastructures.
 
 {{% pretty_screenshot img="/uploads/2021/02/compute_env_platforms.png" %}}
 
