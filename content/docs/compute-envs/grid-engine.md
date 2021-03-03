@@ -27,7 +27,7 @@ To launch pipelines into a **Grid engine** scheduler from Tower, the following r
 * The cluster should be reachable via an SSH connection using an SSH key.
 * The cluster should allow outbound connections to the Tower web service.
 * The cluster queue used to run the Nextflow head job must be able to submit cluster jobs.
-* The Nextflow runtime version 21.01.1-edge (or later) should be installed on the cluster.
+* The Nextflow runtime version **21.02.0-edge** (or later) should be installed on the cluster.
 
 
 ## Compute environment
