@@ -2,10 +2,11 @@
 title: AWS Batch
 weight: 1
 layout: single
-publishdate: 2021-01-19 04:00:00 +0000
+publishdate: 2021-03-08 04:00:00 +0000
 authors:
   - "Evan Floden"
   - "Alain Coletta"
+  - "Abhinav Sharma"
   - "Seqera Labs"
 
 headline: 'AWS Batch Compute Environment'
@@ -237,7 +238,14 @@ Note that if **Min CPUs** is greater than `0`, EC2 instances will remain active.
 
 <br>
 
-**14.** Select **Create** to finalize the compute environment setup. It will take approximately 60 seconds for all the resources to be created and then you will be ready to launch pipelines.
+**14.** If you're using the `Spot instances` then you could also specify the `Cost percentage` to determine the maximum percentage that a `Spot instance` price can be when compared with the `On-Demand` price for that instance type before instances are launched
+
+{{% pretty_screenshot img="/uploads/2021/03/aws_cost_percentage.png" %}}
+
+
+<br>
+
+**15.** Select **Create** to finalize the compute environment setup. It will take approximately 60 seconds for all the resources to be created and then you will be ready to launch pipelines.
 
 {{% pretty_screenshot img="/uploads/2020/09/aws_60s_new_env.png" %}}
 

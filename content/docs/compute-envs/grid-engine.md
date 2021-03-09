@@ -2,10 +2,11 @@
 title: Grid Engine
 weight: 1
 layout: single
-publishdate: 2021-01-19 04:00:00 +0000
+publishdate: 2021-03-08 04:00:00 +0000
 authors:
   - "Evan Floden"
   - "Alain Coletta"
+  - "Abhinav Sharma"
   - "Seqera Labs"
 
 headline: 'Grid Engine Compute Environment'
@@ -70,13 +71,26 @@ A passphrase for your SSH key may be optional depending on how it was created. S
 
 **10.** The **Compute queue name** which is the name of queue, on the cluster, to which pipeline jobs are submitted.
 
-**11.** Select **Create** to finalize the creation of the compute environment.
-
 {{% pretty_screenshot img="/uploads/2021/01/grid-engine_tower_options.png" %}}
 
 {{% tip %}}
 The Compute queue can be overridden as a configuration option in the Nextflow pipeline configuration. See Nextflow [docs](https://www.nextflow.io/docs/latest/process.html#queue) for more details.
 {{% /tip %}}
+
+**Advanced options**
+
+**11.** Optionally, you can customize **Nextflow queue size** field to control the number of Nextflow jobs submitted to the queue at the same time.
+
+{{% pretty_screenshot img="/uploads/2021/03/grid_nextflow_queue_size.png" %}}
+
+
+**12.** Optionally, you can use the **Head job submit options** to  specify options to the head job.
+
+{{% pretty_screenshot img="/uploads/2021/03/grid_head_job_options.png" %}}
+
+**13.** Select **Create** to finalize the creation of the compute environment.
+
+
 
 {{% star "Groovy!" %}}
 You are now ready to launch pipelines.
