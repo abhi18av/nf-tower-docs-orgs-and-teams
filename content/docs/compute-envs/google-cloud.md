@@ -6,6 +6,7 @@ publishdate: 2020-10-20 04:00:00 +0000
 authors:
   - "Evan Floden"
   - "Alain Coletta"
+  - "Abhinav Sharma"
   - "Seqera Labs"
 
 headline: 'Google Cloud Life Sciences Compute Environment'
@@ -202,7 +203,9 @@ To create a new compute environment for Google Cloud in Tower follow these steps
 
 <br>
 
-**4.** Select the **Region** of your **Google storage** bucket.
+**4.** Select the [**Region** and **Zones**](https://cloud.google.com/compute/docs/regions-zones#available) where you'd like to deploy the workload. The **Google Storage** bucket created earlier should be accessible in the region.
+
+{{% pretty_screenshot img="/uploads/2021/03/gcp_regions_and_zones.png" %}}
 
 **5.** You can leave the **Location** empty and Google will run the Life Sciences API Service in the closest available location.
 
@@ -212,11 +215,13 @@ To create a new compute environment for Google Cloud in Tower follow these steps
 This is the name of your **Google Storage bucket** with the `gs://` prefix.
 {{% /tip %}}
 
-**7.** All other options can remain empty.
+**7.** You can also opt-in to execute the workflow on the **Preemptible** instances to save further cost.
 
-**8.** Select **Create** to finalise the creation of the compute environment.
+**8.** Optionally, options such as **Use Private Address**, **Boot disk size**, **Head Job CPUs** and **Head Job memory** could be optimized as per the requirements of the workflow as well.
 
-{{% pretty_screenshot img="/uploads/2020/09/google_tower_location.png" %}}
+**9.** Select **Create** to finalise the creation of the compute environment.
+
+{{% pretty_screenshot img="/uploads/2021/03/google_tower_location.png" %}}
 
 <br>
 
