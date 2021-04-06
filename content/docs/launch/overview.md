@@ -20,11 +20,9 @@ menu:
 
 {{% warning %}}
 
-See the [**Compute Environment**](/docs/compute-envs) documentation to learn how to create an environment.
+See the [**Compute Environment**](/docs/compute-envs) documentation to learn how to create an environment for your preferred executor environment.
 
 {{% /warning %}}
-
-Tower currently supports launching into **AWS**, **Google**, **Slurm** and **LSF** compute environments.
 
 In the following example we will launch the nf-core RNASeq pipeline using a Google Cloud compute environment we have previously set up.
 
