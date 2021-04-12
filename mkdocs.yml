@@ -1,0 +1,97 @@
+site_name: 'Nextflow Tower'
+nav:
+    - 'Getting Started':
+      - 'Usage': 'getting-started/usage.md'
+      - 'Deployments': 'getting-started/deployments.md'
+    - 'Installation':
+      - 'System deployment': 'installation/system-deployment.md'
+    - 'Compute Environments':
+      - 'Overview': 'compute-envs/overview.md'
+      - 'AWS Batch': 'compute-envs/aws-batch.md'
+      - 'Azure Batch': 'compute-envs/azure-batch.md'
+      - 'Google Cloud Life Sciences': 'compute-envs/google-cloud.md'
+      - 'Altair PBS Pro': 'compute-envs/altair-pbs-pro.md'
+      - 'Grid Engine': 'compute-envs/grid-engine.md'
+      - 'IBM LSF': 'compute-envs/lsf.md'
+      - 'Slurm': 'compute-envs/slurm.md'
+      - 'Kubernetes': 'compute-envs/k8s.md'
+      - 'Amazon EKS': 'compute-envs/eks.md'
+      - 'Google GKE': 'compute-envs/gke.md'
+    - 'Launching Pipelines':
+      - 'Overview': 'launch/overview.md'
+      - 'Advanced': 'launch/advanced.md'
+      - 'Re-launch': 'launch/relaunch.md'
+      - 'Notifiications': 'launch/notifications.md'
+    - 'Monitoring Pipelines':
+      - 'Overview': 'monitoring/overview.md'
+      - 'Execution details & logs': 'monitoring/execution.md'
+      - 'Summary & status': 'monitoring/summary.md'
+      - 'Processes': 'monitoring/processes.md'
+      - 'Aggregate stats & load': 'monitoring/aggregate_stats.md'
+      - 'Tasks & metrics': 'monitoring/tasks.md'
+      - 'Sharing pipelines': 'monitoring/sharing.md'
+    - 'Git Integration':
+      - 'Overview': 'git/overview.md'
+      - 'Private Git repositories': 'git/private_repositories.md'
+      - 'Public Git repositories': 'git/public_repositories.md'
+    - 'Automation':
+      - 'Pipeline Actions': 'pipeline-actions/pipeline-actions.md'
+    - API:
+      - 'Overview': 'api/overview.md'
+      - 'Endpoints': 'api/endpoints.md'
+      - 'OpenAPI schema': 'api/openapi.md'
+
+# plugins:
+#   - git-revision-date
+#   - git-revision-date-localized:
+#       fallback_to_build_date: true
+
+theme:
+  language: en
+  name: material
+  palette:
+    scheme: default
+    primary: white
+  favicon: assets/favicons/favicon.ico
+  logo: assets/logos/nf-tower-icon-black.svg
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky #insiders-edition
+    - navigation.top
+    - search.suggest
+    - search.highlight
+
+google_analytics:
+  - UA-XXXXXXXX-X
+  - auto
+
+extra:
+  version:
+    provider: mike
+
+markdown_extensions:
+    - toc:
+        permalink: "#"
+    - admonition
+    - pymdownx.superfences
+    - pymdownx.highlight:
+        linenums: true
+
+copyright: Copyright &copy; 2021 Seqera Labs S.L.
+
+extra:
+  generator: false
+  homepage: /
+  social:
+    - icon: fontawesome/solid/paper-plane
+      link: mailto:support@seqera.io
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/seqeralabs
+    - icon: fontawesome/brands/github
+      link: https://github.com/seqeralabs
+
+edit_uri: https://github.com/seqeralabs/nf-tower-docs
+repo_name: nf-tower-docs
+repo_url: https://github.com/seqeralabs/nf-tower-docs
