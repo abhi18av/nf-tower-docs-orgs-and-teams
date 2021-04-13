@@ -16,7 +16,6 @@ To create a new **Pipeline action**, navigate to the user menu on the top right,
 
 ![](/assets/images/2020/10/actions_new.png)
 
-<br>
 
 **1.** Enter a name for your Action.
 
@@ -24,7 +23,6 @@ To create a new **Pipeline action**, navigate to the user menu on the top right,
 
 ![](/assets/images/2020/10/actions_githook.png)
 
-<br>
 
 **3.** Choose the environment where the pipeline will be executed.
 
@@ -34,14 +32,12 @@ To create a new **Pipeline action**, navigate to the user menu on the top right,
 
 ![](/assets/images/2020/10/actions_params.png)
 
-<br>
 
 !!! note
     The pipeline action is now setup. When a new commit occurs for the selected repository and revision, an event will be triggered in Tower and the pipeline will be launched.
 
 ![](/assets/images/2020/10/actions_created.png)
 
-<br>
 
 !!! note "Awesome!"
     You now have an active **Pipeline action** always listening to the latest changes in your repository.
@@ -55,25 +51,21 @@ Like above, to create a new **Pipeline action**, navigate to the user menu on th
 
 ![](/assets/images/2020/10/actions_new.png)
 
-<br>
 
 **1.** After naming your pipeline action, select **Tower launch hook** as the event source.
 
 ![](/assets/images/2020/10/actions_tower_hook.png)
 
-<br>
 
 **2.** Select the **environment** to execute your pipeline, the **pipeline repository URL**, the **Revision number**, the **Work directory**, the **Config profiles**, and the **Pipeline parameters**, and click **Create**.
 
-![](/assets/images/uploads/2020/10/actions_tower_hook_params.png)
+![](/assets/images/2020/10/actions_tower_hook_params.png)
 
-<br>
 
 A **Tower launch hook** has been created at that endpoint that can be used to programmatically launch the corresponding pipeline. The snippet below shows an example `cURL` command with the authentication token.  
 
 ![](/assets/images/2020/10/actions_endpoint.png)
 
-<br>
 
 !!! note "Awesome!"
     You now have created an endpoint to programmatically launch a pipeline.
@@ -84,10 +76,8 @@ A **Tower launch hook** has been created at that endpoint that can be used to pr
 
 ![](/assets/images/2020/10/actions_new_token.png)
 
-<br>
 
 Access Tokens are accessible on the [tokens page](https://tower.nf/tokens) and can also be accessed from the navigation menu.
 
 ![](/assets/images/2020/10/actions_access_tokens.png)
 
-<br>
