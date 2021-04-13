@@ -49,6 +49,7 @@ nav:
 theme:
   language: en
   name: material
+  custom_dir: overrides
   palette:
     scheme: default
     primary: white
