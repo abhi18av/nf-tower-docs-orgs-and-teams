@@ -17,8 +17,8 @@ theme:
   palette:
     scheme: default
     primary: white
-  favicon: assets/favicons/favicon.ico
-  logo: assets/logos/nf-tower-icon-black.svg
+  favicon: _favicons/favicon.ico
+  logo: _logos/nf-tower-icon-black.svg
   features:
     - navigation.instant
     - navigation.tracking
