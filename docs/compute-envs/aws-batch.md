@@ -270,7 +270,6 @@ Tower can use S3 to access data, create work directories and write outputs. The 
 
 **5.** Name your policy and click **Create policy**.
 
-![](_images/aws_name_policy.png) 
 
 !!! note "Amazing!"
     You now have everything to begin deploying massively scalable pipelines.

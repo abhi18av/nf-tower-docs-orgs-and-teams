@@ -6,7 +6,7 @@ description: 'Managing and connecting to Nextflow workflows to private Git repos
 
 Access to private Git repositories can be managed from the Credentials section, accessible on the right top menu, under **Manage credentials**.
 
-![](_images/git_manage_credentials.png)
+<img src="../_images/git_manage_credentials.png" width="50%"/>
 
 Tower provides support to connect to private repositories from the popular Git hosting platforms GitHub, GitLab, and BitBucket.
 

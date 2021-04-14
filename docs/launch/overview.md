@@ -14,15 +14,12 @@ To launch a pipeline:
 
 **1.** Select the **Launch** button in the navigation bar.
 
-![](_images/launch_button.png)
 
 The **Launch Pipeline** dialog will appear.
 
 **2.** Select the drop down menu to choose a [**Compute Environment**](/compute-envs/overview).  
 
 *The users primary compute environment is selected by default.*
-
-![](_images/launch_RNASeq.png)
 
 
 **3.** Enter the repository of the **Pipeline to launch**.  

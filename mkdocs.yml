@@ -5,10 +5,14 @@ repo_url: https://github.com/seqeralabs/nf-tower-docs
 edit_uri: https://github.com/seqeralabs/nf-tower-docs
 
 
-# plugins:
+
+plugins:
+  - search:
+      prebuild_index: true
 #   - git-revision-date
 #   - git-revision-date-localized:
 #       fallback_to_build_date: true
+
 
 theme:
   language: en
@@ -22,8 +26,6 @@ theme:
   features:
     - navigation.instant
     - navigation.tracking
-    - navigation.tabs
-    - navigation.tabs.sticky #insiders-edition
     - navigation.top
     - search.suggest
     - search.highlight
@@ -53,6 +55,7 @@ extra:
 
 
 nav:
+    - 'Home': 'index.md'
     - 'Getting Started':
       - 'Usage': 'getting-started/usage.md'
       - 'Deployments': 'getting-started/deployments.md'
