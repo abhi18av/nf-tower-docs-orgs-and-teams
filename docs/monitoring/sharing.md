@@ -6,17 +6,17 @@ description: 'Sharing and collaborating on Nextflow pipelines with Nextflow Towe
 
 To share a pipeline execution with a collaborator, select the **Sharing** icon from the main monitoring panel.
 
-![](/assets/images/2020/10/monitoring_sharing1.png)
+![](_images/monitoring_sharing1.png)
 
 
 Select the **Add Collaborator** button, add your collaborator's email or Tower login and click **Confirm**.
 
-![](/assets/images/2020/10/monitoring_sharing2.png)
+![](_images/monitoring_sharing2.png)
 
 
 An email with the pipeline URL will be sent to the collaborator.
 
-![](/assets/images/2020/10/monitoring_sharing3.png)
+![](_images/monitoring_sharing3.png)
 
 
 !!! warning 

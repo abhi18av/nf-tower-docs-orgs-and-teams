@@ -14,14 +14,14 @@ This **Pipeline action** listens for any changes made in the pipeline repository
 
 To create a new **Pipeline action**, navigate to the user menu on the top right, select **Pipeline actions** and create a new action.
 
-![](/assets/images/2020/10/actions_new.png)
+![](_images/actions_new.png)
 
 
 **1.** Enter a name for your Action.
 
 **2.** Choose **GitHub webhook** as the event source.
 
-![](/assets/images/2020/10/actions_githook.png)
+![](_images/actions_githook.png)
 
 
 **3.** Choose the environment where the pipeline will be executed.
@@ -30,13 +30,13 @@ To create a new **Pipeline action**, navigate to the user menu on the top right,
 
 **5.** Choose the working directory, the config profiles, and parameters. Select **Create**.
 
-![](/assets/images/2020/10/actions_params.png)
+![](_images/actions_params.png)
 
 
 !!! note
     The pipeline action is now setup. When a new commit occurs for the selected repository and revision, an event will be triggered in Tower and the pipeline will be launched.
 
-![](/assets/images/2020/10/actions_created.png)
+![](_images/actions_created.png)
 
 
 !!! note "Awesome!"
@@ -49,22 +49,22 @@ A **Tower launch hook** creates a custom endpoint URL which can be used to trigg
 
 Like above, to create a new **Pipeline action**, navigate to the user menu on the top right, select **Pipeline actions** and create a new action.
 
-![](/assets/images/2020/10/actions_new.png)
+![](_images/actions_new.png)
 
 
 **1.** After naming your pipeline action, select **Tower launch hook** as the event source.
 
-![](/assets/images/2020/10/actions_tower_hook.png)
+![](_images/actions_tower_hook.png)
 
 
 **2.** Select the **environment** to execute your pipeline, the **pipeline repository URL**, the **Revision number**, the **Work directory**, the **Config profiles**, and the **Pipeline parameters**, and click **Create**.
 
-![](/assets/images/2020/10/actions_tower_hook_params.png)
+![](_images/actions_tower_hook_params.png)
 
 
 A **Tower launch hook** has been created at that endpoint that can be used to programmatically launch the corresponding pipeline. The snippet below shows an example `cURL` command with the authentication token.  
 
-![](/assets/images/2020/10/actions_endpoint.png)
+![](_images/actions_endpoint.png)
 
 
 !!! note "Awesome!"
@@ -74,10 +74,10 @@ A **Tower launch hook** has been created at that endpoint that can be used to pr
 !!! tip
     When you create a **Tower launch hook**, you also create an access Token to allow submitting executions to Tower.
 
-![](/assets/images/2020/10/actions_new_token.png)
+![](_images/actions_new_token.png)
 
 
 Access Tokens are accessible on the [tokens page](https://tower.nf/tokens) and can also be accessed from the navigation menu.
 
-![](/assets/images/2020/10/actions_access_tokens.png)
+![](_images/actions_access_tokens.png)
 

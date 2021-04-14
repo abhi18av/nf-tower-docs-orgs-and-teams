@@ -19,19 +19,19 @@ The guide is split into two parts. We will begin with configuring your Google Cl
 
 Navigate to the [Google Project Selector page](https://console.cloud.google.com/projectselector2) and select an existing project or click **CREATE PROJECT**.
 
-![](/assets/images/2020/09/google_create_project.png)
+![](_images/google_create_project.png)
 
 
 Enter a name for your new project e.g: "tower-nf", if you are part of an organization the location will be set by default to match your organization parameters.
 
-![](/assets/images/2020/12/google_new_project_name.png)
+![](_images/google_new_project_name.png)
 
 
 ### Make sure Billing is enabled for the project.
 
 At the top left of the page, in the navigation menu (**≡**) click **Billing**. You can follow the enable billing instructions [here](https://cloud.google.com/billing/docs/how-to/modify-project).
 
-![](/assets/images/2020/12/google_enable_billing.png)
+![](_images/google_enable_billing.png)
 
 
 ### Enable the Google Life Sciences, the Compute Engine , and the Google Cloud Storage APIs.
@@ -44,24 +44,24 @@ Open this [link](https://console.cloud.google.com/flows/enableapi?apiid=lifescie
 
 **3.** [Google Cloud Storage JSON API](https://console.cloud.google.com/marketplace/product/google/storage-api.googleapis.com)
 
-![](/assets/images/2020/12/google_enable_apis.png)
+![](_images/google_enable_apis.png)
 
 
 ### Retrieve the Compute Engine Service account for your project
 
 Click **Go to credentials** or visit this [link](https://console.cloud.google.com/apis/credentials/wizard?api=lifesciences.googleapis.com)
 
-![](/assets/images/2020/12/google_api_enabled_confirmation.png)
+![](_images/google_api_enabled_confirmation.png)
 
 
 *i)* Select the **Cloud Life Sciences API** from the dropdown menu and select the radio button **Yes, I'm using one or both** to indicate we will use the Compute Engine API. The click **What credentials do I need?**
 
-![](/assets/images/2020/12/google_credential_options.png)
+![](_images/google_credential_options.png)
 
 
 *ii)* A second screen appears to say you do not need any further credentials. Click **Done**.
 
-![](/assets/images/2020/12/google_credentials_confirmation.png)
+![](_images/google_credentials_confirmation.png)
 
 
 You will be redirected to the **API & Services** page and the **Credentials** section. Note a **Compute Engine default service account** has been created. **Copy** the email address as you will need this to configure **Google Storage**.
@@ -70,32 +70,32 @@ You will be redirected to the **API & Services** page and the **Credentials** se
 
 Copy and click the **Email** of the service account.
 
-![](/assets/images/2020/12/google_service_account.png)
+![](_images/google_service_account.png)
 
 
 *i)* Below the page select **Add key** and **Create new key**.
 
-![](/assets/images/2020/12/google_service_account_create_key.png)
+![](_images/google_service_account_create_key.png)
 
 
 *ii)* Select **JSON** format and press **Create**.
 
-![](/assets/images/2020/12/google_service_account_create_key_json.png)
+![](_images/google_service_account_create_key_json.png)
 
 
 A JSON key will be downloaded to your computer. This is the credentials used by Tower and you will need it to configure the Tower compute environment. In the **Service accounts** page, you can see your key is now active and you can manage it from here.
 
-![](/assets/images/2020/12/google_service_account_create_key_manage.png)
+![](_images/google_service_account_create_key_manage.png)
 
 
 ### Create a Google Storage bucket.
 
 In top left of the page, in the navigation menu (**≡**) click **Storage** and **Create Bucket**.
 
-![](/assets/images/2020/09/google_storage.png)
+![](_images/google_storage.png)
 
 
-![](/assets/images/2020/12/google_create_bucket.png)
+![](_images/google_create_bucket.png)
 
 
 ### Configure your Bucket
@@ -111,7 +111,7 @@ In top left of the page, in the navigation menu (**≡**) click **Storage** and 
 
 *iv)* Select **Uniform** as the **Access control**.
 
-![](/assets/images/2020/12/google_create_bucket_options.png)
+![](_images/google_create_bucket_options.png)
 
 !!! tip 
     The Google Cloud Life Sciences API is available in limited number of [locations](https://cloud.google.com/life-sciences/docs/concepts/locations), however, these locations are only used to store metadata about the pipeline operations. The location of the storage bucket and compute resources can be in any region.
@@ -120,7 +120,7 @@ In top left of the page, in the navigation menu (**≡**) click **Storage** and 
 
 *i)* In the **Storage** page on the **Browser** section click on the newly created storage.
 
-![](/assets/images/2020/12/google_storage_browser.png)
+![](_images/google_storage_browser.png)
 
 
 *ii)* Navigate to the **Permissions** tab and click on **+ Add**,
@@ -135,7 +135,7 @@ In top left of the page, in the navigation menu (**≡**) click **Storage** and 
 
 **Storage Object Creator**  
 
-![](/assets/images/2020/12/google_storage_roles.png)
+![](_images/google_storage_roles.png)
 
 
 !!! tip "Congratulations!" 
@@ -153,22 +153,22 @@ To create a new compute environment for Google Cloud in Tower follow these steps
 
 **1.** In the navigation bar on the upper right, choose your profile then choose **Compute environments**. Select **New Environment**.
 
-![](/assets/images/2020/09/aws_new_env.png)
+![](_images/aws_new_env.png)
 
 
 **2.** Enter a name for this environment. For example "Google Cloud Life Sciences (europe-west2)" and select **Google Life Sciences** as the target platform.
 
-![](/assets/images/2020/09/google_new_env.png)
+![](_images/google_new_env.png)
 
 
 **3.** Select the **+** sign to add new credentials. Name your credentials and copy & paste the contents from the Google JSON key. If you do not have a JSON key follow [this guide](#4-enable-the-google-life-sciences-api-the-compute-engine-api-and-the-google-cloud-storage-api).
 
-![](/assets/images/2020/09/google_tower_credentials.png)
+![](_images/google_tower_credentials.png)
 
 
 **4.** Select the [**Region** and **Zones**](https://cloud.google.com/compute/docs/regions-zones#available) where you'd like to deploy the workload. The **Google Storage** bucket created earlier should be accessible in the region.
 
-![](/assets/images/2021/03/gcp_regions_and_zones.png)
+![](_images/gcp_regions_and_zones.png)
 
 **5.** You can leave the **Location** empty and Google will run the Life Sciences API Service in the closest available location.
 
@@ -183,7 +183,7 @@ To create a new compute environment for Google Cloud in Tower follow these steps
 
 **9.** Select **Create** to finalise the creation of the compute environment.
 
-![](/assets/images/2021/03/google_tower_location.png)
+![](_images/google_tower_location.png)
 
 
 !!! tip "Congratulations!" 

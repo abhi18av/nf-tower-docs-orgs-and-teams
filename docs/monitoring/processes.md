@@ -8,7 +8,7 @@ In Nextflow, a **process** is the basic primitive to execute a block of code. Th
 
 In the example below, there are four tasks of the fastqc process.
 
-![](/assets/images/2020/10/monitoring_fastqc_processes.png)
+![](_images/monitoring_fastqc_processes.png)
 
 By selecting a process, the [**Tasks table**](/docs/monitoring/tasks/) is filtered below.
 

@@ -26,15 +26,15 @@ Tower API requires an authentication token to be specified in each API request u
 Your personal authorization token can be found in your settings, at the top-right corner of the page under the 
 [Your tokens](https://tower.nf/tokens) section.
 
-![](/assets/images/2020/11/your_tokens.png)
+![](_images/your_tokens.png)
 
 To create a new access token, just provide a name for the token. This will help to identify it later.
 
-![](/assets/images/2020/11/token_form.png)
+![](_images/token_form.png)
 
 Once created, the token can only be seen once, when it is initially created. It is important you keep this token at a safe place.
 
-![](/assets/images/2020/11/personal_access_token.png)
+![](_images/personal_access_token.png)
 
 Once created, use the token to authenticate via cURL, Postman, or within your code against the Nextflow API to perform the necessary calls for completing your tasks. 
 Please remember that, as any other Bearer token, this token must be included in every API call.

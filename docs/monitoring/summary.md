@@ -23,7 +23,7 @@ The General summary displays information on the environment and the job being ex
 !!! tip 
     Hover over with the mouse to get full details on the compute environment.
 
-![](/assets/images/2020/10/monitoring_general.png)
+![](_images/monitoring_general.png)
 
 
 ## Task status
@@ -32,4 +32,4 @@ The **Task status** section shows in real time the statuses of your workflow tas
 
 The exact meaning of each status is dependant on the execution platform. 
 
-![](/assets/images/2020/10/monitoring_status.png)
+![](_images/monitoring_status.png)

@@ -6,8 +6,7 @@ description: 'Nextflow Tower is a full-stack application for the development, de
 
 Tower is a full-stack application for [Nextflow](https://www.nextflow.io/) data analysis pipelines. It brings monitoring, logging & observability, to your distributed workflows and simplifies the deployment of workflows on any cloud, cluster or laptop.
 
-![](/assets/images/2020/11/overview_image.png)
-
+![](_images/overview_image.png)
 
 The execution launchpad allows users to run pipelines with ease while the flexible API provides programmatic integration to meet your organization's exacting needs.
 

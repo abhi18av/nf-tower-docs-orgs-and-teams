@@ -1,4 +1,57 @@
 site_name: 'Nextflow Tower'
+site_author: Seqera Labs
+repo_name: nf-tower-docs
+repo_url: https://github.com/seqeralabs/nf-tower-docs
+edit_uri: https://github.com/seqeralabs/nf-tower-docs
+
+
+# plugins:
+#   - git-revision-date
+#   - git-revision-date-localized:
+#       fallback_to_build_date: true
+
+theme:
+  language: en
+  name: material
+  custom_dir: overrides
+  palette:
+    scheme: default
+    primary: white
+  favicon: assets/favicons/favicon.ico
+  logo: assets/logos/nf-tower-icon-black.svg
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky #insiders-edition
+    - navigation.top
+    - search.suggest
+    - search.highlight
+
+markdown_extensions:
+    - toc:
+        permalink: "#"
+    - admonition
+    - pymdownx.superfences
+    - pymdownx.highlight:
+        linenums: true
+
+
+extra:
+  generator: false
+  homepage: /
+  social:
+    - icon: fontawesome/solid/paper-plane
+      link: mailto:support@seqera.io
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/seqeralabs
+    - icon: fontawesome/brands/github
+      link: https://github.com/seqeralabs
+  version:
+    provider: mike
+    default: stable
+
+
 nav:
     - 'Getting Started':
       - 'Usage': 'getting-started/usage.md'
@@ -41,58 +94,5 @@ nav:
       - 'Endpoints': 'api/endpoints.md'
       - 'OpenAPI schema': 'api/openapi.md'
 
-# plugins:
-#   - git-revision-date
-#   - git-revision-date-localized:
-#       fallback_to_build_date: true
-
-theme:
-  language: en
-  name: material
-  custom_dir: overrides
-  palette:
-    scheme: default
-    primary: white
-  favicon: assets/favicons/favicon.ico
-  logo: assets/logos/nf-tower-icon-black.svg
-  features:
-    - navigation.instant
-    - navigation.tracking
-    - navigation.tabs
-    - navigation.tabs.sticky #insiders-edition
-    - navigation.top
-    - search.suggest
-    - search.highlight
-
-google_analytics:
-  - UA-XXXXXXXX-X
-  - auto
-
-extra:
-  version:
-    provider: mike
-
-markdown_extensions:
-    - toc:
-        permalink: "#"
-    - admonition
-    - pymdownx.superfences
-    - pymdownx.highlight:
-        linenums: true
-
 copyright: Copyright &copy; 2021 Seqera Labs S.L.
 
-extra:
-  generator: false
-  homepage: /
-  social:
-    - icon: fontawesome/solid/paper-plane
-      link: mailto:support@seqera.io
-    - icon: fontawesome/brands/twitter
-      link: https://twitter.com/seqeralabs
-    - icon: fontawesome/brands/github
-      link: https://github.com/seqeralabs
-
-edit_uri: https://github.com/seqeralabs/nf-tower-docs
-repo_name: nf-tower-docs
-repo_url: https://github.com/seqeralabs/nf-tower-docs

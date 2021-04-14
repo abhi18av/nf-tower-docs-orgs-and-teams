@@ -14,7 +14,7 @@ To launch a pipeline:
 
 **1.** Select the **Launch** button in the navigation bar.
 
-![](/assets/images/2020/10/launch_button.png)
+![](_images/launch_button.png)
 
 The **Launch Pipeline** dialog will appear.
 
@@ -22,7 +22,7 @@ The **Launch Pipeline** dialog will appear.
 
 *The users primary compute environment is selected by default.*
 
-![](/assets/images/2020/10/launch_RNASeq.png)
+![](_images/launch_RNASeq.png)
 
 
 **3.** Enter the repository of the **Pipeline to launch**.  

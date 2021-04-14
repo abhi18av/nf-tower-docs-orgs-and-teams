@@ -26,19 +26,19 @@ Create an account and login into Tower.
 
   You can access your tokens from the The *Settings* drop-down menu or directly from this [link](https://tower.nf/tokens):
 
-![](/assets/images/2021/01/usage_create_token.png)
+![](_images/usage_create_token.png)
 
 
 **2. Name your token**
 
-![](/assets/images/2021/01/usage_name_token.png)
+![](_images/usage_name_token.png)
 
 
 **3. Save your token safely**
 
   Copy and keep your new token in a safe place.
 
-![](/assets/images/2021/01/usage_token.png)
+![](_images/usage_token.png)
 
 
 **4. Export your token**

@@ -20,11 +20,11 @@ the steps in the [Cluster preparation](https://github.com/seqeralabs/nf-tower-k8
 
 **1.** In the navigation bar on the upper right, select your account profile, then choose **Compute environments** and select **New Environment**.
 
-![](/assets/images/2020/09/aws_new_env.png) 
+![](_images/aws_new_env.png) 
 
 **2.** Provide a name for this environment. For example, *Amazon EKS (us-east-1)* and select **Amazon EKS** as the target platform.
 
-![](/assets/images/2020/12/eks_new_env.png) 
+![](_images/eks_new_env.png) 
 
 **3.** Select your AWS credentials or create new ones. The credentials are needed to identify the user that will access the EKS cluster.
 
@@ -54,7 +54,7 @@ This should reference a Kubernetes persistence volume with `ReadWriteMany` capab
 
 These options allow for the fine-tuning of the Tower configuration for the EKS cluster.
 
-![](/assets/images/2020/12/advanced_options.png) 
+![](_images/advanced_options.png) 
 
 The following parameters are available:
 

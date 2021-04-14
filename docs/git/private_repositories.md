@@ -6,11 +6,11 @@ description: 'Managing and connecting to Nextflow workflows to private Git repos
 
 Access to private Git repositories can be managed from the Credentials section, accessible on the right top menu, under **Manage credentials**.
 
-![](/assets/images/2020/10/git_manage_credentials.png)
+![](_images/git_manage_credentials.png)
 
 Tower provides support to connect to private repositories from the popular Git hosting platforms GitHub, GitLab, and BitBucket.
 
-![](/assets/images/2020/10/git_platforms.png)
+![](_images/git_platforms.png)
 
 
 !!! note 
@@ -29,7 +29,7 @@ To connect a private GitLab repository you need to enter a **Name** for the cred
 
 A GitLab API access token that can be found in your [GitLab account page](https://docs.gitlab.com/ee/api/personal_access_tokens.html). Make sure to select the `api`, `read_api`, and  `read_repository` options.
 
-![](/assets/images/2020/10/git_gitlab_access_token.png)
+![](_images/git_gitlab_access_token.png)
 
 
 ## Bitbucket

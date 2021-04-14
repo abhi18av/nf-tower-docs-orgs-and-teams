@@ -25,13 +25,13 @@ The following instructions are for a **generic Kubernetes** distribution. If you
 **1.** In the navigation bar on the upper right, choose your account name then choose
 *Compute environments*. Click on the *New Environment* button.
 
-![](/assets/images/2020/09/aws_new_env.png)
+![](_images/aws_new_env.png)
 
 
 **2.** Enter a name to identify it (e.g. *My K8s cluster*) and select **Kubernetes** as the target
 platform.
 
-![](/assets/images/2020/12/k8s_new_env.png)
+![](_images/k8s_new_env.png)
 
 
 **3.** Select an existing Kubernetes credentials or click the **+** button to create a new one.
@@ -40,8 +40,7 @@ platform.
 
 **5.** Enter the Kubernetes **Service account token** and then click **Create**
 
-![](/assets/images/2020/12/k8s_credentials.png)
-<br>
+![](_images/k8s_credentials.png)
 
 
 !!! tip 
@@ -85,7 +84,7 @@ Check the [cluster preparation](https://github.com/seqeralabs/nf-tower-k8s/blob/
 These options allow the fine-tuning of the Tower configuration for the Kubernetes cluster.
 
 
-![](/assets/images/2020/12/advanced_options.png)
+![](_images/advanced_options.png)
 
 The following parameters are available:
 

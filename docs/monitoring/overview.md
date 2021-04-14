@@ -10,7 +10,7 @@ Jobs that have been submitted with Tower can be monitored wherever you have an i
 
 The **navigation bar** contains all previous jobs executions. Each new or resumed job will be given a random name e.g: `grave_williams`.
 
-![](/assets/images/2020/10/monitoring_overview.png)
+![](_images/monitoring_overview.png)
 
 
 In the left bar:
@@ -29,5 +29,5 @@ The search box enables searching for runs and pipelines by name.
 
 Use asterisks `✽` before and after keyword to filter results.
 
-![](/assets/images/2020/10/monitoring_search.png)
+![](_images/monitoring_search.png)
 

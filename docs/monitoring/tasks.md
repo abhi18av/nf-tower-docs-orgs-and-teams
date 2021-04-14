@@ -12,17 +12,17 @@ You can use the `Search` bar to filter tasks by process name, tag, hash, status,
 
 Selecting a status in **status** section filters the task table.  E.g. clicking in the _CACHED_ card in the **status** column.
 
-![](/assets/images/2020/10/monitoring_cached.png)
+![](_images/monitoring_cached.png)
 
 
 Selecting a `process` in the **Processes** section above will filter all tasks for that specific process.
 
-![](/assets/images/2020/10/monitoring_star.png)
+![](_images/monitoring_star.png)
 
 
 Selecting a task in the task table provides specific information about the task in the **Task details** dialog. 
 
-![](/assets/images/2020/10/monitoring_task_command.png)
+![](_images/monitoring_task_command.png)
 
 
 The task details dialog has the task information tab and the task **Execution log** tab.
@@ -39,7 +39,7 @@ The task information tab contains the process name and task tag in the title. Th
  - Resources requested
  - Resources used
 
-![](/assets/images/2020/10/monitoring_task_resources.png)
+![](_images/monitoring_task_resources.png)
 
 
 ### Execution log
@@ -48,7 +48,7 @@ The **Execution log** provides a realtime log of the individual task of a Nextfl
 
 This can be very helpful for troubleshooting. It is possible to download the log files including `stdout` and `stderr` from your compute environment.
 
-![](/assets/images/2020/10/monitoring_task_exec_log.png)
+![](_images/monitoring_task_exec_log.png)
 
 ## Resource metrics
 
@@ -56,7 +56,7 @@ This section displays plots with CPU, memory, task duration and I/O usage, group
 
 These metrics can be used to profile an execution to ensure that the correct amount or resources are being requested for each process.
 
-![](/assets/images/2020/10/monitoring_metrics.png)
+![](_images/monitoring_metrics.png)
 
 
 !!! tip 

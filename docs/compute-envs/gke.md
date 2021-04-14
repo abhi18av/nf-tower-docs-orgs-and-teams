@@ -21,13 +21,13 @@ the steps in the [Cluster preparation](https://github.com/seqeralabs/nf-tower-k8
 
 **1.** In the navigation bar on the upper right, choose your account name then choose **Compute environments** and select **New Environment**.
 
-![](/assets/images/2020/09/aws_new_env.png) 
+![](_images/aws_new_env.png) 
 
 </br>
 
 **2.** Enter the **Name** for this environment. For example, *My GKE* and select **Google GKE** as the target platform.
 
-![](/assets/images/2020/12/gke_new_env.png)
+![](_images/gke_new_env.png)
 
 **3.** Select your Google Cloud credentials. The credentials are needed to identify the user that will access the GKE cluster.
 
@@ -39,7 +39,7 @@ the steps in the [Cluster preparation](https://github.com/seqeralabs/nf-tower-k8
     Tower self-completion only shows regions. You should manually edit this field if your GKE cluster was created zonally rather than regionally.
     <br>
 
-![](/assets/images/2020/12/gke_regions.png)
+![](_images/gke_regions.png)
 
 **5.** The field **Cluster name** lists all GKE clusters available in the selected location. Choose the one you want to use to deploy the Nextflow execution.
 

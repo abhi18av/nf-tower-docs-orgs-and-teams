@@ -30,7 +30,7 @@ Nextflow Tower Enterprise includes configuration manifests for the deployment in
 
 This diagram shows the system architecture for the reference deployment on AWS.
 
-![](/assets/images/2020/10/installation_reference_architecture.png)
+![](_images/installation_reference_architecture.png)
 
 ## Tower Modules
 

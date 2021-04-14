@@ -6,12 +6,12 @@ description: 'Guide to re-launching Nextflow pipelines Tower'
 
 Re-launching pipelines is a great way to quickly troubleshoot or make use of Nextflow's resume functionality and re-launch the same pipeline with different parameters.
 
-![](/assets/images/2020/10/launch_relaunch.png)
+![](_images/launch_relaunch.png)
 
 
 The Resume option is selected by default when re-launching a new pipeline. In short, The `-resume` option allows for the continuation of a workflow execution.
 
-![](/assets/images/2020/10/launch_resume.png)
+![](_images/launch_resume.png)
 
 
 !!! note "Nextflow resume" 

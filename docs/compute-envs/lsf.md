@@ -26,12 +26,12 @@ Follow these steps to create a new compute environment for LSF:
 
 **1.** In the navigation bar on the upper right, choose your account name then choose "Compute environments". Click on the *New Environment* button.
 
-![](/assets/images/2021/01/new_env.png)
+![](_images/new_env.png)
 
 
 **2.** Enter a descriptive name (e.g. *LSF On-premise*) and select **IBM LSF** as the target platform.
 
-![](/assets/images/2020/10/lsf_new_env.png)
+![](_images/lsf_new_env.png)
 
 
 **3.** Select the **+** sign to add new SSH credentials.
@@ -40,7 +40,7 @@ Follow these steps to create a new compute environment for LSF:
 
 **5** Enter your **SSH private key** and associated **Passphrase** if required then select **Create**.
 
-![](/assets/images/2020/10/lsf_tower_credentials.png)
+![](_images/lsf_tower_credentials.png)
 
 !!! tip 
     A passphrase for your SSH key may be optional depending on how it was created. See [here](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) for detailed instructions for how to create a key.
@@ -57,7 +57,7 @@ Follow these steps to create a new compute environment for LSF:
 **10.** The **Compute queue name** which is the name of queue, on the cluster, to which pipeline jobs are submitted.
 
 
-![](/assets/images/2020/10/lsf_tower_options.png)
+![](_images/lsf_tower_options.png)
 
 !!! tip 
     The Compute queue can be overridden as a configuration option in the Nextflow pipeline configuration. See Nextflow [docs](https://www.nextflow.io/docs/latest/process.html#queue) for more details.
@@ -66,16 +66,16 @@ Follow these steps to create a new compute environment for LSF:
 
 **11.** Optionally, you can customize **Nextflow queue size** field to control the number of Nextflow jobs submitted to the queue at the same time.
 
-![](/assets/images/2021/03/grid_nextflow_queue_size.png)
+![](_images/grid_nextflow_queue_size.png)
 
 **12.** Optionally, you can also use the **Unit for memory limits** section to customize the memory limits of your LSF cluster.
 
-![](/assets/images/2021/03/lsf_memory_limits.png)
+![](_images/lsf_memory_limits.png)
 
 
 **13.** Optionally, you can use the **Head job submit options** to specify options to the head job.
 
-![](/assets/images/2021/03/grid_head_job_options.png)
+![](_images/grid_head_job_options.png)
 
 **14.** Select **Create** to finalize the creation of the compute environment.
 

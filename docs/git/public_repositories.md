@@ -7,7 +7,7 @@ Nextflow data pipelines can pulled remotely from either a public or private Git-
 
 Launching a publicly hosted Git pipeline simply requires adding the Git repo URL in the **pipeline to launch** field. 
 
-![](/assets/images/2020/10/git_public_repo.png)
+![](_images/git_public_repo.png)
 
 Note the revision and version numbers for a given repository are automatically pulled using the Git API. By default, the default `main/master` branch will be executed.
 

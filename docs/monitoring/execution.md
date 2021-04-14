@@ -24,6 +24,5 @@ This top section is composed of 4 tabs containing details about the Nextflow exe
 
 **4.** The **Execution log** tab is updated in real time with the logs from the main Nextflow process.
 
-{{% pretty_screenshot img="/uploads/2020/10/monitoring_exec_log.png" %}}
+![](_images/monitoring_exec_log.png)
 
-<br>
