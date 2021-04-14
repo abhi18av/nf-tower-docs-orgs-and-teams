@@ -1,0 +1,1333 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Step-by-step instructions to setup Google Cloud Life Sciences for Nextflow Tower.">
+      
+      
+      
+        <meta name="author" content="Seqera Labs">
+      
+      
+      <link rel="icon" href="../../_favicons/favicon.ico">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.0">
+    
+    
+      
+        <title>Google Cloud Life Sciences - Nextflow Tower</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.33e2939f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ef6f36e2.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#ffffff">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#cloud-life-sciences" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="/" title="Nextflow Tower" class="md-header__button md-logo" aria-label="Nextflow Tower" data-md-component="logo">
+      
+  <img src="../../_logos/nf-tower-icon-black.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Nextflow Tower
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Google Cloud Life Sciences
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/seqeralabs/nf-tower-docs/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    nf-tower-docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../getting-started/usage/" class="md-tabs__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../installation/system-deployment/" class="md-tabs__link">
+        Installation
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../overview/" class="md-tabs__link md-tabs__link--active">
+        Compute Environments
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../launch/overview/" class="md-tabs__link">
+        Launching Pipelines
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../monitoring/overview/" class="md-tabs__link">
+        Monitoring Pipelines
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../git/overview/" class="md-tabs__link">
+        Git Integration
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../pipeline-actions/pipeline-actions/" class="md-tabs__link">
+        Automation
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../api/overview/" class="md-tabs__link">
+        API
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="/" title="Nextflow Tower" class="md-nav__button md-logo" aria-label="Nextflow Tower" data-md-component="logo">
+      
+  <img src="../../_logos/nf-tower-icon-black.svg" alt="logo">
+
+    </a>
+    Nextflow Tower
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/seqeralabs/nf-tower-docs/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    nf-tower-docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+      
+      <label class="md-nav__link" for="__nav_1">
+        Getting Started
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Getting Started" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Getting Started
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/usage/" class="md-nav__link">
+        Usage
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/deployments/" class="md-nav__link">
+        Deployments
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        Installation
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Installation" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Installation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/system-deployment/" class="md-nav__link">
+        System deployment
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      <label class="md-nav__link" for="__nav_3">
+        Compute Environments
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Compute Environments" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Compute Environments
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aws-batch/" class="md-nav__link">
+        AWS Batch
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../azure-batch/" class="md-nav__link">
+        Azure Batch
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Google Cloud Life Sciences
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Google Cloud Life Sciences
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-of-google-cloud" class="md-nav__link">
+    Configuration of Google Cloud
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration of Google Cloud">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-a-new-google-cloud-project-or-select-an-existing-one" class="md-nav__link">
+    Create a new Google Cloud project or select an existing one.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#make-sure-billing-is-enabled-for-the-project" class="md-nav__link">
+    Make sure Billing is enabled for the project.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enable-the-google-life-sciences-the-compute-engine-and-the-google-cloud-storage-apis" class="md-nav__link">
+    Enable the Google Life Sciences, the Compute Engine , and the Google Cloud Storage APIs.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retrieve-the-compute-engine-service-account-for-your-project" class="md-nav__link">
+    Retrieve the Compute Engine Service account for your project
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-new-key-for-the-compute-service-account" class="md-nav__link">
+    Create a new key for the compute service account
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-google-storage-bucket" class="md-nav__link">
+    Create a Google Storage bucket.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-your-bucket" class="md-nav__link">
+    Configure your Bucket
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-bucket-permissions" class="md-nav__link">
+    Set Bucket permissions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tower-configuration" class="md-nav__link">
+    Tower configuration
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../altair-pbs-pro/" class="md-nav__link">
+        Altair PBS Pro
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../grid-engine/" class="md-nav__link">
+        Grid Engine
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsf/" class="md-nav__link">
+        IBM LSF
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../slurm/" class="md-nav__link">
+        Slurm
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../k8s/" class="md-nav__link">
+        Kubernetes
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../eks/" class="md-nav__link">
+        Amazon EKS
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gke/" class="md-nav__link">
+        Google GKE
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
+        Launching Pipelines
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Launching Pipelines" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Launching Pipelines
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../launch/overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../launch/advanced/" class="md-nav__link">
+        Advanced
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../launch/relaunch/" class="md-nav__link">
+        Re-launch
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../launch/notifications/" class="md-nav__link">
+        Notifiications
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
+        Monitoring Pipelines
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Monitoring Pipelines" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Monitoring Pipelines
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../monitoring/overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../monitoring/execution/" class="md-nav__link">
+        Execution details & logs
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../monitoring/summary/" class="md-nav__link">
+        Summary & status
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../monitoring/processes/" class="md-nav__link">
+        Processes
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../monitoring/aggregate_stats/" class="md-nav__link">
+        Aggregate stats & load
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../monitoring/tasks/" class="md-nav__link">
+        Tasks & metrics
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../monitoring/sharing/" class="md-nav__link">
+        Sharing pipelines
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      <label class="md-nav__link" for="__nav_6">
+        Git Integration
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Git Integration" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Git Integration
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../git/overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../git/private_repositories/" class="md-nav__link">
+        Private Git repositories
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../git/public_repositories/" class="md-nav__link">
+        Public Git repositories
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      <label class="md-nav__link" for="__nav_7">
+        Automation
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Automation" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Automation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pipeline-actions/pipeline-actions/" class="md-nav__link">
+        Pipeline Actions
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      <label class="md-nav__link" for="__nav_8">
+        API
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="API" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          API
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/endpoints/" class="md-nav__link">
+        Endpoints
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/openapi/" class="md-nav__link">
+        OpenAPI schema
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-of-google-cloud" class="md-nav__link">
+    Configuration of Google Cloud
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration of Google Cloud">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-a-new-google-cloud-project-or-select-an-existing-one" class="md-nav__link">
+    Create a new Google Cloud project or select an existing one.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#make-sure-billing-is-enabled-for-the-project" class="md-nav__link">
+    Make sure Billing is enabled for the project.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enable-the-google-life-sciences-the-compute-engine-and-the-google-cloud-storage-apis" class="md-nav__link">
+    Enable the Google Life Sciences, the Compute Engine , and the Google Cloud Storage APIs.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retrieve-the-compute-engine-service-account-for-your-project" class="md-nav__link">
+    Retrieve the Compute Engine Service account for your project
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-new-key-for-the-compute-service-account" class="md-nav__link">
+    Create a new key for the compute service account
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-google-storage-bucket" class="md-nav__link">
+    Create a Google Storage bucket.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-your-bucket" class="md-nav__link">
+    Configure your Bucket
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-bucket-permissions" class="md-nav__link">
+    Set Bucket permissions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tower-configuration" class="md-nav__link">
+    Tower configuration
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/seqeralabs/nf-tower-docs/compute-envs/google-cloud.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <div class="admonition tip">
+<p class="admonition-title">Requirements</p>
+<p>This guide assumes you have an existing <a href="https://console.cloud.google.com">Google Cloud Account</a>. Sign-up for a free account <a href="https://cloud.google.com/">here</a>.</p>
+</div>
+<h1 id="cloud-life-sciences">Cloud Life Sciences<a class="headerlink" href="#cloud-life-sciences" title="Permanent link">#</a></h1>
+<p>Tower provides integration to Google Cloud via the <a href="https://cloud.google.com/life-sciences/docs/reference/rest">Cloud Life Sciences API</a>.</p>
+<p>The guide is split into two parts. We will begin with configuring your Google Cloud account and enabling the Google Life Sciences API. It will then guide you through creating a new Google Cloud compute environment in Tower.</p>
+<h2 id="configuration-of-google-cloud">Configuration of Google Cloud<a class="headerlink" href="#configuration-of-google-cloud" title="Permanent link">#</a></h2>
+<h3 id="create-a-new-google-cloud-project-or-select-an-existing-one">Create a new Google Cloud project or select an existing one.<a class="headerlink" href="#create-a-new-google-cloud-project-or-select-an-existing-one" title="Permanent link">#</a></h3>
+<p>Navigate to the <a href="https://console.cloud.google.com/projectselector2">Google Project Selector page</a> and select an existing project or click <strong>CREATE PROJECT</strong>.</p>
+<p><img alt="" src="../_images/google_create_project.png" /></p>
+<p>Enter a name for your new project e.g: "tower-nf", if you are part of an organization the location will be set by default to match your organization parameters.</p>
+<p><img alt="" src="../_images/google_new_project_name.png" /></p>
+<h3 id="make-sure-billing-is-enabled-for-the-project">Make sure Billing is enabled for the project.<a class="headerlink" href="#make-sure-billing-is-enabled-for-the-project" title="Permanent link">#</a></h3>
+<p>At the top left of the page, in the navigation menu (<strong>≡</strong>) click <strong>Billing</strong>. You can follow the enable billing instructions <a href="https://cloud.google.com/billing/docs/how-to/modify-project">here</a>.</p>
+<p><img alt="" src="../_images/google_enable_billing.png" /></p>
+<h3 id="enable-the-google-life-sciences-the-compute-engine-and-the-google-cloud-storage-apis">Enable the Google Life Sciences, the Compute Engine , and the Google Cloud Storage APIs.<a class="headerlink" href="#enable-the-google-life-sciences-the-compute-engine-and-the-google-cloud-storage-apis" title="Permanent link">#</a></h3>
+<p>Open this <a href="https://console.cloud.google.com/flows/enableapi?apiid=lifesciences.googleapis.com%2Ccompute.googleapis.com%2Cstorage-api.googleapis.com">link</a>, to enable all <strong>three APIs</strong> on for your project. Select your project from the drop down menu and click <strong>Enable</strong>. Alternatively enable these APIs manually by selecting the project on the top bar and visiting the API pages:</p>
+<p><strong>1.</strong> <a href="https://console.cloud.google.com/marketplace/product/google/lifesciences.googleapis.com">Google Cloud Life Sciences API</a></p>
+<p><strong>2.</strong> <a href="https://console.cloud.google.com/marketplace/product/google/compute.googleapis.com">Compute Engine API</a></p>
+<p><strong>3.</strong> <a href="https://console.cloud.google.com/marketplace/product/google/storage-api.googleapis.com">Google Cloud Storage JSON API</a></p>
+<p><img alt="" src="../_images/google_enable_apis.png" /></p>
+<h3 id="retrieve-the-compute-engine-service-account-for-your-project">Retrieve the Compute Engine Service account for your project<a class="headerlink" href="#retrieve-the-compute-engine-service-account-for-your-project" title="Permanent link">#</a></h3>
+<p>Click <strong>Go to credentials</strong> or visit this <a href="https://console.cloud.google.com/apis/credentials/wizard?api=lifesciences.googleapis.com">link</a></p>
+<p><img alt="" src="../_images/google_api_enabled_confirmation.png" /></p>
+<p><em>i)</em> Select the <strong>Cloud Life Sciences API</strong> from the dropdown menu and select the radio button <strong>Yes, I'm using one or both</strong> to indicate we will use the Compute Engine API. The click <strong>What credentials do I need?</strong></p>
+<p><img alt="" src="../_images/google_credential_options.png" /></p>
+<p><em>ii)</em> A second screen appears to say you do not need any further credentials. Click <strong>Done</strong>.</p>
+<p><img alt="" src="../_images/google_credentials_confirmation.png" /></p>
+<p>You will be redirected to the <strong>API &amp; Services</strong> page and the <strong>Credentials</strong> section. Note a <strong>Compute Engine default service account</strong> has been created. <strong>Copy</strong> the email address as you will need this to configure <strong>Google Storage</strong>.</p>
+<h3 id="create-a-new-key-for-the-compute-service-account">Create a new key for the compute service account<a class="headerlink" href="#create-a-new-key-for-the-compute-service-account" title="Permanent link">#</a></h3>
+<p>Copy and click the <strong>Email</strong> of the service account.</p>
+<p><img alt="" src="../_images/google_service_account.png" /></p>
+<p><em>i)</em> Below the page select <strong>Add key</strong> and <strong>Create new key</strong>.</p>
+<p><img alt="" src="../_images/google_service_account_create_key.png" /></p>
+<p><em>ii)</em> Select <strong>JSON</strong> format and press <strong>Create</strong>.</p>
+<p><img alt="" src="../_images/google_service_account_create_key_json.png" /></p>
+<p>A JSON key will be downloaded to your computer. This is the credentials used by Tower and you will need it to configure the Tower compute environment. In the <strong>Service accounts</strong> page, you can see your key is now active and you can manage it from here.</p>
+<p><img alt="" src="../_images/google_service_account_create_key_manage.png" /></p>
+<h3 id="create-a-google-storage-bucket">Create a Google Storage bucket.<a class="headerlink" href="#create-a-google-storage-bucket" title="Permanent link">#</a></h3>
+<p>In top left of the page, in the navigation menu (<strong>≡</strong>) click <strong>Storage</strong> and <strong>Create Bucket</strong>.</p>
+<p><img alt="" src="../_images/google_storage.png" /></p>
+<p><img alt="" src="../_images/google_create_bucket.png" /></p>
+<h3 id="configure-your-bucket">Configure your Bucket<a class="headerlink" href="#configure-your-bucket" title="Permanent link">#</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">Bucket Naming - No underscores _ !</p>
+<p>Do not use underscores in your bucket name and use hyphens instead.</p>
+</div>
+<p><em>i)</em> Name your bucket, you will need this name to configure the Tower environment.</p>
+<p><em>ii)</em> Select <strong>Region</strong> as the <strong>Location type</strong> and the <strong>Location</strong> for your bucket. You will need the <strong>Location</strong> to configure the Tower environment.</p>
+<p><em>iii)</em> Select <strong>Standard</strong> as the <strong>default storage class</strong>.</p>
+<p><em>iv)</em> Select <strong>Uniform</strong> as the <strong>Access control</strong>.</p>
+<p><img alt="" src="../_images/google_create_bucket_options.png" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The Google Cloud Life Sciences API is available in limited number of <a href="https://cloud.google.com/life-sciences/docs/concepts/locations">locations</a>, however, these locations are only used to store metadata about the pipeline operations. The location of the storage bucket and compute resources can be in any region.</p>
+</div>
+<h3 id="set-bucket-permissions">Set Bucket permissions<a class="headerlink" href="#set-bucket-permissions" title="Permanent link">#</a></h3>
+<p><em>i)</em> In the <strong>Storage</strong> page on the <strong>Browser</strong> section click on the newly created storage.</p>
+<p><img alt="" src="../_images/google_storage_browser.png" /></p>
+<p><em>ii)</em> Navigate to the <strong>Permissions</strong> tab and click on <strong>+ Add</strong>,</p>
+<p><em>iii)</em> Copy-paste the service account email created above into the <code>new members box</code> and add the following roles:</p>
+<p><strong>Storage Admin</strong></p>
+<p><strong>Storage Legacy Bucket Owner</strong></p>
+<p><strong>Storage Legacy Object Owner</strong></p>
+<p><strong>Storage Object Creator</strong>  </p>
+<p><img alt="" src="../_images/google_storage_roles.png" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Congratulations!</p>
+<p>You have created a project, enabled the necessary Google APIs, created a bucket and a JSON file containing required credentials. You are now ready to set up a new compute environment in Tower.</p>
+</div>
+<h2 id="tower-configuration">Tower configuration<a class="headerlink" href="#tower-configuration" title="Permanent link">#</a></h2>
+<div class="admonition warning requirements">
+<p class="admonition-title">Warning</p>
+<p>The following guide to configure Tower assumes you have JSON keys for a configured Google Cloud account. You will also need the name and location of the <strong>Google storage</strong> bucket.</p>
+</div>
+<p>The <a href="#configuration-of-google-cloud">section above</a> shows how to configure Google Cloud.</p>
+<p>To create a new compute environment for Google Cloud in Tower follow these steps:</p>
+<p><strong>1.</strong> In the navigation bar on the upper right, choose your profile then choose <strong>Compute environments</strong>. Select <strong>New Environment</strong>.</p>
+<p><img alt="" src="../_images/aws_new_env.png" /></p>
+<p><strong>2.</strong> Enter a name for this environment. For example "Google Cloud Life Sciences (europe-west2)" and select <strong>Google Life Sciences</strong> as the target platform.</p>
+<p><img alt="" src="../_images/google_new_env.png" /></p>
+<p><strong>3.</strong> Select the <strong>+</strong> sign to add new credentials. Name your credentials and copy &amp; paste the contents from the Google JSON key. If you do not have a JSON key follow <a href="#4-enable-the-google-life-sciences-api-the-compute-engine-api-and-the-google-cloud-storage-api">this guide</a>.</p>
+<p><img alt="" src="../_images/google_tower_credentials.png" /></p>
+<p><strong>4.</strong> Select the <a href="https://cloud.google.com/compute/docs/regions-zones#available"><strong>Region</strong> and <strong>Zones</strong></a> where you'd like to deploy the workload. The <strong>Google Storage</strong> bucket created earlier should be accessible in the region.</p>
+<p><img alt="" src="../_images/gcp_regions_and_zones.png" /></p>
+<p><strong>5.</strong> You can leave the <strong>Location</strong> empty and Google will run the Life Sciences API Service in the closest available location.</p>
+<p><strong>6.</strong> Enter the bucket URL in the <strong>Pipeline work directory</strong> e.g. <em>gs://my-google-bucket-name</em>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>This is the name of your <strong>Google Storage bucket</strong> with the <code>gs://</code> prefix.</p>
+</div>
+<p><strong>7.</strong> You can also opt-in to execute the workflow on the <strong>Preemptible</strong> instances to save further cost.</p>
+<p><strong>8.</strong> Optionally, options such as <strong>Use Private Address</strong>, <strong>Boot disk size</strong>, <strong>Head Job CPUs</strong> and <strong>Head Job memory</strong> could be optimized as per the requirements of the workflow as well.</p>
+<p><strong>9.</strong> Select <strong>Create</strong> to finalise the creation of the compute environment.</p>
+<p><img alt="" src="../_images/google_tower_location.png" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Congratulations!</p>
+<p>Time to start launching pipelines in your cloud.</p>
+</div>
+<p>Jump to the documentation section for <a href="/docs/launch/overview/">Launching Pipelines</a>.</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+
+        <div class="md-footer-copyright__highlight">
+          Copyright &copy; 2021 Seqera Labs S.L.
+        </div>
+      </div>
+
+            <div class="md-footer-social">
+
+
+
+              <a href="mailto:support@seqera.io" target="_blank" rel="noopener" title="" class="md-footer-social__link">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M476 3.2 12.5 270.6c-18.1 10.4-15.8 35.6 2.2 43.2L121 358.4l287.3-253.2c5.5-4.9 13.3 2.6 8.6 8.3L176 407v80.5c0 23.6 28.5 32.9 42.5 15.8L282 426l124.6 52.2c14.2 6 30.4-2.9 33-18.2l72-432C515 7.8 493.3-6.8 476 3.2z"/></svg>
+              </a>
+
+
+
+
+
+
+              <a href="https://twitter.com/seqeralabs" target="_blank" rel="noopener" title="twitter.com" class="md-footer-social__link">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+              </a>
+
+
+
+
+
+
+              <a href="https://github.com/seqeralabs" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+              </a>
+
+            </div>
+
+
+    </div>
+
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "search.suggest", "search.highlight"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.fe42c31b.min.js", "version": {"default": "stable", "provider": "mike"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d892486b.min.js"></script>
+      
+    
+  </body>
+</html>
