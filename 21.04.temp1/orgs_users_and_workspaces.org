@@ -1,0 +1,25 @@
+#+TITLE: Orgs, Teams And Workspaces
+
+   **TIP**: This feature is only available after version ...
+
+   Nextflow Tower aims to simplify the execution of Nextflow workflows by providing a centralized interface to manage the credentials, compute environments as well as to curate a list of ready to launch workflows. Use of orgs, teams and workspaces
+
+
+* Launchpad
+ Launchpad offers a streamlined solution for launching and managing the associated compute environments, credentials. Using the new Launchpad, it is possible to create a curated set of workflows (including variations of the same workflow) which are ready to be executed on the linked compute environments while allowing you to customize the workflow level parameters and you're good to go launch the workflow.
+
+ It is worth noting that the associated compute environment and storage settings could still be configured using the Launch Settings option, giving users the flexibility to fine-tune the underlying resource as well.
+
+* Orgs
+Tower allows creation of multiple organizations with associated credentials, compute environments as well as workspaces. In addition to this, organizations provides a way to manage users within these workspaces as well as at an org level via Teams.
+
+This allows any organization to essentially customize and organize the usage of resources while maintaining an access control layers for users associated with a workspace.
+
+* Workspaces
+  By default, each user has a unique workspace where they can interact with the Nextflow workflows. However, as mentioned in the Organizations section, it is also possible to create an organization with multiple workspaces and associate these workspaces with teams of users, while providing a fine-grained access control model for each of the users.
+* Users
+Any user who has signed-up for a Tower instance (public or private) using one of the available authentication methods can be added or removed from a particular organization or a workspace and could be allocated a specific access role within that workspace. TIP: refer teams for managing groups of users.
+
+* Teams
+Teams provides a way for the organizations to collect various users and participants together into groups such as `workflow_developers` or `workflow_users` and apply access control to all the users within this group as a whole.
+
