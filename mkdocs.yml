@@ -14,6 +14,10 @@ plugins:
 #       fallback_to_build_date: true
 
 
+google_analytics:
+  - UA-364526-12
+  - auto
+
 theme:
   language: en
   name: material
