@@ -7,7 +7,7 @@ description: 'Step-by-step instructions to set up SLURM for Nextflow Tower.'
 
 [Slurm Workload Manager](https://slurm.schedmd.com/overview.html) is an open source, fault-tolerant, and highly scalable cluster management and job scheduling system for large and small Linux clusters.
 
-!!! warning "Support for remote batch schedulers is an incubating feature" 
+!!! note 
     This feature enables Tower to connect to remote cloud or on-premise clusters and launch pipelines.
 
 ## Requirements
@@ -24,19 +24,15 @@ To launch pipelines into a Slurm cluster from Tower, the following requirements 
 
 Follow these steps to create a new compute environment for Slurm:
 
-**1.** In the navigation bar on the upper right, choose your account name then choose "Compute environments". Click on the *New Environment* button.
-
-![](_images/new_env.png)
+**1.** In a workspace choose "Compute environments" and then, click on the **New Environment** button.
 
 **2.** Enter a descriptive name (e.g. *Slurm On-premise*) and select **Slurm Workload Manager** as the target platform.
 
-![](_images/slurm_new_env.png)
-
 **3.** Select the **+** sign to add new SSH credentials.
 
-**4.** Enter a name for the credentials
+**4.** Enter a name for the credentials.
 
-**5.** Enter your **SSH private key** and associated **Passphrase** if required then click **Create**.
+**5.** Enter your **SSH private key** and associated **Passphrase**, if required then click **Create**.
 
 ![](_images/slurm_tower_credentials.png)
 
@@ -54,8 +50,6 @@ Follow these steps to create a new compute environment for Slurm:
 
 **10.** The **Compute queue name** which is the name of queue, on the cluster, to which pipeline jobs are submitted.
 
-![](_images/slurm_tower_options.png)
-
 !!! tip 
     The Compute queue can be overridden as a configuration option in the Nextflow pipeline configuration. See Nextflow [docs](https://www.nextflow.io/docs/latest/process.html#queue) for more details.
 
@@ -64,13 +58,7 @@ Follow these steps to create a new compute environment for Slurm:
 
 **11.** Optionally, you can customize **Nextflow queue size** field to control the number of Nextflow jobs submitted to the queue at the same time.
 
-![](_images/grid_nextflow_queue_size.png)
-
-
 **12.** Optionally, you can use the **Head job submit options** to  specify options to the head job.
-
-![](_images/grid_head_job_options.png)
-
 
 **13.** Select **Create** to finalize the creation of the compute environment.
 
