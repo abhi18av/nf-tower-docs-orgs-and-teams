@@ -18,9 +18,7 @@ the steps in the [Cluster preparation](https://github.com/seqeralabs/nf-tower-k8
 
 ## Compute environment setup  
 
-**1.** In the navigation bar on the upper right, select your account profile, then choose **Compute environments** and select **New Environment**.
-
-![](_images/aws_new_env.png) 
+**1.** In a workspace choose "Compute environments" and then, click on the **New Environment** button.
 
 **2.** Provide a name for this environment. For example, *Amazon EKS (us-east-1)* and select **Amazon EKS** as the target platform.
 

@@ -19,11 +19,7 @@ the steps in the [Cluster preparation](https://github.com/seqeralabs/nf-tower-k8
 
 ## Compute environment setup
 
-**1.** In the navigation bar on the upper right, choose your account name then choose **Compute environments** and select **New Environment**.
-
-![](_images/aws_new_env.png) 
-
-</br>
+**1.** In a workspace choose "Compute environments" and then, click on the **New Environment** button.
 
 **2.** Enter the **Name** for this environment. For example, *My GKE* and select **Google GKE** as the target platform.
 

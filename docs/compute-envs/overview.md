@@ -31,11 +31,7 @@ The following sections describe how to set up each of the available compute envi
 
 If you have more than one **Compute Environment**, you can select which one will be used by default when launching a pipeline.
 
-![](_images/aws_new_env.png)
-
 **1.** Navigate to your [compute environments page](https://tower.nf/compute-envs).
-
-![](_images/compute_env_make_primary.png)
 
 **2.** Choose your default environment by selecting the **Make primary** button.   
 
