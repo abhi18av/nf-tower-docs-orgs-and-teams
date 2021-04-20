@@ -17,7 +17,7 @@ You need to have Kubernetes cluster up and running. Make sure you have followed
 the steps in the [Cluster preparation](https://github.com/seqeralabs/nf-tower-k8s) guide to create the cluster resources required by Nextflow Tower.
 
 The following instructions are for a **generic Kubernetes** distribution. If you are using
-[Amazon EKS](/compute-envs/eks/) or [Google GKE](/compute-envs/gke/), see the corresponding documentation pages.
+[Amazon EKS](../eks/) or [Google GKE](../gke/), see the corresponding documentation pages.
 
 
 ## Compute environment setup  

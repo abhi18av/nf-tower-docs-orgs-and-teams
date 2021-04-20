@@ -17,7 +17,7 @@ Tower can be accessed and/or deployed in three ways:
 
 ## Hosted
 
-To try Tower, visit [tower.nf](https://tower.nf/login) and login with GitHub or Google credentials. The [Launching Pipelines](/launch/overview/) documentation section provides step-by-step instructions to start your first pipeline. The Hosted version of Tower has a limit of five concurrent workflow executions per user.
+To try Tower, visit [tower.nf](https://tower.nf/login) and login with GitHub or Google credentials. The [Launching Pipelines](../../launch/overview/) documentation section provides step-by-step instructions to start your first pipeline. The Hosted version of Tower has a limit of five concurrent workflow executions per user.
 
 ![](_images/starting_tower_nf.png)
 
