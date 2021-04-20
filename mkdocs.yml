@@ -64,8 +64,8 @@ nav:
       - 'System deployment': 'installation/system-deployment.md'
     - 'Orgs and Teams':
       - 'Overview': 'orgs-and-teams/overview.md'
-      - 'Organizations': 'orgs-and-teams/organizations.md'
-      - 'Organization Workspaces': 'orgs-and-teams/workspaces.md'
+      - 'User Management': 'orgs-and-teams/user-management.md'
+      - 'Workspace Management': 'orgs-and-teams/workspace-management.md'
     - 'Compute Environments':
       - 'Overview': 'compute-envs/overview.md'
       - 'AWS Batch': 'compute-envs/aws-batch.md'

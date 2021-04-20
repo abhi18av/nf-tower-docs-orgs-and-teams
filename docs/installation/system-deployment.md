@@ -17,8 +17,8 @@ All components for the Enterprise release are packaged as Docker container image
 ## Deployment configurations
 
 
-!!! tip 
-     To install Nextflow Tower on private infrastructure, you'd need a license key. Please contact us at sales@seqera.io to get your license key.
+!!! warning 
+     To install Nextflow Tower on private infrastructure, you'd need a **license key**. Please contact us at sales@seqera.io to get your license key.
 
 
 ### Basic deployment
