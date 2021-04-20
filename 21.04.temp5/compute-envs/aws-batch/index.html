@@ -1,0 +1,1364 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Step-by-step instructions to set up AWS Batch in Nextflow Tower.">
+      
+      
+      
+        <meta name="author" content="Seqera Labs">
+      
+      
+      <link rel="icon" href="../../_favicons/favicon.ico">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.0">
+    
+    
+      
+        <title>AWS Batch - Nextflow Tower</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.33e2939f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ef6f36e2.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#ffffff">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#forge" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="/" title="Nextflow Tower" class="md-header__button md-logo" aria-label="Nextflow Tower" data-md-component="logo">
+      
+  <img src="../../_logos/nf-tower-icon-black.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Nextflow Tower
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              AWS Batch
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/seqeralabs/nf-tower-docs/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    nf-tower-docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="/" title="Nextflow Tower" class="md-nav__button md-logo" aria-label="Nextflow Tower" data-md-component="logo">
+      
+  <img src="../../_logos/nf-tower-icon-black.svg" alt="logo">
+
+    </a>
+    Nextflow Tower
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/seqeralabs/nf-tower-docs/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    nf-tower-docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        Getting Started
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Getting Started" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Getting Started
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/usage/" class="md-nav__link">
+        Usage
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/deployments/" class="md-nav__link">
+        Deployments
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/workspace/" class="md-nav__link">
+        User workspace
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
+        Installation
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Installation" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Installation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/system-deployment/" class="md-nav__link">
+        System deployment
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
+        Orgs and Teams
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Orgs and Teams" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Orgs and Teams
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../orgs-and-teams/overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../orgs-and-teams/user-management/" class="md-nav__link">
+        User Management
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../orgs-and-teams/workspace-management/" class="md-nav__link">
+        Workspace Management
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      <label class="md-nav__link" for="__nav_5">
+        Compute Environments
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Compute Environments" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Compute Environments
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          AWS Batch
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        AWS Batch
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#forge" class="md-nav__link">
+    Forge
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#forge-aws-resources" class="md-nav__link">
+    Forge AWS Resources
+  </a>
+  
+    <nav class="md-nav" aria-label="Forge AWS Resources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iam-user-permissions" class="md-nav__link">
+    IAM User Permissions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-an-s3-bucket-for-storage" class="md-nav__link">
+    Creating an S3 Bucket for Storage
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#forge-compute-environment" class="md-nav__link">
+    Forge compute environment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manual" class="md-nav__link">
+    Manual
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manual-compute-environment" class="md-nav__link">
+    Manual compute environment
+  </a>
+  
+    <nav class="md-nav" aria-label="Manual compute environment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#access-to-s3-buckets" class="md-nav__link">
+    Access to S3 Buckets
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../azure-batch/" class="md-nav__link">
+        Azure Batch
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../google-cloud/" class="md-nav__link">
+        Google Cloud Life Sciences
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../altair-pbs-pro/" class="md-nav__link">
+        Altair PBS Pro
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../grid-engine/" class="md-nav__link">
+        Grid Engine
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lsf/" class="md-nav__link">
+        IBM LSF
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../slurm/" class="md-nav__link">
+        Slurm
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../k8s/" class="md-nav__link">
+        Kubernetes
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../eks/" class="md-nav__link">
+        Amazon EKS
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gke/" class="md-nav__link">
+        Google GKE
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      <label class="md-nav__link" for="__nav_6">
+        Launching Pipelines
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Launching Pipelines" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Launching Pipelines
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../launch/overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../launch/advanced/" class="md-nav__link">
+        Advanced
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../launch/relaunch/" class="md-nav__link">
+        Re-launch
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../launch/notifications/" class="md-nav__link">
+        Notifiications
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      <label class="md-nav__link" for="__nav_7">
+        Monitoring Pipelines
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Monitoring Pipelines" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Monitoring Pipelines
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../monitoring/overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../monitoring/execution/" class="md-nav__link">
+        Execution details & logs
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../monitoring/summary/" class="md-nav__link">
+        Summary & status
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../monitoring/processes/" class="md-nav__link">
+        Processes
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../monitoring/aggregate_stats/" class="md-nav__link">
+        Aggregate stats & load
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../monitoring/tasks/" class="md-nav__link">
+        Tasks & metrics
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../monitoring/sharing/" class="md-nav__link">
+        Sharing pipelines
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      <label class="md-nav__link" for="__nav_8">
+        Git Integration
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Git Integration" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Git Integration
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../git/overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../git/private_repositories/" class="md-nav__link">
+        Private Git repositories
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../git/public_repositories/" class="md-nav__link">
+        Public Git repositories
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+      
+      <label class="md-nav__link" for="__nav_9">
+        Automation
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Automation" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          Automation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pipeline-actions/pipeline-actions/" class="md-nav__link">
+        Pipeline Actions
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" >
+      
+      <label class="md-nav__link" for="__nav_10">
+        API
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="API" data-md-level="1">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          API
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/endpoints/" class="md-nav__link">
+        Endpoints
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/openapi/" class="md-nav__link">
+        OpenAPI schema
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#forge" class="md-nav__link">
+    Forge
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#forge-aws-resources" class="md-nav__link">
+    Forge AWS Resources
+  </a>
+  
+    <nav class="md-nav" aria-label="Forge AWS Resources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iam-user-permissions" class="md-nav__link">
+    IAM User Permissions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-an-s3-bucket-for-storage" class="md-nav__link">
+    Creating an S3 Bucket for Storage
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#forge-compute-environment" class="md-nav__link">
+    Forge compute environment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manual" class="md-nav__link">
+    Manual
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manual-compute-environment" class="md-nav__link">
+    Manual compute environment
+  </a>
+  
+    <nav class="md-nav" aria-label="Manual compute environment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#access-to-s3-buckets" class="md-nav__link">
+    Access to S3 Buckets
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/seqeralabs/nf-tower-docs/compute-envs/aws-batch.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                  <h1>AWS Batch</h1>
+                
+                <div class="admonition note">
+<p class="admonition-title">Disclaimer</p>
+<p>This guide assumes you have an existing <a href="https://aws.amazon.com/">AWS Account</a>. Sign up for a free AWS account <a href="https://portal.aws.amazon.com/billing/signup">here</a>.</p>
+</div>
+<p>There are two ways to create a <strong>Compute Environment</strong> for <strong>AWS Batch</strong> with Tower.</p>
+<ol>
+<li>
+<p><strong>Tower Forge</strong> for AWS Batch automatically creates AWS Batch resources in your AWS account.</p>
+</li>
+<li>
+<p><strong>Tower Launch</strong> allows you to create a compute environment using existing AWS Batch resources.</p>
+</li>
+</ol>
+<p>If you don't yet have an AWS Batch environment fully set-up, following the <a href="#forge">Tower Forge</a> guide is suggested. If you have been provided with an AWS Batch queue from your account administrator, or if you have set up AWS Batch previously, follow the <a href="#manual">Tower Launch</a> guide.</p>
+<h2 id="forge">Forge<a class="headerlink" href="#forge" title="Permanent link">#</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Follow these instructions if you have not pre-configured an AWS Batch environment. Note that this will create resources in your AWS account that you may be charged for by AWS.</p>
+</div>
+<p>Tower Forge automates the configuration of an <a href="https://aws.amazon.com/batch/">AWS Batch</a> compute environment and queues required for the deployment of Nextflow pipelines.</p>
+<h2 id="forge-aws-resources">Forge AWS Resources<a class="headerlink" href="#forge-aws-resources" title="Permanent link">#</a></h2>
+<h3 id="iam-user-permissions">IAM User Permissions<a class="headerlink" href="#iam-user-permissions" title="Permanent link">#</a></h3>
+<p>To use the Tower Forge feature, Tower requires an IAM user with the permissions listed in this <a href="https://github.com/seqeralabs/nf-tower-aws/blob/master/forge/forge-policy.json">policy file</a>. These permissions are more permissive than those required to only launch a pipeline as Tower needs to create AWS resources on your behalf.</p>
+<p>The steps below will guide you through the creation a new IAM user for Tower and attach the required policy for the newly created user.</p>
+<p><strong>1.</strong> Open the <a href="https://console.aws.amazon.com/iam">AWS IAM console</a>, select <strong>Users</strong> on the left menu and click the <strong>Add User</strong> button on top.</p>
+<p><img alt="" src="../_images/aws_aim_new_user.png" /></p>
+<p><strong>2.</strong> Enter a name for your user (e.g. <code>tower</code>) and choose the <strong>Programmatic access</strong> type. Then select the <strong>Next: Permissions</strong> button.</p>
+<p><strong>3.</strong> Now perform the following steps: click on the <strong>Next: Tags</strong> button, <strong>Next: Review</strong> and <strong>Create User</strong>.</p>
+<p><img alt="" src="../_images/aws_user_no_permissions.png" /></p>
+<div class="admonition warning">
+<p class="admonition-title">This user has no permissions</p>
+<p>For the time behing, you can ignore the warning, we will address this later using an <strong>IAM Policy</strong>.</p>
+</div>
+<p><strong>4.</strong> Save the <strong>Access key ID</strong> and <strong>Secret access key</strong> in a secure location. We will use these in the <a href="#forge-compute-environment">next section</a>. Press the <strong>Close</strong> button.</p>
+<p><img alt="" src="../_images/aws_user_created.png" /></p>
+<p><strong>5.</strong> Back in the users table, select the newly created user and click <strong>+ Add inline policy</strong> to add user permissions.</p>
+<p><img alt="" src="../_images/aws_add_inline_policy.png" /></p>
+<p><strong>6.</strong> Choose JSON and copy the content of the <a href="https://github.com/seqeralabs/nf-tower-aws/blob/master/forge/forge-policy.json">policy linked above</a>.</p>
+<p><img alt="" src="../_images/aws_review_policy.png" /></p>
+<p><strong>7.</strong> Select the <strong>Review policy</strong> button, name your policy (e.g. <code>tower-forge-policy</code>), and confirm the operation by clicking on the <strong>Create policy</strong> button.</p>
+<div class="admonition tip">
+<p class="admonition-title">What permissions are required?</p>
+<p>This policy includes the minimal permissions required to allow the user to submit jobs to AWS Batch, gather the container execution metadata, read CloudWatch logs and access data from the S3 bucket in your AWS account in read-only mode.</p>
+</div>
+<h3 id="creating-an-s3-bucket-for-storage">Creating an S3 Bucket for Storage<a class="headerlink" href="#creating-an-s3-bucket-for-storage" title="Permanent link">#</a></h3>
+<p>Next up we need to create an <strong>S3 Bucket</strong> to access files and store results for our pipelines. S3 stands for Simple Storage Service and is a type of <strong>object storage</strong>.</p>
+<p>We must grant our new Tower IAM user access to this bucket.</p>
+<p><strong>1.</strong> Navigate to the <a href="https://console.aws.amazon.com/s3/home">S3 service</a> and select <strong>Create New Bucket</strong>.</p>
+<p><strong>2.</strong> Enter a unique name for your Bucket and select a region.</p>
+<p><img alt="" src="../_images/aws_create_bucket.png" /></p>
+<div class="admonition warning">
+<p class="admonition-title">Which AWS region should I use?</p>
+<p>The region of the bucket should be in the same region as the compute environment which we will set in the next section. Typically users select a region closest to their physical location but Tower Forge supports creating resources in any of the available AWS regions.</p>
+</div>
+<p><strong>3.</strong> Select the default options for <strong>Configure options</strong>.</p>
+<p><img alt="" src="../_images/aws_new_bucket_configure_options.png" /></p>
+<p><strong>4.</strong> Select the default options for <strong>Set permissions</strong>.</p>
+<p><img alt="" src="../_images/aws_new_bucket_set_permissions.png" /></p>
+<p><strong>5.</strong> Review the bucket and select <strong>Create bucket</strong>.</p>
+<p><img alt="" src="../_images/aws_new_bucket_review.png" /></p>
+<p>!!! warning "S3 Storage Costs" 
+    S3 is used by Nextflow for the storage of intermediary files. For production pipelines, this can amount to a large quantity of data. To reduce costs, when configuring a bucket, users should consider management options such as the ability to automatically delete these files after 30 days.</p>
+<h2 id="forge-compute-environment">Forge compute environment<a class="headerlink" href="#forge-compute-environment" title="Permanent link">#</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Awesome!</p>
+<p>You have completed the AWS environment setup for Tower.</p>
+</div>
+<p>Now we can add a new <strong>AWS Batch</strong> environment in the Tower UI. To create a new compute environment, follow these steps:</p>
+<p><strong>1.</strong> In a workspace choose "Compute environments" and then, click on the <strong>New Environment</strong> button.</p>
+<p><strong>2.</strong> Enter a descriptive name for this environment. For example, <em>AWS Batch Spot (eu-west-1)</em> and select <strong>Amazon Batch</strong> as the target platform.</p>
+<p><img alt="" src="../_images/aws_new_env_name.png" /></p>
+<p><strong>3.</strong> Add new credentials by selecting the <strong>+</strong> button. Choose a name, e.g. <em>AWS Credentials</em> and add the Access key and Secret key. These are the keys we saved in the previous steps when creating the AWS IAM user.</p>
+<p><img alt="" src="../_images/aws_keys.png" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Multiple credentials</p>
+<p>You can create multiple credentials in your Tower environment.</p>
+</div>
+<p><strong>4.</strong> Select a <strong>Region</strong>. For example <em>eu-west-1 - Europe (Ireland)</em>, and in the <strong>Pipeline work directory</strong> enter the S3 bucket we created in the previous section e.g: <code>s3://unique-tower-bucket</code>.</p>
+<p><strong>5.</strong> Select <strong>Batch Forge</strong> as the <strong>Config Mode</strong>.</p>
+<p><img alt="" src="../_images/aws_s3_bucket_region.png" /></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The bucket should be in the same <strong>Region</strong> as selected above.</p>
+</div>
+<p><strong>6.</strong> Choose a <strong>Provisioning model</strong>. In most cases this will be <em>Spot</em>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Spot or On-demand?</p>
+<p>You can choose to create a compute environment that will launch either <strong>Spot</strong> or <strong>On-demand</strong> instances. <strong>Spot instances can cost as little as 20% of on-demand instances</strong> and with Nextflow's ability to automatically relaunch failed tasks, Spot is almost always the recommended provisioning model.
+Note however that when choosing <em>Spot</em> instances, Tower will also create a dedicated queue for running the main Nextflow job using a single on-demand instance in order to prevent any execution interruptions.</p>
+</div>
+<p><img alt="" src="../_images/aws_cpus.png" /></p>
+<p><strong>7.</strong> Enter the <strong>Max CPUs</strong> e.g. <code>64</code>. This is the maximum number of combined CPUs (the sum of all instances CPUs) AWS Batch will launch at any time.</p>
+<p><strong>8.</strong> Choose <strong>EBS Auto scale</strong> to allow the EC2 virtual machines to expand the amount of available disk space during task execution.</p>
+<p><strong>9.</strong> With the optional <strong>Enable Fusion mounts</strong> feature enabled, S3 buckets specified in the <strong>Pipeline work directory</strong> and <strong>Allowed S3 Buckets</strong> fields will be mounted as file system volumes in the EC2 instances carrying out the Batch job execution. These are then accessible at the path location with the pattern <code>/fusion/s3/BUCKET_NAME</code>.
+For example if the bucket name is <code>s3://imputation-gp2</code> the Nextflow pipeline will access it using the file system path <code>/fusion/s3/imputation-gp2</code>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Note that's not required to modify your pipeline or files to take advantage of this feature. Nextflow is able to recognise these buckets will automatically replace any reference to s3:// prefixed files with the corresponding Fusion mount paths.</p>
+</div>
+<p><strong>10.</strong> Choose <strong>Enable GPUs</strong> to allow the deployment of GPU enabled EC2 virtual machines if required.</p>
+<p><strong>11.</strong> Enter any additional <strong>Allowed S3 buckets</strong> that your workflows require to read input data or to write output files. The <strong>Pipeline work directory</strong> bucket above is added by default to the list of <strong>Allowed S3 buckets</strong>.</p>
+<p><strong>12.</strong> To use <strong>FSx</strong>, you can enter <code>/fsx</code> as the <strong>FSx mount path</strong> and set the <strong>Pipeline work directory</strong> above to be <code>/fsx/work</code></p>
+<p><img alt="" src="../_images/aws_lustre_options.png" /></p>
+<p><strong>13.</strong> Choose the <strong>Dispose resources</strong> option.</p>
+<p><strong>Advanced options</strong></p>
+<div class="admonition warning">
+<p class="admonition-title">AMI ID - AMI requirements for AWS Batch use</p>
+<p>To use an existing AMI, make sure the AMI is based on an Amazon Linux-2 ECS optimized image that meets the Batch requirements. To learn more about approved versions of the Amazon ECS optimized AMI, visit this <a href="https://docs.aws.amazon.com/batch/latest/userguide/compute_resource_AMIs.html#batch-ami-spec">link</a></p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Min CPUs - Editing this will result in additional AWS costs</p>
+<p>Keeping EC2 instances running may result in additional costs. You will be billed for these running EC2 instances regardless of whether you are executing pipelines or not.</p>
+</div>
+<p>Note that if <strong>Min CPUs</strong> is greater than <code>0</code>, EC2 instances will remain active. An advantage of this is that a pipeline execution will initialize faster but it may have additional costs.</p>
+<p><img alt="" src="../_images/aws_warning_min_cpus.png" /></p>
+<p><strong>14.</strong> If you're using the <code>Spot instances</code> then you could also specify the <code>Cost percentage</code> to determine the maximum percentage that a <code>Spot instance</code> price can be when compared with the <code>On-Demand</code> price for that instance type before instances are launched</p>
+<p><img alt="" src="../_images/aws_cost_percentage.png" /> </p>
+<p><strong>15.</strong> Select <strong>Create</strong> to finalize the compute environment setup. It will take approximately 60 seconds for all the resources to be created and then you will be ready to launch pipelines.</p>
+<p><img alt="" src="../_images/aws_60s_new_env.png" /> </p>
+<div class="admonition note">
+<p class="admonition-title">Amazing!</p>
+<p>You now have everything you need to begin deploying massively scalable pipelines.</p>
+</div>
+<p>Jump to the documentation section for <a href="/docs/launch/overview/">Launching Pipelines</a>.</p>
+<h2 id="manual">Manual<a class="headerlink" href="#manual" title="Permanent link">#</a></h2>
+<p>This section is for users with a pre-configured AWS environment. You will need a Batch queue, Batch compute environment, an IAM user and an S3 bucket already set up.</p>
+<p>To enable Tower within your existing AWS configuration, you need to have an IAM user with the following IAM permissions:</p>
+<ul>
+<li><code>AmazonS3ReadOnlyAccess</code></li>
+<li><code>AmazonEC2ContainerRegistryReadOnly</code></li>
+<li><code>CloudWatchLogsReadOnlyAccess</code></li>
+<li>A <a href="https://github.com/seqeralabs/nf-tower-aws/blob/master/launch/launch-policy.json">custom policy</a> to grant the ability to submit and control Batch jobs.</li>
+<li>Write access to any S3 bucket used pipeline work directories with the following <a href="https://github.com/seqeralabs/nf-tower-aws/blob/master/launch/s3-bucket-write.json">policy template</a>. See <a href="#access-to-s3-buckets">below for details</a></li>
+</ul>
+<p>With these permissions set, we can add a new <strong>AWS Batch</strong> environment in the <a href="#launch-compute-environment">Tower UI</a></p>
+<h2 id="manual-compute-environment">Manual compute environment<a class="headerlink" href="#manual-compute-environment" title="Permanent link">#</a></h2>
+<p>To create a new compute environment for AWS Batch (Manual):</p>
+<p><strong>1.</strong> In a workspace choose "Compute environments" and then, click on the <strong>New Environment</strong> button.</p>
+<p><strong>2.</strong> Choose a descriptive name for this environment. For example "AWS Batch Launch (eu-west-1)" and Select <strong>Amazon Batch</strong> as the target platform</p>
+<p><img alt="" src="../_images/aws_new_launch_env.png" /> </p>
+<p><strong>3.</strong> Add new credentials by clicking the "+" button. Choose a name, add the <strong>Access key</strong> and <strong>Secret key</strong> from your IAM user.</p>
+<p><img alt="" src="../_images/aws_keys.png" /> </p>
+<div class="admonition tip">
+<p class="admonition-title">Multiple credentials</p>
+<p>You can create multiple credentials in your Tower environment. See the section <strong>Credentials Management</strong>.</p>
+</div>
+<p><strong>4.</strong> Select a region, for example "eu-west-1 - Europe (Ireland)"</p>
+<p><strong>5.</strong> Enter an S3 bucket path, For example "s3://tower-bucket"</p>
+<p><strong>6.</strong> the <strong>Manual</strong> config mode.</p>
+<p><strong>7.</strong> Enter the <strong>Head queue</strong> which is the name of the AWS Batch queue that the Nextflow driver job will run and a <strong>Compute queue</strong> which is the name of the AWS Batch queue that tasks will be submitted to.</p>
+<p><strong>8.</strong> Select <strong>Create</strong> to finalize the compute environment setup.</p>
+<p><img alt="" src="../_images/aws_new_env_manual_config.png" /> </p>
+<div class="admonition note">
+<p class="admonition-title">Awesome!</p>
+<p>You now have created a compute environment.</p>
+</div>
+<h3 id="access-to-s3-buckets">Access to S3 Buckets<a class="headerlink" href="#access-to-s3-buckets" title="Permanent link">#</a></h3>
+<p>Tower can use S3 to access data, create work directories and write outputs. The IAM user above needs permissions to use these S3 Buckets. We can set a policy for our IAM user that provides the permission to access specific buckets.</p>
+<p><strong>1.</strong> Access the IAM User table in the <a href="https://console.aws.amazon.com/iam/home">IAM service</a></p>
+<p><strong>2.</strong> Select the IAM user.</p>
+<p><strong>3.</strong> Select <strong>+ add inline policy</strong>.</p>
+<p><img alt="" src="../_images/aws_user_s3_inline_policy.png" /> </p>
+<p><strong>4.</strong> Select JSON and copy the contents of <a href="https://github.com/seqeralabs/nf-tower-aws/blob/master/launch/s3-bucket-write.json">this policy</a>. Replace lines 10 and 21 with your bucket name.</p>
+<p><img alt="" src="../_images/aws_s3_policy.png" /> </p>
+<p><strong>5.</strong> Name your policy and click <strong>Create policy</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Amazing!</p>
+<p>You now have everything to begin deploying massively scalable pipelines.</p>
+</div>
+<p>Jump to the documentation section for <a href="/docs/launch/overview/">Launching Pipelines</a>.</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+
+        <div class="md-footer-copyright__highlight">
+          Copyright &copy; 2021 Seqera Labs S.L.
+        </div>
+      </div>
+
+            <div class="md-footer-social">
+
+
+
+              <a href="mailto:support@seqera.io" target="_blank" rel="noopener" title="" class="md-footer-social__link">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M476 3.2 12.5 270.6c-18.1 10.4-15.8 35.6 2.2 43.2L121 358.4l287.3-253.2c5.5-4.9 13.3 2.6 8.6 8.3L176 407v80.5c0 23.6 28.5 32.9 42.5 15.8L282 426l124.6 52.2c14.2 6 30.4-2.9 33-18.2l72-432C515 7.8 493.3-6.8 476 3.2z"/></svg>
+              </a>
+
+
+
+
+
+
+              <a href="https://twitter.com/seqeralabs" target="_blank" rel="noopener" title="twitter.com" class="md-footer-social__link">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+              </a>
+
+
+
+
+
+
+              <a href="https://github.com/seqeralabs" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+              </a>
+
+            </div>
+
+
+    </div>
+
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "search.suggest", "search.highlight"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.fe42c31b.min.js", "version": {"default": "stable", "provider": "mike"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d892486b.min.js"></script>
+      
+    
+  </body>
+</html>
