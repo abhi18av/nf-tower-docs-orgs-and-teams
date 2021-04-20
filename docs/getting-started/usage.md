@@ -14,9 +14,9 @@ You can use Tower via either the **online GUI**, using the `-with-tower` option 
 
 **1.** Create an account and login into Tower, available free of charge, at [tower.nf](https://tower.nf).
 
-**2.** Create and configure a new [compute environment](/compute-envs/overview/).
+**2.** Create and configure a new [compute environment](../../compute-envs/overview/).
 
-**3.** Start [launching pipelines](/launch/overview/).
+**3.** Start [launching pipelines](../../launch/overview/).
 
 ## Via Nextflow run command
 
@@ -67,8 +67,8 @@ nextflow run hello.nf -with-tower
 
 You will see and be able to monitor your **Nextflow jobs** in Tower.
 
-To configure and execute Nextflow jobs in **Cloud environments**, visit the [Compute environments section](/compute-envs/overview/).
+To configure and execute Nextflow jobs in **Cloud environments**, visit the [Compute environments section](../../compute-envs/overview/).
 
 ## API
 
-To learn more about using the Tower API, visit to the [API section](/api/overview/) in this documentation.
+To learn more about using the Tower API, visit to the [API section](../../api/overview/) in this documentation.

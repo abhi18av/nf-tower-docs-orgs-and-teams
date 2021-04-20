@@ -186,4 +186,4 @@ To create a new compute environment for Google Cloud in Tower follow these steps
 !!! tip "Congratulations!" 
     Time to start launching pipelines in your cloud.
 
-Jump to the documentation section for [Launching Pipelines](/launch/overview/).
+Jump to the documentation section for [Launching Pipelines](../../launch/overview/).

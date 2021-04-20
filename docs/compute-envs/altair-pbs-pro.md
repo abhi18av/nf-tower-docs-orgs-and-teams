@@ -62,5 +62,5 @@ Follow these steps to create a new compute environment for **Altair PBS Pro**:
 !!! tip "Congratulations!" 
     You are now ready to launch pipelines.
 
-Jump to the documentation section for [Launching Pipelines](/launch/overview/).
+Jump to the documentation section for [Launching Pipelines](../../launch/overview/).
 

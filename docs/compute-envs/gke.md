@@ -61,3 +61,9 @@ The following parameters are available:
 **2.** The **Work directory** field defines the file system path used as working directory by the Nextflow pipelines. It must be the same or a subdirectory of the *Storage mount path* at the previous point. Default: the same as *Storage mount path*.
 
 **3.** The  **Compute service account** field allows you to specify the Kubernetes *service account* that the pipeline jobs should use. Default is the `default` service account in your Kubernetes cluster.
+
+!!! note "Amazing!" 
+    You now have everything you need to begin deploying massively scalable pipelines.
+
+
+Jump to the documentation section for [Launching Pipelines](../../launch/overview/).

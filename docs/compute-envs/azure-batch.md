@@ -206,5 +206,5 @@ This section is for users with a pre-configured Azure environment. You will need
 !!! note "Amazing!" 
     You now have everything you need to begin deploying massively scalable pipelines.
 
-Jump to the documentation section for [Launching Pipelines](/launch/overview/).
+Jump to the documentation section for [Launching Pipelines](../../launch/overview/).
 

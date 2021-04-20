@@ -22,7 +22,7 @@ To create a new workspace within an organization, please follow these steps
 !!!tip
    It is possible to change the values of the optional fields either using the **Edit** option on the workspace listing for an organization or using the **Settings** tab within the workspace page, provided that you're the **Owner** of the workspace. 
 
-Apart from the **Participants** tab, the **organization workspace** is similar to the **user workspace** therefore, the familiar concepts of [Runs](/launch/overview/), [Pipeline Actions](/pipeline-actions/pipeline-actions/), [Compute Environments](/compute-envs/overview/) and [Credentials](/getting-started/workspace#credentials) are applicable.
+Apart from the **Participants** tab, the **organization workspace** is similar to the **user workspace** therefore, the familiar concepts of [Runs](../../launch/overview/), [Pipeline Actions](../../pipeline-actions/pipeline-actions/), [Compute Environments](../../compute-envs/overview/) and [Credentials](../../getting-started/workspace#credentials) are applicable.
 
 ### Add a new Participant
 

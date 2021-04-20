@@ -11,13 +11,13 @@ description: 'Create and manage teams and resources for an organization.'
 
 Nextflow Tower simplifies the development and execution of workflows by providing a centralized interface to manage people (users and teams) and resources (credentials, compute environments etc) while allowing the users to curate a list of ready to launch workflows at an organizational level. 
 
-This is achieved through the context of workspaces, to learn more about workspaces, please refer the [Workspaces](/getting-started/workspaces/) section. Each user has their own private workspace, however each organization can create multiple workspaces and invite users as **collaborators** or **members**.
+This is achieved through the context of workspaces, to learn more about workspaces, please refer the [Workspaces](../../getting-started/workspaces/) section. Each user has their own private workspace, however each organization can create multiple workspaces and invite users as **collaborators** or **members**.
 
 ## Organization resources
 
 Tower allows creation of multiple organizations, each of which can contain multiple workspaces with shared users and resources. This allows any organization to essentially customize and organize the usage of resources while maintaining an access control layers for users associated with a workspace.
 
-For further information, please refer the [Workspace Management](/orgs-and-teams/workspace-management/) section.
+For further information, please refer the [Workspace Management](../workspace-management/) section.
 
 ## Organization users
 
@@ -25,4 +25,4 @@ Any user who has for a Tower instance (public or private) can be added or remove
 
 The Teams feature provides a way for the organizations to group various users and participants together into teams, for example `workflow_developers` or `workflow_users`, and apply access control to all the users within this team as a whole.
 
-For further information, please refer the [User Management ](/orgs-and-teams/user-management/) section.
+For further information, please refer the [User Management ](../user-management/) section.

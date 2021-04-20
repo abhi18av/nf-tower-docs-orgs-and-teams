@@ -271,4 +271,4 @@ Tower can use S3 to access data, create work directories and write outputs. The 
 !!! note "Amazing!"
     You now have everything to begin deploying massively scalable pipelines.
 
-Jump to the documentation section for [Launching Pipelines](/docs/launch/overview/).
+Jump to the documentation section for [Launching Pipelines](../../launch/overview/).
