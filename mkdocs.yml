@@ -59,13 +59,13 @@ nav:
     - 'Getting Started':
       - 'Usage': 'getting-started/usage.md'
       - 'Deployments': 'getting-started/deployments.md'
-      - 'Workspaces': 'getting-started/workspaces.md'
+      - 'User workspace': 'getting-started/workspace.md'
     - 'Installation':
       - 'System deployment': 'installation/system-deployment.md'
     - 'Orgs and Teams':
       - 'Overview': 'orgs-and-teams/overview.md'
       - 'Organizations': 'orgs-and-teams/organizations.md'
-      - 'Teams': 'orgs-and-teams/teams.md'
+      - 'Organization Workspaces': 'orgs-and-teams/workspaces.md'
     - 'Compute Environments':
       - 'Overview': 'compute-envs/overview.md'
       - 'AWS Batch': 'compute-envs/aws-batch.md'

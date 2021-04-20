@@ -4,8 +4,6 @@ headline: 'Organizations'
 description: 'Create and manage organization resources.'
 ---
 
-## Organizations
-
 Each organization can be considered as a collection of workspaces, members, teams as well as collaborations. To better explore these concepts, let us first create an organization.
 
 **1.** To create an organization, click on the dropdown next to your name and select **New organization** to open the creation dialog.
@@ -23,11 +21,8 @@ Each organization can be considered as a collection of workspaces, members, team
     It is possible to change the values of the optional fields either using the **Edit** option on the [organizations page](https://tower.nf/orgs) or using the **Settings** tab within the organization page, provided that you're the **Owner** of the organization 
 
 
-### Organization workspaces 
 
-**Organization workspaces** builds upon the functionality of a **User workspace** as discussed in the [Getting Started](/getting-started/workspaces/) section, since they add the ability to fine-tune the access level for any particular member, collaborator or team.
-
-### Members
+## Members
 
 Once an organization is created, the user who created the organization is the default owner of that organization. It is also possible to invite/add other members as well.
 
@@ -36,21 +31,17 @@ Tower, provides an access level for invited members of an organization by classi
 !!! note
     **Owners** have full read/write access to all the users and resources within an organization, whereas the **members** could 
 
-### Collaborators
+## Collaborators
 
 **Collaborators** are users which are invited only within an organization workspace, as a result, their access is limited to only within this workspace in an organization. 
 
-New collaborators to an organization workspace can be added using the **Participants**.
+New collaborators to an organization workspace can be added using the **Participants**. To further read the various available access levels for **Participants**, please refer the [Organization Workspaces](/orgs-and-teams/organization_workspaces)
 
 !!! note
     A list of all the available **Members** and **Collaborators** can be found at the organization page.
 
-### Participant permissions
 
-Nextflow Tower further allows the organization owners to allocate a distinct access level within an organization workspace to all the **Participants** of the workspace.
-
-### Teams
+## Teams
 
 **Teams** allows the organization **Owners** to group various members or collaborators 
-
 
