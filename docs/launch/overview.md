@@ -1,5 +1,5 @@
 ---
-title: Launch overview
+title: Launch Overview
 headline: 'Pipeline Execution'
 description: 'Guide to launching pipelines using Nextflow Tower.'
 ---
@@ -8,7 +8,7 @@ description: 'Guide to launching pipelines using Nextflow Tower.'
     See the [**Compute Environment**](/compute-envs/overview/) documentation to learn how to create an environment for your preferred executor environment.
 
 
-In the following example we will launch the nf-core RNASeq pipeline using a Google Cloud compute environment we have previously set up.
+In the following example we will launch the *nf-core/rnaseq* workflow using a Google Cloud compute environment we have previously set up.
 
 To launch a pipeline:
 

@@ -1,5 +1,5 @@
 ---
-title: Overview
+title: Compute Environments Overview
 headline: 'Compute Environments'
 description: 'Step-by-step instructions to set up compute environments in Nextflow Tower.'
 ---
@@ -36,4 +36,4 @@ If you have more than one **Compute Environment**, you can select which one will
 **2.** Choose your default environment by selecting the **Make primary** button.   
 
 !!! tip "Congratulations!" 
-    You are now ready to launch pipelines with your default compute environment.
+    You are now ready to launch pipelines with your primary compute environment.

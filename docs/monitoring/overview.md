@@ -1,5 +1,5 @@
 ---
-title: Dashboard overview
+title: Runs Overview
 headline: 'Monitoring Pipelines'
 description: 'Guide to monitoring Nextflow pipelines executed through Tower.'
 ---
