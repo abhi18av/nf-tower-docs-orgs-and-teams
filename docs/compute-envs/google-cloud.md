@@ -151,10 +151,7 @@ The [section above](#configuration-of-google-cloud) shows how to configure Googl
 
 To create a new compute environment for Google Cloud in Tower follow these steps:
 
-**1.** In the navigation bar on the upper right, choose your profile then choose **Compute environments**. Select **New Environment**.
-
-![](_images/aws_new_env.png)
-
+**1.** In a workspace choose "Compute environments" and then, click on the **New Environment** button.
 
 **2.** Enter a name for this environment. For example "Google Cloud Life Sciences (europe-west2)" and select **Google Life Sciences** as the target platform.
 
@@ -189,4 +186,4 @@ To create a new compute environment for Google Cloud in Tower follow these steps
 !!! tip "Congratulations!" 
     Time to start launching pipelines in your cloud.
 
-Jump to the documentation section for [Launching Pipelines](/docs/launch/overview/).
+Jump to the documentation section for [Launching Pipelines](../../launch/overview/).

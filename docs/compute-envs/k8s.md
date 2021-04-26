@@ -17,16 +17,13 @@ You need to have Kubernetes cluster up and running. Make sure you have followed
 the steps in the [Cluster preparation](https://github.com/seqeralabs/nf-tower-k8s) guide to create the cluster resources required by Nextflow Tower.
 
 The following instructions are for a **generic Kubernetes** distribution. If you are using
-[Amazon EKS](/docs/compute-envs/eks/) or [Google GKE](/docs/compute-envs/gke/), see the corresponding documentation pages.
+[Amazon EKS](../eks/) or [Google GKE](../gke/), see the corresponding documentation pages.
 
 
 ## Compute environment setup  
 
-**1.** In the navigation bar on the upper right, choose your account name then choose
-*Compute environments*. Click on the *New Environment* button.
 
-![](_images/aws_new_env.png)
-
+**1.** In a workspace choose "Compute environments" and then, click on the **New Environment** button.
 
 **2.** Enter a name to identify it (e.g. *My K8s cluster*) and select **Kubernetes** as the target
 platform.
@@ -93,3 +90,9 @@ The following parameters are available:
 **2.** The **Work directory** field defines the file system path used as a working directory by Nextflow pipelines. It must be the same or a subdirectory of the *Storage mount path* at the previous point. Default: the same as *Storage mount path*.
 
 **3.** The  **Compute service account** field allows you to specify the Kubernetes *service account* that the pipeline jobs should use. Default is the `default` service account in your Kubernetes cluster.
+
+!!! note "Amazing!" 
+    You now have everything you need to begin deploying massively scalable pipelines.
+
+
+Jump to the documentation section for [Launching Pipelines](../../launch/overview/).

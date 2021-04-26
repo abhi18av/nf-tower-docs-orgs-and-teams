@@ -112,9 +112,8 @@ We must grant our new Tower IAM user access to this bucket.
 
 Now we can add a new **AWS Batch** environment in the Tower UI. To create a new compute environment, follow these steps:
 
-**1.** In the navigation bar on the upper right, choose your account name then choose **Compute environments** and select **New Environment**.
 
-![](_images/aws_new_env.png)
+**1.** In a workspace choose "Compute environments" and then, click on the **New Environment** button.
 
 
 **2.** Enter a descriptive name for this environment. For example, *AWS Batch Spot (eu-west-1)* and select **Amazon Batch** as the target platform.
@@ -216,9 +215,7 @@ With these permissions set, we can add a new **AWS Batch** environment in the [T
 ## Manual compute environment
 To create a new compute environment for AWS Batch (Manual):
 
-**1.** In the navigation bar on the upper right, choose your account name then choose **Compute environments** and select on **New Environment**.
-
-![](_images/aws_new_env.png) 
+**1.** In a workspace choose "Compute environments" and then, click on the **New Environment** button.
 
 
 **2.** Choose a descriptive name for this environment. For example "AWS Batch Launch (eu-west-1)" and Select **Amazon Batch** as the target platform
@@ -274,4 +271,4 @@ Tower can use S3 to access data, create work directories and write outputs. The 
 !!! note "Amazing!"
     You now have everything to begin deploying massively scalable pipelines.
 
-Jump to the documentation section for [Launching Pipelines](/docs/launch/overview/).
+Jump to the documentation section for [Launching Pipelines](../../launch/overview/).

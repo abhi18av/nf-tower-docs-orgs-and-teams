@@ -1,14 +1,14 @@
 ---
-title: Launch overview
+title: Launch Overview
 headline: 'Pipeline Execution'
 description: 'Guide to launching pipelines using Nextflow Tower.'
 ---
 
 !!! warning 
-    See the [**Compute Environment**](/compute-envs/overview/) documentation to learn how to create an environment for your preferred executor environment.
+    See the [**Compute Environment**](../../compute-envs/overview/) documentation to learn how to create an environment for your preferred executor environment.
 
 
-In the following example we will launch the nf-core RNASeq pipeline using a Google Cloud compute environment we have previously set up.
+In the following example we will launch the *nf-core/rnaseq* workflow using a Google Cloud compute environment we have previously set up.
 
 To launch a pipeline:
 
@@ -17,7 +17,7 @@ To launch a pipeline:
 
 The **Launch Pipeline** dialog will appear.
 
-**2.** Select the drop down menu to choose a [**Compute Environment**](/compute-envs/overview).  
+**2.** Select the drop down menu to choose a [**Compute Environment**](../../compute-envs/overview).  
 
 *The users primary compute environment is selected by default.*
 
@@ -45,7 +45,7 @@ The **Launch Pipeline** dialog will appear.
 **8.** Select *Launch* to begin the pipeline execution.
 
 !!! tip 
-    Nextflow pipelines are simply Git repositories and the location can be any public or private Git-hosting platform. See [**Git Integration**](/git/overview/) in the Tower docs and [**Pipeline Sharing**](https://www.nextflow.io/docs/latest/sharing.html) in the Nextflow docs for more details.
+    Nextflow pipelines are simply Git repositories and the location can be any public or private Git-hosting platform. See [**Git Integration**](../../git/overview/) in the Tower docs and [**Pipeline Sharing**](https://www.nextflow.io/docs/latest/sharing.html) in the Nextflow docs for more details.
 
 !!! warning 
     The credentials associated with the compute environment must be able to access the work directory.

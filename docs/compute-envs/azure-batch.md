@@ -43,7 +43,7 @@ When you open [this link](https://portal.azure.com/#create/Microsoft.ResourceGro
 
 ### Storage account
 
-The next step is to create the necessary Azure Storage. When you open [this link](https://portal.azure.com/#blade/HubsExtension/BrowseResource/resourceType/Microsoft.Storage%2FStorageAccounts) you'll notice the "Create a storage account" dialog, as shown below.
+The next step is to create the necessary Azure Storage. When you open [this link](https://portal.azure.com/#blade/HubsExtension/BrowseResource/resourceType/Microsoft.Storage%2FStorageAccounts) you'll notice the **Create a storage account** dialog, as shown below.
 
 ![](_images/azure_create_storage_account.png) 
 
@@ -73,7 +73,7 @@ The next step is to create the necessary Azure Storage. When you open [this link
 
 ### Batch account
 
-The next step is to create the necessary Azure Storage. When you open [this link](https://portal.azure.com/#blade/HubsExtension/BrowseResource/resourceType/Microsoft.Batch%2FbatchAccounts) you'll notice the "Create a batch account" dialog, as shown below.
+The next step is to create the necessary Azure Storage. When you open [this link](https://portal.azure.com/#blade/HubsExtension/BrowseResource/resourceType/Microsoft.Batch%2FbatchAccounts) you'll notice the **Create a batch account** dialog, as shown below.
 
 ![](_images/azure_new_batch_account.png) 
 
@@ -95,9 +95,7 @@ Tower Forge automates the configuration of an [Azure Batch](https://azure.micros
 
 Once the Azure resource setup is done, we can add a new **Azure Batch** environment in the Tower UI. To create a new compute environment, follow these steps:
 
-**1.** In the navigation bar on the upper right, choose your account name then choose **Compute environments** and select **New Environment**.
-
-![](_images/aws_new_env.png) 
+**1.** In a workspace choose **Compute environments** and then, click on the **New Environment** button.
 
 
 **2.** Enter a descriptive name for this environment, for example *Azure Batch (east-us)*, and select **Azure Batch** as the target platform.
@@ -150,7 +148,7 @@ Once the Azure resource setup is done, we can add a new **Azure Batch** environm
 !!! note "Amazing!" 
     You now have everything you need to begin deploying massively scalable pipelines.
 
-Jump to the documentation section for [Launching Pipelines](/launch/overview/).
+Jump to the documentation section for [Launching Pipelines](../../launch/overview/).
 
 
 ## Launch
@@ -158,16 +156,11 @@ Jump to the documentation section for [Launching Pipelines](/launch/overview/).
 
 This section is for users with a pre-configured Azure environment. You will need an Azure Batch account, Azure Storage account already set up. In order to add a new compute environment in the Tower UI for existing Azure resources, follow these steps:
 
-**1.** In the navigation bar on the upper right, choose your account name then choose **Compute environments** and select **New Environment**.
-
-![](_images/aws_new_env.png) 
-
-
+**1.** In a workspace choose **Compute environments** and then, click on the **New Environment** button.
 
 **2.** Enter a descriptive name for this environment, for example, *Azure Batch (east-us)* and select **Azure Batch** as the target platform.
 
 ![](_images/azure_new_env_name.png) 
-
 
 
 **3.** Add new credentials by selecting the **+** button. Choose a name, e.g. *tower credentials* and add the Access key and Secret key. These are the keys we saved in the previous steps when creating the Azure resources.
@@ -213,5 +206,5 @@ This section is for users with a pre-configured Azure environment. You will need
 !!! note "Amazing!" 
     You now have everything you need to begin deploying massively scalable pipelines.
 
-Jump to the documentation section for [Launching Pipelines](/launch/overview/).
+Jump to the documentation section for [Launching Pipelines](../../launch/overview/).
 
