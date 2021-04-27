@@ -1,11 +1,14 @@
 pull:
 	docker pull squidfunk/mkdocs-material
 
-build: 
-	docker run --rm -it -p 8000:8000 -v ${PWD}:/docs squidfunk/mkdocs-material build
+build:
+	docker run --rm -it -p 8000:8000 -v ${PWD}:/docs abhi18av/nftower-mkdocs mkdocs build
 
 serve:
-	docker run --rm -it -p 8000:8000 -v ${PWD}:/docs squidfunk/mkdocs-material
+	docker run --rm -it -p 8000:8000 -v ${PWD}:/docs abhi18av/nftower-mkdocs mkdocs serve --dev-addr=0.0.0.0:8000
+
+versioned:
+	docker run --rm -it -p 8000:8000 -v ${PWD}:/docs abhi18av/nftower-mkdocs mike serve --dev-addr=0.0.0.0:8000
 
 clean:
 	rm -rf site
