@@ -1,7 +1,0 @@
-{{/* Ensure this is in a wrapper with the .faq class */}}
-{{- if and .headline .textline -}}
-<div class="column">
-    <h3>{{ .headline }}</h3>
-    {{ .textline | markdownify }}
-</div>
-{{- end -}}

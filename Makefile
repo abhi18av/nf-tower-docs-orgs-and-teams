@@ -1,8 +1,11 @@
-html:
-	docker run -v $$PWD:$$PWD -w $$PWD klakegg/hugo:0.77.0-alpine
-	
+build:
+	docker run --rm -it -p 8000:8000 -v ${PWD}:/docs squidfunk/mkdocs-material build
+
 serve:
-	docker run -p 1313:1313 -v $$PWD:$$PWD -w $$PWD klakegg/hugo:0.77.0-alpine serve
+	docker run --rm -it -p 8000:8000 -v ${PWD}:/docs squidfunk/mkdocs-material
+
+clean:
+	rm -rf site
 
 publish:
 	aws s3 sync public s3://help.tower.nf/ \

@@ -25,7 +25,7 @@ jobs:
           fetch-depth: 1
 
       - name: Build docs
-        run: make html
+        run: make build
 
       - name: Publish website
         if: github.ref == 'refs/heads/master'
