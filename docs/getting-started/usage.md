@@ -56,6 +56,12 @@ Where `eyxxxxxxxxxxxxxxxQ1ZTE=` is the token you have just created.
 !!! note "check your Nextflow version"
     Bearer token requires Nextflow version 20.10.0 or later, set with the second command above.
 
+To submit a pipeline to a [Workspace](../../getting-started/workspace) using the Nextflow command line tool, add the workspace ID to your environment. For example
+
+```bash
+export TOWER_WORKSPACE_ID=215559034546123
+```
+
 **5. Run Nextflow with tower**
 
 Run your Nextflow workflows as usual with the addition of the `-with-tower` command:
