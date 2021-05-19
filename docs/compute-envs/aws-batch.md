@@ -188,7 +188,15 @@ Note that if **Min CPUs** is greater than `0`, EC2 instances will remain active.
 
 ![](_images/aws_cost_percentage.png) 
 
-**15.** Select **Create** to finalize the compute environment setup. It will take approximately 60 seconds for all the resources to be created and then you will be ready to launch pipelines.
+
+!!! note "Network security"
+    If you have configured custom `VPC`, `Subnets` and `Security groups` make sure to specify them in the corresponding fields in the Advanced options.
+
+!!! tip "Remote access"
+    If you need to debug the EC2 instance provisioned by AWS Batch, specify the `Key pair` to login the VM via SSH.
+
+
+**15.** Select **Create** to finalize the compute environment setup. It will take a few seconds for all the resources to be created and then you will be ready to launch pipelines.
 
 ![](_images/aws_60s_new_env.png) 
 
