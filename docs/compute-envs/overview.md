@@ -6,7 +6,9 @@ description: 'Step-by-step instructions to set up compute environments in Nextfl
 
 ## Introduction
 
-Tower uses the concept of **Compute Environments** to define the execution platform where a pipeline will run. It supports launching of pipelines into a growing number of **cloud** and **on-premise** infrastructures.
+Tower uses the concept of **Compute Environments** to define the execution platform where a pipeline will run. 
+
+It supports launching of pipelines into a growing number of **cloud** and **on-premise** infrastructures.
 
 ![](_images/compute_env_platforms.png)
 

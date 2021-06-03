@@ -43,7 +43,7 @@ Follow these steps to create a new compute environment for **Altair PBS Pro**:
 
 **9.** The **Head queue name** which is the name of the queue, on the cluster, used to launch the execution of the Nextflow runtime.
 
-**10.** The **Compute queue name** which is the name of queue, on the cluster, to which pipeline jobs are submitted.
+**10.** The **Compute queue name** which is the name of the queue, on the cluster, to which pipeline jobs are submitted.
 
 !!! tip
     The Compute queue can be overridden as a configuration option in the Nextflow pipeline configuration. See Nextflow [docs](https://www.nextflow.io/docs/latest/process.html#queue) for more details.
