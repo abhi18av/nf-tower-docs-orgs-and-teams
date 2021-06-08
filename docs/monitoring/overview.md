@@ -25,9 +25,7 @@ In the left bar:
 
 ## Search
 
-The search box enables searching for runs and pipelines by name. 
-
-Use asterisks `✽` before and after keyword to filter results.
+The search box allows searching for workflows by `project name`, `run name`, `session id` or `manifest name`. Moreover, wildcards can be used to filter the desired workflows such as using asterisks `*` before and after keyword to filter results.
 
 ![](_images/monitoring_search.png)
 
