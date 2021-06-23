@@ -1,8 +1,10 @@
+DOCKER = squidfunk/mkdocs-material:7.1.2
+
 build:
-	docker run --rm -p 8000:8000 -v ${PWD}:/docs squidfunk/mkdocs-material build
+	docker run --rm -p 8000:8000 -v ${PWD}:/docs $(DOCKER)  build
 
 serve:
-	docker run --rm -it -p 8000:8000 -v ${PWD}:/docs squidfunk/mkdocs-material
+	docker run --rm -it -p 8000:8000 -v ${PWD}:/docs $(DOCKER)
 
 clean:
 	rm -rf site
