@@ -189,12 +189,16 @@ For example if the bucket name is `s3://imputation-gp2`, the Nextflow pipeline w
 
 The **Pipeline work directory** bucket above is added by default to the list of **Allowed S3 buckets**.
 
-**14.** To use **FSx**, you can enter `/fsx` as the **FSx mount path** and set the **Pipeline work directory** above to be `/fsx/work`
+
+**14.** To use **EFS**, you can either specify the existing EFS option using **Use existing EFS file system** or deploy a new EFS using **Create new EFS file system** option.
+
+
+**15.** To use **FSx**, you can enter `/fsx` as the **FSx mount path** and set the **Pipeline work directory** above to be `/fsx/work`
 
 ![](_images/aws_lustre_options.png)
 
 
-**15.** Choose the **Dispose resources** option.
+**16.** Choose the **Dispose resources** option.
 
 **Advanced options**
 
@@ -211,7 +215,7 @@ Note that if **Min CPUs** is greater than `0`, EC2 instances will remain active.
     Keeping EC2 instances running may result in additional costs. You will be billed for these running EC2 instances regardless of whether you are executing pipelines or not.
 
 
-**16.** If you're using the `Spot instances`, then you could also specify the `Cost percentage` to determine the maximum percentage that a `Spot instance` price can be, when compared with the `On-Demand` price for that instance type, before instances are launched.
+**17.** If you're using the `Spot instances`, then you could also specify the `Cost percentage` to determine the maximum percentage that a `Spot instance` price can be, when compared with the `On-Demand` price for that instance type, before instances are launched.
 
 ![](_images/aws_cost_percentage.png) 
 
@@ -223,7 +227,7 @@ Note that if **Min CPUs** is greater than `0`, EC2 instances will remain active.
     If you need to debug the EC2 instance provisioned by AWS Batch, specify the `Key pair` to login the VM via SSH.
 
 
-**17.** Select **Create** to finalize the compute environment setup. 
+**18.** Select **Create** to finalize the compute environment setup. 
 
 It will take a few seconds for all the resources to be created and then you will be ready to launch pipelines.
 

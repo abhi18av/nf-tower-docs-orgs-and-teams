@@ -102,6 +102,7 @@ nav:
       - 'Public Git repositories': 'git/public_repositories.md'
     - 'Automation':
       - 'Pipeline Actions': 'pipeline-actions/pipeline-actions.md'
+    - 'Pipeline Schema': 'pipeline-schema/overview.md'
     - 'Installation':
       - 'System deployment': 'installation/system-deployment.md'
     - 'API':

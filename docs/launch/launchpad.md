@@ -13,7 +13,13 @@ A pipeline is a repository containing a Nextflow workflow, a compute environment
 
 ## Pipeline Parameters Form
 
-Launchpad automatically detects the presence of a `nextflow_schema.json` in the root of the repository and dynamically creates a form where users can easily update the parameters. This makes it trivial for users without any expertise in Nextflow to enter their pipeline parameters and launch.
+Launchpad automatically detects the presence of a `nextflow_schema.json` in the root of the repository and dynamically creates a form where users can easily update the parameters. 
+
+
+!!! tip
+    The parameter forms view will appear, if the workflow has a Nextflow schema file for the parameters. Please refer the [**Nextflow Schema guide**](../../nextflow-schema/overview) to learn more about the usa-cases and how to create them.
+
+This makes it trivial for users without any expertise in Nextflow to enter their pipeline parameters and launch.
 
 ![](_images/launch_rnaseq_nextflow_schema.png)
 
