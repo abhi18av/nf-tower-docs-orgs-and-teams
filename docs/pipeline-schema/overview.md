@@ -26,7 +26,7 @@ For more information, please follow [this link](https://nf-co.re/tools/#build-a-
 
 ## How can I individualize or edit the automatically created schema file? 
 
-Once your pipeline schema file has been built with the `nf-core schema build`, the tool can send the schema to the nf-core website so that you can use a [graphical interface](https://nf-co.re/tools/#build-a-pipeline-schema) to organize and fill in the schema. 
+Once your pipeline schema file has been built with the `nf-core schema build`, the tool can send the schema to the nf-core website so that you can use a [graphical interface](https://nf-co.re/pipeline_schema_builder) to organize and fill in the schema. 
 
 
 ![](./_images/pipeline_schema_overview.png)
