@@ -33,6 +33,7 @@ theme:
     - navigation.top
     - search.suggest
     - search.highlight
+  font: false
 
 markdown_extensions:
     - toc:
@@ -57,6 +58,9 @@ extra:
     provider: mike
     default: stable
 
+extra_css:
+  - assets/stylesheets/fonts.css
+  - assets/stylesheets/overrides.css
 
 nav:
     - 'Home': 'index.md'
@@ -111,4 +115,3 @@ nav:
       - 'OpenAPI schema': 'api/openapi.md'
 
 copyright: Copyright &copy; 2021 Seqera Labs, S.L.
-
