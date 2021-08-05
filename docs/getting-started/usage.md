@@ -62,6 +62,8 @@ To submit a pipeline to a [Workspace](../../getting-started/workspace) using the
 export TOWER_WORKSPACE_ID=000000000000000
 ```
 
+The workspace ID can be found on the organisation's Workspaces overview page.
+
 **5. Run Nextflow with tower**
 
 Run your Nextflow workflows as usual with the addition of the `-with-tower` command:

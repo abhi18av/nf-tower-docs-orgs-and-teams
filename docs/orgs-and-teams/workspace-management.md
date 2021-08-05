@@ -55,3 +55,7 @@ There are five roles available for every workspace participant.
 
 5. **View**: The participant can view the team pipelines and runs in read-only mode.
 
+
+### Sharing monitoring with workspace
+
+To allow users executing pipelines from the command-line to share their runs with a given workspace, follow the instructions under [Getting Started](/getting-started/usage/)
