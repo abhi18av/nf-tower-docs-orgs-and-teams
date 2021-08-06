@@ -24,7 +24,7 @@ To connect a private GitHub repository you need to enter a **Name** for the cred
 
 ## GitLab
 
-To connect a private GitLab repository you need to enter a **Name** for the credentials, a **Username** and a **Password** or **Access token**.
+To connect a private GitLab repository you need to enter a **Name** for the credentials, a **Username**, **Password** and **Access token**.
 
 A GitLab API access token that can be found in your [GitLab account page](https://docs.gitlab.com/ee/api/personal_access_tokens.html). Make sure to select the `api`, `read_api`, and  `read_repository` options.
 
