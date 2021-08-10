@@ -160,10 +160,6 @@ The default VM type is `Standard_D4_v3`.
 ![](_images/azure_newly_created_env.png) 
 
 
-
-!!! note "Amazing!" 
-    You now have everything you need to begin deploying massively scalable pipelines.
-
 Jump to the documentation section for [Launching Pipelines](../../launch/launch/).
 
 ## Launch
@@ -229,9 +225,4 @@ It will take approximately 20 seconds for all the resources to be created and th
 ![](_images/azure_newly_created_env.png) 
 
 
-
-!!! note "Amazing!" 
-    You now have everything you need to begin deploying massively scalable pipelines.
-
 Jump to the documentation section for [Launching Pipelines](../../launch/launch/).
-

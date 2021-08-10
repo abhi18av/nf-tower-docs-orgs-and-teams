@@ -67,8 +67,5 @@ Default: the same as *Storage mount path*.
 
 **3.** The  **Compute service account** field allows you to specify the Kubernetes *service account* that the pipeline jobs should use. Default is the `default` service account in your Kubernetes cluster.
 
-!!! note "Amazing!" 
-    You now have everything you need to begin deploying massively scalable pipelines.
-
 
 Jump to the documentation section for [Launching Pipelines](../../launch/launch/).

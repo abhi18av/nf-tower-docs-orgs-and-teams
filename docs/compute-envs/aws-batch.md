@@ -233,8 +233,6 @@ It will take a few seconds for all the resources to be created and then you will
 
 ![](_images/aws_60s_new_env.png) 
 
-!!! note "Amazing!"
-    You now have everything you need to begin deploying massively scalable pipelines.
 
 Jump to the documentation section for [Launching Pipelines](../../launch/launch/).
 
@@ -316,8 +314,5 @@ Tower can use S3 to access data, create work directories and write outputs. The 
 
 **5.** Name your policy and click **Create policy**.
 
-
-!!! note "Amazing!"
-    You now have everything to begin deploying massively scalable pipelines.
 
 Jump to the documentation section for [Launching Pipelines](../../launch/launch/).
