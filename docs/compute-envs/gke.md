@@ -57,15 +57,23 @@ This should reference a Kubernetes persistence volume with `ReadWriteMany` capab
 
 The following parameters are available:
 
-**1.** The **Storage mount path** defines the file system path where the Storage claim is mount. 
+**1.** The **Storage mount path** defines the file system path where the Storage claim is mounted. 
 
 Default: `/scratch`
 
-**2.** The **Work directory** field defines the file system path used as working directory by the Nextflow pipelines. It must be the same or a subdirectory of the *Storage mount path* at the previous point. 
+**2.** The **Work directory** field defines the file system path used as a working directory by Nextflow pipelines. It must be the same or a subdirectory of the *Storage mount path* at the previous point. 
 
 Default: the same as *Storage mount path*.
 
-**3.** The  **Compute service account** field allows you to specify the Kubernetes *service account* that the pipeline jobs should use. Default is the `default` service account in your Kubernetes cluster.
+**3.** The  **Compute service account** field allows you to specify the Kubernetes *service account* that the pipeline jobs should use. 
+
+Default is the `default` service account in your Kubernetes cluster.
+
+**4.** The pod behavior within the cluster could be controlled by using the **Pod cleanup policy** option.
+
+**5.** The **Custom head pod specs** field allows you to provide a custom configuration for the pod running the Nextflow workflow e.g. `nodeSelector` and `affinity` constraints. It should be a valid PodSpec YAML structure starting with `spec:`.
+
+**6.** The **Custom service pod specs** field allows you to provide a custom configuration for the compute environment service pod e.g. `nodeSelector` and `affinity` constraints. It should be a valid PodSpec YAML structure starting with `spec:`.
 
 
 Jump to the documentation section for [Launching Pipelines](../../launch/launch/).
