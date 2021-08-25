@@ -202,32 +202,34 @@ The **Pipeline work directory** bucket above is added by default to the list of 
 
 **Advanced options**
 
+**17.** Optionally, you can specify the **Allocation strategy** and indicate the preferred **Instance types** to AWS Batch.
+
+**18.** You can configure your custom networking setup using the `VPC`, `Subnets` and `Security groups` fields. 
+
 !!! warning "AMI ID - AMI requirements for AWS Batch use"
     To use an existing AMI, make sure the AMI is based on an Amazon Linux-2 ECS optimized image that meets the Batch requirements. To learn more about approved versions of the Amazon ECS optimized AMI, visit [this link](https://docs.aws.amazon.com/batch/latest/userguide/compute_resource_AMIs.html#batch-ami-spec)
-
-
-Note that if **Min CPUs** is greater than `0`, EC2 instances will remain active. An advantage of this is that a pipeline execution will initialize faster but it may have additional costs.
-
-![](_images/aws_warning_min_cpus.png)
-
-
-!!! warning "Min CPUs - Editing this will result in additional AWS costs" 
-    Keeping EC2 instances running may result in additional costs. You will be billed for these running EC2 instances regardless of whether you are executing pipelines or not.
-
-
-**17.** If you're using the `Spot instances`, then you could also specify the `Cost percentage` to determine the maximum percentage that a `Spot instance` price can be, when compared with the `On-Demand` price for that instance type, before instances are launched.
-
-![](_images/aws_cost_percentage.png) 
-
-
-!!! note "Network security"
-    If you have configured custom `VPC`, `Subnets` and `Security groups` make sure to specify them in the corresponding fields in the Advanced options.
 
 !!! tip "Remote access"
     If you need to debug the EC2 instance provisioned by AWS Batch, specify the `Key pair` to login the VM via SSH.
 
+**19.** Optionally, you can set **Min CPUs** to be greater than `0`, EC2 instances will remain active. An advantage of this is that a pipeline execution will initialize faster.
 
-**18.** Select **Create** to finalize the compute environment setup. 
+!!! warning "Min CPUs - Editing this will result in additional AWS costs" 
+    Keeping EC2 instances running may result in additional costs. You will be billed for these running EC2 instances regardless of whether you are executing pipelines or not.
+
+![](_images/aws_warning_min_cpus.png)
+
+**20.** You can specify the hardware resources allocated for the Head Job using **Head Job CPUs** and **Head Job Memory**
+
+**21.** For fine-grained IAM permissions for the Head Job and Compute Job, you can rely upon **Head Job role** and **Compute Job role** 
+
+**22.** If you're using the `Spot instances`, then you could also specify the `Cost percentage` to determine the maximum percentage that a `Spot instance` price can be, when compared with the `On-Demand` price for that instance type, before instances are launched.
+
+![](_images/aws_cost_percentage.png) 
+
+**23.** Optionally, you can also specify the location of `aws` cli using the **AWS CLI tool path**.
+
+**24.** Select **Create** to finalize the compute environment setup. 
 
 It will take a few seconds for all the resources to be created and then you will be ready to launch pipelines.
 
@@ -291,8 +293,16 @@ For example "AWS Batch Launch (eu-west-1)".
 ![](_images/aws_new_env_manual_config.png) 
 
 
-!!! note "Awesome!"
-    You now have created a compute environment.
+**Advanced options**
+
+**12.** You can specify the hardware resources allocated for the Head Job using **Head Job CPUs** and **Head Job Memory**
+
+**13.** For fine-grained IAM permissions for the Head Job and Compute Job, you can rely upon **Head Job role** and **Compute Job role** 
+
+**14.** Optionally, you can also specify the location of `aws` cli using the **AWS CLI tool path**.
+
+**15.** Select **Create** to finalize the compute environment setup. 
+
 
 ### Access to S3 Buckets
 
