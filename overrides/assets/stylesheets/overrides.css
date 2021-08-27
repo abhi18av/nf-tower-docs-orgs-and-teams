@@ -13,6 +13,12 @@ strong {
   line-height: 32px;
 }
 
+.md-typeset li {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 32px;
+}
+
 .md-nav__title {
   color: #676767;
   font-size: 16px;
