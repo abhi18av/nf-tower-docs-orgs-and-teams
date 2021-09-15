@@ -7,6 +7,17 @@ on:
       - master
 
 jobs:
+  
+  markdown-link-check:
+    name: Check markdown files links
+    if: "!contains(github.event.head_commit.message, '[ci skip]')"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Markdown links check
+        uses: ruzickap/action-my-markdown-link-checker@v1
+
   build:
     name: Tower docs build
     if: "!contains(github.event.head_commit.message, '[ci skip]')"
