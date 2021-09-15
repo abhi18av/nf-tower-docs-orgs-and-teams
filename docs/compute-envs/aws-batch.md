@@ -143,8 +143,8 @@ These are the keys we saved in the previous steps when creating the AWS IAM user
 ![](_images/aws_keys.png)
 
 
-!!! tip "Multiple credentials"
-    You can create multiple credentials in your Tower environment.
+!!! note "Assume role"
+    You can also specify the IAM Role (ARN) which will be assumed to access the AWS resources provided by the associated compute environment.
 
 
 **6.** Select a **Region**, for example *eu-west-1 - Europe (Ireland)*, and enter the S3 bucket we created in the previous section in the **Pipeline work directory** e.g: `s3://unique-tower-bucket`.
