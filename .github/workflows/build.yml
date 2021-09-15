@@ -17,6 +17,9 @@ jobs:
 
       - name: Markdown links check
         uses: ruzickap/action-my-markdown-link-checker@v1
+        with:
+          exclude: |
+            README.md
 
   build:
     name: Tower docs build
