@@ -14,7 +14,7 @@ Move to the working directory e.g: `cd nf-tower-docs`.
 
 Build and run mkdocs server:
 ```
-mkdocs serve
+make serve
 ```
 
 The result is that a local website is run and can be accessed locally at http://localhost:8000.
