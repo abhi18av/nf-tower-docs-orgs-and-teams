@@ -36,7 +36,7 @@ The steps below will guide you through the creation of a new IAM user for Tower,
 **1.** Open the [AWS IAM console](https://console.aws.amazon.com/iam).
 **2** Select **Users** on the left menu and click the **Add User** button on top.
 
-![](_images/aws_aim_new_user.png)
+![](_images/aws_iam_new_user.png)
 
 
 **3.** Enter a name for your user (e.g. `tower`) and choose the **Programmatic access** type. 
