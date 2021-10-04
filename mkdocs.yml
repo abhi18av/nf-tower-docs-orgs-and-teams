@@ -100,6 +100,7 @@ nav:
       - 'Google GKE': 'compute-envs/gke.md'
     - 'Credentials':
       - 'Overview': 'credentials/overview.md'
+    - 'Datasets': 'datasets/overview.md'
     - 'Git Integration':
       - 'Overview': 'git/overview.md'
       - 'Private Git repositories': 'git/private_repositories.md'
