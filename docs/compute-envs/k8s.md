@@ -46,7 +46,7 @@ If you are using [Amazon EKS](../eks/) or [Google GKE](../gke/), see the corresp
 
     ```bash
     SECRET=$(kubectl get secrets | grep <SERVICE-ACCOUNT-NAME> | cut -f1 -d ' ')
-    kubectl describe secret SECRET | grep -E '^token' | cut -f2 -d':' | tr -d '\t'
+    kubectl describe secret $SECRET | grep -E '^token' | cut -f2 -d':' | tr -d '\t'
     ```
 
     Replace `<SERVICE-ACCOUNT-NAME>` with the name of the service account create in the [Cluster preparation](https://github.com/seqeralabs/nf-tower-k8s/blob/master/cluster-preparation.md#2-service-account--role-creation) step.
