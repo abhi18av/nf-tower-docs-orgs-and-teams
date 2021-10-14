@@ -55,11 +55,11 @@ curl -H "Authorization: Bearer eyJ...YTk0" https://tower.nf/api/workflow
 Some API `GET` methods will accept standard `query` parameters, which are defined in the documentation; `querystring` optional 
 parameters such as page size, number (when available) and file name; and body parameters, mostly used for `POST`, `PUT` and `DELETE` requests.
 
-Additionally, several head parameters are accepted such as `Authorization` for bearer access token or `Accept-Version` to indicate the desired API version to use (default to version 1.0.)
+Additionally, several head parameters are accepted such as `Authorization` for bearer access token or `Accept-Version` to indicate the desired API version to use (default to version 1)
 
 ```bash
 curl -H "Authorization: Bearer QH..E5M=" 
-     -H "Accept-Version:1.0"
+     -H "Accept-Version:1"
      -X POST https://tower.nf/api/domain/{item_id}?queryString={value}
      -d { params: { "key":"value" } }
 
