@@ -76,4 +76,4 @@ Default is the `default` service account in your Kubernetes cluster.
 **6.** The **Custom service pod specs** field allows you to provide a custom configuration for the compute environment service pod e.g. `nodeSelector` and `affinity` constraints. It should be a valid PodSpec YAML structure starting with `spec:`.
 
 
-Jump to the documentation section for [Launching Pipelines](../../launch/launch/).
+Jump to the documentation section for [Launching Pipelines](../../launch/launchpad/).

@@ -160,7 +160,7 @@ The default VM type is `Standard_D4_v3`.
 ![](_images/azure_newly_created_env.png) 
 
 
-Jump to the documentation section for [Launching Pipelines](../../launch/launch/).
+Jump to the documentation section for [Launching Pipelines](../../launch/launchpad/).
 
 ## Launch
 
@@ -225,4 +225,4 @@ It will take approximately 20 seconds for all the resources to be created and th
 ![](_images/azure_newly_created_env.png) 
 
 
-Jump to the documentation section for [Launching Pipelines](../../launch/launch/).
+Jump to the documentation section for [Launching Pipelines](../../launch/launchpad/).

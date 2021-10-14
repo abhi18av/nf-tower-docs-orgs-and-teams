@@ -60,4 +60,4 @@ Follow these steps to create a new compute environment for Grid Engine:
 !!! tip "Congratulations!" 
     You are now ready to launch pipelines.
 
-Jump to the documentation section for [Launching Pipelines](../../launch/launch/).
+Jump to the documentation section for [Launching Pipelines](../../launch/launchpad/).

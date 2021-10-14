@@ -211,7 +211,4 @@ The **Google Storage** bucket created earlier should be accessible in the region
 ![](_images/google_tower_location.png)
 
 
-!!! tip "Congratulations!" 
-    Time to start launching pipelines in your cloud.
-
-Jump to the documentation section for [Launching Pipelines](../../launch/launch/).
+Jump to the documentation section for [Launching Pipelines](../../launch/launchpad/).
