@@ -27,3 +27,5 @@ hugo/static/js/scripts.js.map
 hugo/static/js/scripts.min.js
 
 site
+
+.cache

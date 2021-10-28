@@ -7,16 +7,12 @@ edit_uri: https://github.com/seqeralabs/nf-tower-docs/tree/master/docs
 site_dir: public
 
 plugins:
-  - search:
-      prebuild_index: true
+  - social
+  - search
 #   - git-revision-date
 #   - git-revision-date-localized:
 #       fallback_to_build_date: true
 
-
-google_analytics:
-  - UA-364526-12
-  - auto
 
 theme:
   language: en
@@ -34,6 +30,20 @@ theme:
     - search.suggest
     - search.highlight
   font: false
+  icon:
+    admonition:
+      note: fontawesome/solid/sticky-note
+      abstract: fontawesome/solid/book
+      info: fontawesome/solid/info-circle
+      tip: fontawesome/solid/bullhorn
+      success: fontawesome/solid/check
+      question: fontawesome/solid/question-circle
+      warning: fontawesome/solid/exclamation-triangle
+      failure: fontawesome/solid/bomb
+      danger: fontawesome/solid/skull
+      bug: fontawesome/solid/robot
+      example: fontawesome/solid/flask
+      quote: fontawesome/solid/quote-left
 
 markdown_extensions:
     - toc:
@@ -45,7 +55,10 @@ markdown_extensions:
 
 
 extra:
-  generator: false
+  analytics:
+    provider: google
+    property: UA-364526-12
+  # generator: false
   homepage: /
   social:
     - icon: fontawesome/solid/paper-plane
@@ -56,7 +69,19 @@ extra:
       link: https://github.com/seqeralabs
   version:
     provider: mike
-    default: stable
+
+markdown_extensions:
+    - toc:
+        permalink: "#"
+    - attr_list
+    - admonition
+    - pymdownx.superfences
+    - pymdownx.highlight:
+        linenums: true
+    - pymdownx.snippets
+    - pymdownx.emoji:
+        emoji_index: !!python/name:materialx.emoji.twemoji
+        emoji_generator: !!python/name:materialx.emoji.to_svg
 
 extra_css:
   - assets/stylesheets/fonts.css
