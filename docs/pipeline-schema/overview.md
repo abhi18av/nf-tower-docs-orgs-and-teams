@@ -8,16 +8,23 @@ description: 'A brief introduction to Pipeline Schema.'
 
 This page will give you a detailed description of what pipeline schema files are, why they are used and to give you an in-depth description of how to build and customize your own Pipeline JSON schema file. 
 
+![](_images/pipeline_schema_form.png)
+
+
 ## What is a Pipeline schema? 
 
-In short, the main use of pipeline schema is to describe the structure and validation constraints of your workflow parameters. Schemas in general are used to validate parameters before use to prevent software/pipelines failing in unexpected ways at runtime.
+In short, the main use of pipeline schema is to describe the structure and validation constraints of your workflow parameters. Schemas in general are used to validate parameters before use to prevent software/pipelines failing in unexpected ways at runtime. 
+
+You can create a UI for your pipeline parameters using the **pipeline schema**.
 
 ## Why do you need a schema file for your pipelines or software applications?
 
 Pipeline schema file is used to describe the different paraments used by the Nextflow workflow and the input parameters that the pipeline accepts.
 
-Nextflow Tower uses this file to automatically generate the pipeline inputs form and validate
-the user provided parameters in a user friendly way.
+Nextflow Tower uses this file to automatically generate the pipeline inputs form and validate the user provided parameters in a user friendly way.
+
+!!! tip
+    You can populate the parameters in the pipeline, by uploading a YAML or a JSON file, in addition to filling it on the UI itself.
 
 ## How can I build my own Pipeline schema file for my Nextflow pipelines?
 
