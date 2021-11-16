@@ -77,6 +77,12 @@ This should reference a Kubernetes persistence volume with `ReadWriteMany` capab
 
 Check the [cluster preparation](https://github.com/seqeralabs/nf-tower-k8s/blob/master/cluster-preparation.md#3-storage-configuration) guide for details.
 
+
+**12.** You can specify certain environment variables on the Head job or the Compute job using the **Environment variables** option.
+
+![](_images/env_vars.png)
+
+
 ## Advanced options
 
 These options allow the fine-tuning of the Tower configuration for the Kubernetes cluster.

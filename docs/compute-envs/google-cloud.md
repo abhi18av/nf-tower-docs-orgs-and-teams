@@ -204,9 +204,20 @@ The **Google Storage** bucket created earlier should be accessible in the region
 
 **10.** You can also opt-in to execute the workflow on the **Preemptible** instances to save further cost.
 
-**11.** Optionally, settings such as **Use Private Address**, **Boot disk size**, **Head Job CPUs** and **Head Job memory** could be optimized as per the requirements of the workflow as well.
+**11.** If you'd like to integrate an existing Google FileStore volume to your compute environment, you can make use of the **Filestore file system** option.
 
-**12.** Select **Create** to finalise the creation of the compute environment.
+![](_images/google_filestore.png)
+
+**12.** You can specify certain environment variables on the Head job or the Compute job using the **Environment variables** option.
+
+![](_images/env_vars.png)
+
+
+#### Advanced options
+
+**1.** Optionally, settings such as **Use Private Address**, **Boot disk size**, **Head Job CPUs** and **Head Job memory** could be optimized as per the requirements of the workflow as well.
+
+**2.** Select **Create** to finalise the creation of the compute environment.
 
 ![](_images/google_tower_location.png)
 

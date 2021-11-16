@@ -200,11 +200,16 @@ The **Pipeline work directory** bucket above is added by default to the list of 
 
 **16.** Choose the **Dispose resources** option.
 
+
+**17.** You can specify certain environment variables on the Head job or the Compute job using the **Environment variables** option.
+
+![](_images/env_vars.png)
+
 **Advanced options**
 
-**17.** Optionally, you can specify the **Allocation strategy** and indicate the preferred **Instance types** to AWS Batch.
+**18.** Optionally, you can specify the **Allocation strategy** and indicate the preferred **Instance types** to AWS Batch.
 
-**18.** You can configure your custom networking setup using the `VPC`, `Subnets` and `Security groups` fields. 
+**19.** You can configure your custom networking setup using the `VPC`, `Subnets` and `Security groups` fields. 
 
 !!! warning "AMI ID - AMI requirements for AWS Batch use"
     To use an existing AMI, make sure the AMI is based on an Amazon Linux-2 ECS optimized image that meets the Batch requirements. To learn more about approved versions of the Amazon ECS optimized AMI, visit [this link](https://docs.aws.amazon.com/batch/latest/userguide/compute_resource_AMIs.html#batch-ami-spec)
@@ -212,18 +217,18 @@ The **Pipeline work directory** bucket above is added by default to the list of 
 !!! tip "Remote access"
     If you need to debug the EC2 instance provisioned by AWS Batch, specify the `Key pair` to login the VM via SSH.
 
-**19.** Optionally, you can set **Min CPUs** to be greater than `0`, EC2 instances will remain active. An advantage of this is that a pipeline execution will initialize faster.
+**20.** Optionally, you can set **Min CPUs** to be greater than `0`, EC2 instances will remain active. An advantage of this is that a pipeline execution will initialize faster.
 
 !!! warning "Min CPUs - Editing this will result in additional AWS costs" 
     Keeping EC2 instances running may result in additional costs. You will be billed for these running EC2 instances regardless of whether you are executing pipelines or not.
 
 ![](_images/aws_warning_min_cpus.png)
 
-**20.** You can specify the hardware resources allocated for the Head Job using **Head Job CPUs** and **Head Job Memory**
+**21.** You can specify the hardware resources allocated for the Head Job using **Head Job CPUs** and **Head Job Memory**
 
-**21.** For fine-grained IAM permissions for the Head Job and Compute Job, you can rely upon **Head Job role** and **Compute Job role** 
+**22.** For fine-grained IAM permissions for the Head Job and Compute Job, you can rely upon **Head Job role** and **Compute Job role** 
 
-**22.** If you're using the `Spot instances`, then you could also specify the `Cost percentage` to determine the maximum percentage that a `Spot instance` price can be, when compared with the `On-Demand` price for that instance type, before instances are launched.
+**23.** If you're using the `Spot instances`, then you could also specify the `Cost percentage` to determine the maximum percentage that a `Spot instance` price can be, when compared with the `On-Demand` price for that instance type, before instances are launched.
 
 ![](_images/aws_cost_percentage.png) 
 
@@ -292,15 +297,22 @@ For example "AWS Batch Launch (eu-west-1)".
 ![](_images/aws_new_env_manual_config.png) 
 
 
+
+**12.** You can specify certain environment variables on the Head job or the Compute job using the **Environment variables** option.
+
+![](_images/env_vars.png)
+
+
+
 **Advanced options**
 
-**12.** You can specify the hardware resources allocated for the Head Job using **Head Job CPUs** and **Head Job Memory**
+**13.** You can specify the hardware resources allocated for the Head Job using **Head Job CPUs** and **Head Job Memory**
 
-**13.** For fine-grained IAM permissions for the Head Job and Compute Job, you can rely upon **Head Job role** and **Compute Job role** 
+**14.** For fine-grained IAM permissions for the Head Job and Compute Job, you can rely upon **Head Job role** and **Compute Job role** 
 
-**14.** Optionally, you can also specify the location of `aws` cli using the **AWS CLI tool path**.
+**15.** Optionally, you can also specify the location of `aws` cli using the **AWS CLI tool path**.
 
-**15.** Select **Create** to finalize the compute environment setup. 
+**16.** Select **Create** to finalize the compute environment setup. 
 
 
 ### Access to S3 Buckets

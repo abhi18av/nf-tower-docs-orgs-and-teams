@@ -48,16 +48,21 @@ Follow these steps to create a new compute environment for **Altair PBS Pro**:
 !!! tip
     The Compute queue can be overridden as a configuration option in the Nextflow pipeline configuration. See Nextflow [docs](https://www.nextflow.io/docs/latest/process.html#queue) for more details.
 
+**11.** You can specify certain environment variables on the Head job or the Compute job using the **Environment variables** option.
+
+![](_images/env_vars.png)
+
+
 
 **Advanced options**
 
-**11.** Optionally, you can customize **Nextflow queue size** field to control the number of Nextflow jobs submitted to the queue at the same time.
+**12.** Optionally, you can customize **Nextflow queue size** field to control the number of Nextflow jobs submitted to the queue at the same time.
 
 
-**12.** Optionally, you can use the **Head job submit options** to  specify options to the head job.
+**13.** Optionally, you can use the **Head job submit options** to  specify options to the head job.
 
 
-**13.** Select **Create** to finalize the creation of the compute environment.
+**14.** Select **Create** to finalize the creation of the compute environment.
 
 Jump to the documentation section for [Launching Pipelines](../../launch/launchpad/).
 

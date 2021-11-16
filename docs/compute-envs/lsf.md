@@ -53,6 +53,13 @@ Follow these steps to create a new compute environment for LSF:
 !!! tip 
     The Compute queue can be overridden as a configuration option in the Nextflow pipeline configuration. See Nextflow [docs](https://www.nextflow.io/docs/latest/process.html#queue) for more details.
 
+
+**12.** You can specify certain environment variables on the Head job or the Compute job using the **Environment variables** option.
+
+![](_images/env_vars.png)
+
+
+
 **Advanced options**
 
 **1.** Optionally, you can customize **Nextflow queue size** field to control the number of Nextflow jobs submitted to the queue at the same time.

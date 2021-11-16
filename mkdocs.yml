@@ -139,5 +139,6 @@ nav:
       - 'Overview': 'api/overview.md'
       - 'Endpoints': 'api/endpoints.md'
       - 'OpenAPI schema': 'api/openapi.md'
+      - 'CLI': 'api/cli.md'
 
 copyright: Copyright &copy; 2021 Seqera Labs, S.L.
